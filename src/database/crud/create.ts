@@ -2,7 +2,7 @@ import { database } from "../db";
 import { set, ref, push } from "firebase/database";
 import uniqueRandom from "unique-random";
 
-const uploadCourse = (category: string) => {
+const uploadCourse = () => {
   let newBookRef = ref(database, "books");
   let pushRef = push(newBookRef);
   console.log(pushRef);

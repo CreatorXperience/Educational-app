@@ -6,7 +6,7 @@ import uploadCourse from "./database/crud/create";
 
 function App() {
   useEffect(() => {
-    uploadCourse("javascript");
+    uploadCourse();
   });
 
   return <div className="App">App</div>;

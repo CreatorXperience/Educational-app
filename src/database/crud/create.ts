@@ -2,22 +2,26 @@ import { database } from "../db";
 import { set, ref, push } from "firebase/database";
 import uniqueRandom from "unique-random";
 
-const uploadCourse = () => {
+type TCourse = {
+  image: string;
+  category: string;
+  title: string;
+  author: {
+    name: string;
+    status: string;
+    stars: number;
+  };
+};
+
+const createCourse = (course: TCourse) => {
   let newBookRef = ref(database, "books");
   let pushRef = push(newBookRef);
   console.log(pushRef);
 
   set(pushRef, {
     id: pushRef.key,
-    image: "image_url_15.jpg",
-    category: "design",
-    title: "Interaction Design: Beyond Human-Computer Interaction",
-    author: {
-      name: "Jenny Preece",
-      status: "interaction designer",
-      stars: 4.5,
-    },
+    ...course,
   });
 };
 
-export default uploadCourse;
+export default createCourse;

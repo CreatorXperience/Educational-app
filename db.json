@@ -1,0 +1,123 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "image": "image_url_11.jpg",
+      "category": "development",
+      "title": "The Pragmatic Programmer: Your Journey to Mastery",
+      "author": {
+        "name": "David Thomas",
+        "status": "software engineer",
+        "stars": 4.9
+      }
+    },
+    {
+      "id": 2,
+      "image": "image_url_12.jpg",
+      "category": "business",
+      "title": "Zero to One: Notes on Startups, or How to Build the Future",
+      "author": {
+        "name": "Peter Thiel",
+        "status": "entrepreneur",
+        "stars": 4.8
+      }
+    },
+    {
+      "id": 3,
+      "image": "image_url_13.jpg",
+      "category": "data-science",
+      "title": "Data Science for Business: What You Need to Know about Data Mining and Data-Analytic Thinking",
+      "author": {
+        "name": "Foster Provost",
+        "status": "data scientist",
+        "stars": 4.7
+      }
+    },
+    {
+      "id": 4,
+      "image": "image_url_14.jpg",
+      "category": "marketing",
+      "title": "Building a StoryBrand: Clarify Your Message So Customers Will Listen",
+      "author": {
+        "name": "Donald Miller",
+        "status": "marketing expert",
+        "stars": 4.6
+      }
+    },
+    {
+      "id": 5,
+      "image": "image_url_15.jpg",
+      "category": "design",
+      "title": "Interaction Design: Beyond Human-Computer Interaction",
+      "author": {
+        "name": "Jenny Preece",
+        "status": "interaction designer",
+        "stars": 4.5
+      }
+    },
+    {
+      "id": 6,
+      "image": "image_url_16.jpg",
+      "category": "design",
+      "title": "The Elements of User Experience: User-Centered Design for the Web",
+      "author": {
+        "name": "Jesse James Garrett",
+        "status": "user experience designer",
+        "stars": 4.7
+      }
+    }
+  ],
+
+  "development": [
+    {
+      "id": 1,
+      "image": "image_url_11.jpg",
+      "category": "development",
+      "title": "The Pragmatic Programmer: Your Journey to Mastery",
+      "author": {
+        "name": "David Thomas",
+        "status": "software engineer",
+        "stars": 4.9
+      }
+    }
+  ],
+  "business": [
+    {
+      "id": 1,
+      "image": "image_url_12.jpg",
+      "category": "business",
+      "title": "Zero to One: Notes on Startups, or How to Build the Future",
+      "author": {
+        "name": "Peter Thiel",
+        "status": "entrepreneur",
+        "stars": 4.8
+      }
+    }
+  ],
+  "data-science": [
+    {
+      "id": 1,
+      "image": "image_url_13.jpg",
+      "category": "data-science",
+      "title": "Data Science for Business: What You Need to Know about Data Mining and Data-Analytic Thinking",
+      "author": {
+        "name": "Foster Provost",
+        "status": "data scientist",
+        "stars": 4.7
+      }
+    }
+  ],
+  "marketing": [
+    {
+      "id": 1,
+      "image": "image_url_14.jpg",
+      "category": "marketing",
+      "title": "Building a StoryBrand: Clarify Your Message So Customers Will Listen",
+      "author": {
+        "name": "Donald Miller",
+        "status": "marketing expert",
+        "stars": 4.6
+      }
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import {
   signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
+  User,
 } from "firebase/auth";
 import app from "../services/firebase";
 
@@ -26,13 +27,15 @@ const auth = () => {
   const signIn = async (email: string, password: string) => {
     const user = await signInWithEmailAndPassword(initAuth, email, password);
 
-    console.log(user.user);
+    return user.user;
   };
 
-  const getUserInfo = () => {
+  const getUserInfo = (
+    appState: React.Dispatch<React.SetStateAction<User | null | undefined>>
+  ) => {
     onAuthStateChanged(initAuth, (user) => {
       if (user) {
-        console.log(user);
+        appState(user);
       }
 
       return user;

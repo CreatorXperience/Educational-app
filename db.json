@@ -1,123 +1,104 @@
 {
-  "books": [
+  "data": [
     {
-      "id": 1,
-      "image": "image_url_11.jpg",
-      "category": "development",
-      "title": "The Pragmatic Programmer: Your Journey to Mastery",
-      "author": {
-        "name": "David Thomas",
-        "status": "software engineer",
-        "stars": 4.9
-      }
+      "title": "Python for Financial Analysis Next and Algorithmic Trading",
+      "category": "Python",
+      "Author": {
+        "name": "Adam Smith",
+        "post": "Python Developer"
+      },
+      "stars": 4.5,
+      "youtubeVideoId": "abcdef12345"
     },
     {
-      "id": 2,
-      "image": "image_url_12.jpg",
-      "category": "business",
-      "title": "Zero to One: Notes on Startups, or How to Build the Future",
-      "author": {
-        "name": "Peter Thiel",
-        "status": "entrepreneur",
-        "stars": 4.8
-      }
+      "title": "Machine Learning with Scikit-Learn",
+      "category": "Machine Learning",
+      "Author": {
+        "name": "Emily Johnson",
+        "post": "Data Scientist"
+      },
+      "stars": 4.2,
+      "youtubeVideoId": "ghijkl67890"
     },
     {
-      "id": 3,
-      "image": "image_url_13.jpg",
-      "category": "data-science",
-      "title": "Data Science for Business: What You Need to Know about Data Mining and Data-Analytic Thinking",
-      "author": {
-        "name": "Foster Provost",
-        "status": "data scientist",
-        "stars": 4.7
-      }
+      "title": "JavaScript for Web Development",
+      "category": "JavaScript",
+      "Author": {
+        "name": "David Brown",
+        "post": "Web Developer"
+      },
+      "stars": 4.0,
+      "youtubeVideoId": "mnopqr12345"
     },
     {
-      "id": 4,
-      "image": "image_url_14.jpg",
-      "category": "marketing",
-      "title": "Building a StoryBrand: Clarify Your Message So Customers Will Listen",
-      "author": {
-        "name": "Donald Miller",
-        "status": "marketing expert",
-        "stars": 4.6
-      }
+      "title": "Introduction to Data Science",
+      "category": "Data Science",
+      "Author": {
+        "name": "Jennifer Lee",
+        "post": "Data Scientist"
+      },
+      "stars": 4.8,
+      "youtubeVideoId": "stuvwx67890"
     },
     {
-      "id": 5,
-      "image": "image_url_15.jpg",
-      "category": "design",
-      "title": "Interaction Design: Beyond Human-Computer Interaction",
-      "author": {
-        "name": "Jenny Preece",
-        "status": "interaction designer",
-        "stars": 4.5
-      }
+      "title": "C++ Programming Essentials",
+      "category": "C++",
+      "Author": {
+        "name": "Michael Johnson",
+        "post": "Software Engineer"
+      },
+      "stars": 4.3,
+      "youtubeVideoId": "yzabcd12345"
     },
     {
-      "id": 6,
-      "image": "image_url_16.jpg",
-      "category": "design",
-      "title": "The Elements of User Experience: User-Centered Design for the Web",
-      "author": {
-        "name": "Jesse James Garrett",
-        "status": "user experience designer",
-        "stars": 4.7
-      }
-    }
-  ],
-
-  "development": [
+      "title": "Artificial Intelligence and Machine Learning Basics",
+      "category": "Machine Learning",
+      "Author": {
+        "name": "Sophia White",
+        "post": "AI Researcher"
+      },
+      "stars": 4.6,
+      "youtubeVideoId": "efghij67890"
+    },
     {
-      "id": 1,
-      "image": "image_url_11.jpg",
-      "category": "development",
-      "title": "The Pragmatic Programmer: Your Journey to Mastery",
-      "author": {
-        "name": "David Thomas",
-        "status": "software engineer",
-        "stars": 4.9
-      }
-    }
-  ],
-  "business": [
+      "title": "Front-End Web Development with React",
+      "category": "JavaScript",
+      "Author": {
+        "name": "Daniel Smith",
+        "post": "Front-End Developer"
+      },
+      "stars": 4.7,
+      "youtubeVideoId": "klmnop12345"
+    },
     {
-      "id": 1,
-      "image": "image_url_12.jpg",
-      "category": "business",
-      "title": "Zero to One: Notes on Startups, or How to Build the Future",
-      "author": {
-        "name": "Peter Thiel",
-        "status": "entrepreneur",
-        "stars": 4.8
-      }
-    }
-  ],
-  "data-science": [
+      "title": "Data Analysis with Pandas",
+      "category": "Data Science",
+      "Author": {
+        "name": "Emma Davis",
+        "post": "Data Analyst"
+      },
+      "stars": 4.4,
+      "youtubeVideoId": "qrstuv67890"
+    },
     {
-      "id": 1,
-      "image": "image_url_13.jpg",
-      "category": "data-science",
-      "title": "Data Science for Business: What You Need to Know about Data Mining and Data-Analytic Thinking",
-      "author": {
-        "name": "Foster Provost",
-        "status": "data scientist",
-        "stars": 4.7
-      }
-    }
-  ],
-  "marketing": [
+      "title": "Java Programming for Beginners",
+      "category": "Java",
+      "Author": {
+        "name": "John Brown",
+        "post": "Software Engineer"
+      },
+      "stars": 4.1,
+      "youtubeVideoId": "wxyzab12345"
+    },
     {
-      "id": 1,
-      "image": "image_url_14.jpg",
-      "category": "marketing",
-      "title": "Building a StoryBrand: Clarify Your Message So Customers Will Listen",
-      "author": {
-        "name": "Donald Miller",
-        "status": "marketing expert",
-        "stars": 4.6
-      }
+      "title": "Deep Learning Fundamentals",
+      "category": "Machine Learning",
+      "Author": {
+        "name": "Alex Smith",
+        "post": "AI Researcher"
+      },
+      "stars": 4.9,
+      "youtubeVideoId": "1234567890"
     }
   ]
 }

@@ -9,7 +9,7 @@
       },
       "stars": 4.5,
       "youtubeVideoId": "abcdef12345",
-      "desc": "This comprehensive course covers Python's applications in financial analysis and algorithmic trading. Learn data analysis, statistical modeling, and trading strategies in Python."
+      "description": "This comprehensive course covers Python's applications in financial analysis and algorithmic trading. Learn data analysis, statistical modeling, and trading strategies in Python."
     },
     {
       "title": "Machine Learning with Scikit-Learn",
@@ -20,7 +20,7 @@
       },
       "stars": 4.2,
       "youtubeVideoId": "ghijkl67890",
-      "desc": "Master machine learning with Scikit-Learn! This course by Emily Johnson, a seasoned Data Scientist, will teach you the fundamentals of machine learning using Python and Scikit-Learn."
+      "description": "Master machine learning with Scikit-Learn! This course by Emily Johnson, a seasoned Data Scientist, will teach you the fundamentals of machine learning using Python and Scikit-Learn."
     },
     {
       "title": "JavaScript for Web Development",
@@ -31,7 +31,7 @@
       },
       "stars": 4.0,
       "youtubeVideoId": "mnopqr12345",
-      "desc": "Become a proficient web developer with JavaScript! Join David Brown in this hands-on course, where you'll learn everything you need to know about JavaScript for web development."
+      "description": "Become a proficient web developer with JavaScript! Join David Brown in this hands-on course, where you'll learn everything you need to know about JavaScript for web development."
     },
     {
       "title": "Introduction to Data Science",
@@ -42,7 +42,7 @@
       },
       "stars": 4.8,
       "youtubeVideoId": "stuvwx67890",
-      "desc": "Get started in the exciting field of data science with Jennifer Lee. This course introduces you to data analysis, machine learning, and data-driven decision-making in real-world scenarios."
+      "description": "Get started in the exciting field of data science with Jennifer Lee. This course introduces you to data analysis, machine learning, and data-driven decision-making in real-world scenarios."
     },
     {
       "title": "C++ Programming Essentials",
@@ -53,7 +53,7 @@
       },
       "stars": 4.3,
       "youtubeVideoId": "yzabcd12345",
-      "desc": "Learn the essentials of C++ programming with Michael Johnson, a seasoned Software Engineer. Master C++ fundamentals and begin building your own software applications."
+      "description": "Learn the essentials of C++ programming with Michael Johnson, a seasoned Software Engineer. Master C++ fundamentals and begin building your own software applications."
     },
     {
       "title": "Artificial Intelligence and Machine Learning Basics",
@@ -64,7 +64,7 @@
       },
       "stars": 4.6,
       "youtubeVideoId": "efghij67890",
-      "desc": "Dive into the world of AI and machine learning basics with Sophia White, an AI researcher. Understand the key concepts and applications of artificial intelligence and machine learning."
+      "description": "Dive into the world of AI and machine learning basics with Sophia White, an AI researcher. Understand the key concepts and applications of artificial intelligence and machine learning."
     },
     {
       "title": "Front-End Web Development with React",
@@ -75,7 +75,7 @@
       },
       "stars": 4.7,
       "youtubeVideoId": "klmnop12345",
-      "desc": "Become a skilled front-end web developer using React.js with Daniel Smith. This course covers React fundamentals and best practices for building interactive web applications."
+      "description": "Become a skilled front-end web developer using React.js with Daniel Smith. This course covers React fundamentals and best practices for building interactive web applications."
     },
     {
       "title": "Data Analysis with Pandas",
@@ -86,7 +86,7 @@
       },
       "stars": 4.4,
       "youtubeVideoId": "qrstuv67890",
-      "desc": "Unlock the power of data analysis with Pandas in Python. Emma Davis, a seasoned Data Analyst, will guide you through data manipulation, exploration, and visualization."
+      "description": "Unlock the power of data analysis with Pandas in Python. Emma Davis, a seasoned Data Analyst, will guide you through data manipulation, exploration, and visualization."
     },
     {
       "title": "Java Programming for Beginners",
@@ -97,7 +97,7 @@
       },
       "stars": 4.1,
       "youtubeVideoId": "wxyzab12345",
-      "desc": "Start your journey in Java programming with John Brown, a Software Engineer. Learn the basics of Java and start building your own software applications."
+      "description": "Start your journey in Java programming with John Brown, a Software Engineer. Learn the basics of Java and start building your own software applications."
     },
     {
       "title": "Deep Learning Fundamentals",
@@ -108,7 +108,7 @@
       },
       "stars": 4.9,
       "youtubeVideoId": "1234567890",
-      "desc": "Delve deep into the fundamentals of deep learning with Alex Smith, an AI researcher. Understand neural networks, deep learning architectures, and their real-world applications."
+      "description": "Delve deep into the fundamentals of deep learning with Alex Smith, an AI researcher. Understand neural networks, deep learning architectures, and their real-world applications."
     }
   ]
 }

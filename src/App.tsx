@@ -1,12 +1,29 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
-import { database } from "./database/db";
-import { ref, set } from "firebase/database";
+import readData from "./database/crud/read";
+
+import type { TDatabase } from "./types/type";
 
 function App() {
-  useEffect(() => {});
+  const [database, setDatabase] = useState<TDatabase[] | null>();
+  useEffect(() => {
+    readData(setDatabase);
+  }, []);
 
-  return <div className="App">App</div>;
+  return (
+    <div className="App">
+      <ul>
+        {database?.map((database) => {
+          return (
+            <h2 key={database.id}>
+              {" "}
+              <img src={database.image} alt="image" />{" "}
+            </h2>
+          );
+        })}
+      </ul>
+    </div>
+  );
 }
 
 export default App;

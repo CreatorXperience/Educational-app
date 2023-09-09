@@ -5,10 +5,10 @@ import {
   onAuthStateChanged,
   signOut,
 } from "firebase/auth";
-import appInit from "../services/firebase";
+import app from "../services/firebase";
 
 const auth = () => {
-  const initAuth = getAuth(appInit);
+  const initAuth = getAuth(app);
   const signUp = async (email: string, password: string) => {
     try {
       const response = await createUserWithEmailAndPassword(

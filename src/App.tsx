@@ -6,6 +6,7 @@ import type { TDatabase } from "./types/type";
 import auth from "./auth/auth";
 import { User } from "firebase/auth";
 import signInWithGitOauth from "./auth/gitOauth";
+import { illustration } from "./constants/images";
 
 function App() {
   return <div className="App"></div>;

@@ -5,6 +5,7 @@ import readData from "./database/crud/read";
 import type { TDatabase } from "./types/type";
 import auth from "./auth/auth";
 import { User } from "firebase/auth";
+import signInWithGitOauth from "./auth/gitOauth";
 
 function App() {
   const [database, setDatabase] = useState<TDatabase[] | null>();
@@ -13,6 +14,7 @@ function App() {
 
   useEffect(() => {
     signIn("allyearmustobey@gmail.com", "1234567890");
+
     getUserInfo(setUserInfo);
     readData(setDatabase);
   }, []);
@@ -25,7 +27,13 @@ function App() {
         return (
           <div key={database.id}>
             {" "}
-            <img src={database.image} alt="image" /> <h3>{database.title}</h3>
+            <img
+              src={database.coverImage}
+              alt="image"
+              width="200px"
+              style={{ borderRadius: "20px" }}
+            />{" "}
+            <h4>{database.coverTitle}</h4>
           </div>
         );
       })}

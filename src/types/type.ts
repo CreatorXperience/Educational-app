@@ -1,15 +1,24 @@
+import { SrvRecord } from "dns";
+
 type TDatabase = {
-  title: string;
+  id: number;
+  coverTitle: string;
   category: string;
-  Author: {
+  author: {
     name: string;
     post: string;
   };
   stars: number;
-  youtubeVideoId: string;
-  description: string;
-  image: string;
-  id: number;
+  courseDescription: string;
+  coverImage: string;
+  courseContent: {
+    topic: {
+      title: string;
+      id: string;
+      description: string;
+      youtubeVideoId: string;
+    }[];
+  };
 };
 
 export type { TDatabase };

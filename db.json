@@ -1,122 +1,160 @@
 {
-  "books": [
+  "data": [
     {
       "id": 1,
-      "image": "image_url_11.jpg",
-      "category": "development",
-      "title": "The Pragmatic Programmer: Your Journey to Mastery",
+      "coverTitle": "Python for Financial Analysis Next and Algorithmic Trading",
+      "category": "Python",
       "author": {
-        "name": "David Thomas",
-        "status": "software engineer",
-        "stars": 4.9
+        "name": "Adam Smith",
+        "post": "Python Developer"
+      },
+      "stars": 4.5,
+      "courseDescription": "This comprehensive course covers Python's applications in financial analysis and algorithmic trading. Learn data analysis, statistical modeling, and trading strategies in Python.",
+      "coverImage": "https://i.pinimg.com/564x/b5/57/27/b5572779de0108771ad125d0c095abe2.jpg",
+      "courseContent": {
+        "topic": [
+          {
+            "title": "Introduction to Python for Finance",
+            "id": "t1",
+            "description": "Learn the basics of Python for finance and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          },
+          {
+            "title": "Python for Financial Analysis",
+            "id": "t2",
+            "description": "Learn how to use Python for financial analysis and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          },
+          {
+            "title": "Python for Algorithmic Trading",
+            "id": "t3",
+            "description": "Learn how to use Python for algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          }
+        ]
       }
     },
     {
       "id": 2,
-      "image": "image_url_12.jpg",
-      "category": "business",
-      "title": "Zero to One: Notes on Startups, or How to Build the Future",
+      "coverTitle": "Data Science with Python",
+      "category": "Python",
       "author": {
-        "name": "Peter Thiel",
-        "status": "entrepreneur",
-        "stars": 4.8
+        "name": "Emily Johnson",
+        "post": "Data Scientist"
+      },
+      "stars": 4.7,
+      "courseDescription": "Master data science techniques using Python. Dive into data analysis, machine learning, and data visualization with real-world projects.",
+      "coverImage": "https://i.pinimg.com/564x/38/cb/32/38cb32a6dac1fa47c41aed24cb0b653c.jpg",
+      "courseContent": {
+        "topic": [
+          {
+            "title": "Introduction to Data Science with Python",
+            "id": "t4",
+            "description": "Get started with data science and Python. Learn about data types, data cleaning, and basic data analysis.",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=pqrstuvwxyz"
+          },
+          {
+            "title": "Machine Learning with Python",
+            "id": "t5",
+            "description": "Explore machine learning algorithms and their implementation in Python. Build predictive models and solve real-world problems.",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=ijklmnop"
+          },
+          {
+            "title": "Data Visualization with Python",
+            "id": "t6",
+            "description": "Learn to create informative and visually appealing data visualizations using Python libraries like Matplotlib and Seaborn.",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=qrstuvw"
+          }
+        ]
       }
     },
     {
       "id": 3,
-      "image": "image_url_13.jpg",
-      "category": "data-science",
-      "title": "Data Science for Business: What You Need to Know about Data Mining and Data-Analytic Thinking",
+      "coverTitle": "Web Development with JavaScript",
+      "category": "Web Development",
       "author": {
-        "name": "Foster Provost",
-        "status": "data scientist",
-        "stars": 4.7
+        "name": "Sarah Davis",
+        "post": "Full-Stack Developer"
+      },
+      "stars": 4.6,
+      "courseDescription": "Learn web development from scratch using JavaScript. Build interactive websites and web applications.",
+      "coverImage": "https://i.pinimg.com/564x/7e/0f/64/7e0f64e278cabce4752abac1d8432389.jpg",
+      "courseContent": {
+        "topic": [
+          {
+            "title": "Introduction to Web Development",
+            "id": "t7",
+            "description": "Get started with web development and JavaScript. Learn about HTML, CSS, and the basics of JavaScript.",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=uvwxyz12345"
+          },
+          {
+            "title": "JavaScript Fundamentals",
+            "id": "t8",
+            "description": "Master the fundamentals of JavaScript, including variables, functions, and control structures.",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcde98765"
+          },
+          {
+            "title": "Building Interactive Websites",
+            "id": "t9",
+            "description": "Learn to build interactive web pages using JavaScript for adding interactivity and responsiveness.",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=pqrs4567890"
+          }
+        ]
       }
     },
     {
       "id": 4,
-      "image": "image_url_14.jpg",
-      "category": "marketing",
-      "title": "Building a StoryBrand: Clarify Your Message So Customers Will Listen",
+      "coverTitle": "Machine Learning Fundamentals",
+      "category": "Machine Learning",
       "author": {
-        "name": "Donald Miller",
-        "status": "marketing expert",
-        "stars": 4.6
+        "name": "John Smith",
+        "post": "Machine Learning Engineer"
+      },
+      "stars": 4.8,
+      "courseDescription": "Explore the basics of machine learning with practical examples. Understand algorithms, data preprocessing, and model evaluation.",
+      "coverImage": "https://i.pinimg.com/564x/9d/a0/cc/9da0cc217103cc59c5b0bc7362fa7700.jpg",
+      "courseContent": {
+        "topic": [
+          {
+            "title": "Introduction to Machine Learning",
+            "id": "t10",
+            "description": "Get started with machine learning. Understand the machine learning workflow and terminology.",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=12345abcdef"
+          },
+          {
+            "title": "Supervised Learning Algorithms",
+            "id": "t11",
+            "description": "Explore supervised learning algorithms, including regression and classification.",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=67890mnopqr"
+          },
+          {
+            "title": "Unsupervised Learning and Clustering",
+            "id": "t12",
+            "description": "Learn about unsupervised learning, clustering, and dimensionality reduction techniques.",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=ijklmnopqrs"
+          }
+        ]
       }
     },
     {
       "id": 5,
-      "image": "image_url_15.jpg",
-      "category": "design",
-      "title": "Interaction Design: Beyond Human-Computer Interaction",
+      "coverTitle": "Mobile App Development with React Native",
+      "category": "Mobile Development",
       "author": {
-        "name": "Jenny Preece",
-        "status": "interaction designer",
-        "stars": 4.5
-      }
-    },
-    {
-      "id": 6,
-      "image": "image_url_16.jpg",
-      "category": "design",
-      "title": "The Elements of User Experience: User-Centered Design for the Web",
-      "author": {
-        "name": "Jesse James Garrett",
-        "status": "user experience designer",
-        "stars": 4.7
-      }
-    }
-  ],
-
-  "development": [
-    {
-      "id": 1,
-      "image": "image_url_11.jpg",
-      "category": "development",
-      "title": "The Pragmatic Programmer: Your Journey to Mastery",
-      "author": {
-        "name": "David Thomas",
-        "status": "software engineer",
-        "stars": 4.9
-      }
-    }
-  ],
-  "business": [
-    {
-      "id": 1,
-      "image": "image_url_12.jpg",
-      "category": "business",
-      "title": "Zero to One: Notes on Startups, or How to Build the Future",
-      "author": {
-        "name": "Peter Thiel",
-        "status": "entrepreneur",
-        "stars": 4.8
-      }
-    }
-  ],
-  "data-science": [
-    {
-      "id": 1,
-      "image": "image_url_13.jpg",
-      "category": "data-science",
-      "title": "Data Science for Business: What You Need to Know about Data Mining and Data-Analytic Thinking",
-      "author": {
-        "name": "Foster Provost",
-        "status": "data scientist",
-        "stars": 4.7
-      }
-    }
-  ],
-  "marketing": [
-    {
-      "id": 1,
-      "image": "image_url_14.jpg",
-      "category": "marketing",
-      "title": "Building a StoryBrand: Clarify Your Message So Customers Will Listen",
-      "author": {
-        "name": "Donald Miller",
-        "status": "marketing expert",
-        "stars": 4.6
+        "name": "Michael Johnson",
+        "post": "Mobile App Developer"
+      },
+      "stars": 4.6,
+      "courseDescription": "Build cross-platform mobile apps using React Native. Develop apps for both iOS and Android with a single codebase.",
+      "coverImage": "https://i.pinimg.com/564x/36/52/39/3652395ca0c28066919a6e0a6f31f22c.jpg",
+      "courseContent": {
+        "topic": [
+          {
+            "title": "Getting Started with React Native",
+            "id": "t13",
+            "description": "Begin your journey into mobile app development"
+          }
+        ]
       }
     }
   ]

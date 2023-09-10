@@ -1,5 +1,5 @@
 import { getDatabase } from "firebase/database";
-import appInit from "../services/firebase";
+import app from "../config/firebase";
 
-const database = getDatabase(appInit);
+const database = getDatabase(app);
 export { database };

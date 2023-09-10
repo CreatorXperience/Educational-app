@@ -1,16 +1,17 @@
 import { GithubAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
-import appInit from "../services/firebase";
+import app from "../config/firebase";
+
+const auth = getAuth(app);
+const gitAuthProvider = new GithubAuthProvider();
 
 const signInWithGitOauth = () => {
-  const auth = getAuth(appInit);
-  const gitAuthProvider = new GithubAuthProvider();
-
   signInWithPopup(auth, gitAuthProvider)
     .then((result) => {
       const userResult = GithubAuthProvider.credentialFromResult(result);
       const token = userResult?.accessToken;
 
       const user = result.user;
+      console.log(user);
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -21,3 +22,5 @@ const signInWithGitOauth = () => {
       const errorMail = error.customData.mail;
     });
 };
+
+export default signInWithGitOauth;

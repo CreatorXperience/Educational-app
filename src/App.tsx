@@ -1,28 +1,14 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
-import { database } from "./database/db";
-import { ref, set } from "firebase/database";
+import readData from "./services/read";
+
+import type { TDatabase } from "./types/type";
+import auth from "./auth/auth";
+import { User } from "firebase/auth";
+import signInWithGitOauth from "./auth/gitOauth";
 
 function App() {
-  useEffect(() => {
-    function writeUserData() {
-      set(ref(database, "books/new-books-1"), {
-        id: 2,
-        image: "image_url_2.jpg",
-        tag: "design",
-        title: "Design Patterns: Elements of Reusable Object-Oriented Software",
-        author: {
-          name: "Erich Gamma",
-          status: "software engineer",
-          stars: 4.5,
-        },
-      });
-    }
-
-    writeUserData();
-  });
-
-  return <div className="App">App</div>;
+  return <div className="App"></div>;
 }
 
 export default App;

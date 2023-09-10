@@ -6,7 +6,7 @@ import {
   signOut,
   User,
 } from "firebase/auth";
-import app from "../services/firebase";
+import app from "../config/firebase";
 
 const auth = () => {
   const initAuth = getAuth(app);

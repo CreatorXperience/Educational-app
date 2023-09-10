@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import readData from "./database/crud/read";
+import readData from "./services/read";
 
 import type { TDatabase } from "./types/type";
 import auth from "./auth/auth";

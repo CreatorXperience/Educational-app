@@ -1,6 +1,6 @@
-import type { TDatabase } from "../../types/type";
+import type { TDatabase } from "../types/type";
 import { getDatabase, onValue, ref } from "firebase/database";
-import app from "../../services/firebase";
+import app from "../config/firebase";
 
 const readData = (
   appState: React.Dispatch<React.SetStateAction<TDatabase[] | null | undefined>>

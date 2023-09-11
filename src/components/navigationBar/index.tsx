@@ -41,6 +41,7 @@ export default NavigationBar;
 const NavigationWrapper = styled.div`
   width: 100%;
   height: auto;
+
   .navigationCircle {
     border: 1px solid red;
     height: 100px;

@@ -11,6 +11,16 @@ const Hero = () => {
           {illustration()}
         </div>
       </div>
+      <div className="inputWrapper">
+        <div className="inputBar">
+          <i
+            className="fa-solid fa-magnifying-glass"
+            style={{ color: "lightgrey" }}
+          ></i>
+          <input type="text" placeholder="Explore courses" />
+          <button className="explorebtn">Explore</button>
+        </div>
+      </div>
     </HeroWrapper>
   );
 };
@@ -19,8 +29,6 @@ export default Hero;
 
 const HeroWrapper = styled.div`
   width: 100%;
-  display: flex;
-  justify-content: center;
 
   .hero {
     margin-top: 40px;
@@ -57,6 +65,50 @@ const HeroWrapper = styled.div`
     }
   }
 
+  .inputWrapper {
+    border: 1px solid red;
+    height: 100px;
+    position: relative;
+
+    .inputBar {
+      width: 40%;
+      height: 60px;
+      background-color: white;
+      position: absolute;
+      left: 8%;
+      margin-top: 10px;
+
+      padding: 12px;
+      border-radius: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      input {
+        width: 80%;
+        height: 90%;
+        padding: 10px;
+        border: none;
+        outline: none;
+        border: 1px solid red;
+        font-size: 18px;
+        color: #979595;
+        font-family: DM sans, sans-serif;
+      }
+
+      .explorebtn {
+        padding: 16px 28px;
+        border-radius: 47px;
+        background: #7f56d9;
+        /* Shadow/xs */
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+        color: white;
+        border: none;
+        font-family: DM sans, sans-serif;
+      }
+    }
+  }
+
   @media screen and (max-width: 600px) {
     .hero {
       flex-direction: column;
@@ -75,6 +127,12 @@ const HeroWrapper = styled.div`
         .character-illustration {
           width: 100%;
         }
+      }
+    }
+
+    .inputWrapper {
+      .inputBar {
+        width: 80%;
       }
     }
   }

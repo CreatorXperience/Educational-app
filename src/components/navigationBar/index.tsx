@@ -115,6 +115,7 @@ const NavigationWrapper = styled.div`
           font-style: normal;
           font-weight: 500;
           line-height: 24px; /* 109.091% */
+          cursor: pointer;
         }
       }
 
@@ -145,6 +146,7 @@ const NavigationWrapper = styled.div`
           line-height: 28px; /* 155.556% */
           margin-right: 10px;
           height: 63px;
+          cursor: pointer;
         }
 
         .getStartedBtn {
@@ -161,6 +163,8 @@ const NavigationWrapper = styled.div`
           border: none;
           color: #fff;
           height: 63px;
+          animation: 1s infinite ease-in-out;
+          cursor: pointer;
         }
       }
     }

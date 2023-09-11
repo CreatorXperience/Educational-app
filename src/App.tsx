@@ -1,14 +1,14 @@
-import { useEffect, useState } from "react";
 import "./App.css";
-import readData from "./services/read";
-
-import type { TDatabase } from "./types/type";
-import auth from "./auth/auth";
-import { User } from "firebase/auth";
-import signInWithGitOauth from "./auth/gitOauth";
+import Hero from "./components/hero";
+import NavigationBar from "./components/navigationBar";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <NavigationBar />
+      <Hero />
+    </div>
+  );
 }
 
 export default App;

@@ -11,6 +11,7 @@ const Partner = () => {
   return (
     <PartnerWrapper>
       <div className="p-container">
+        <div className="p-circle"></div>
         <div className="dots-1"></div>
         <div className="dots-2"></div>
         <div className="partner-text">Our Course Partners</div>
@@ -41,6 +42,17 @@ const PartnerWrapper = styled.div`
     position: relative;
     width: 80%;
     height: 80%;
+
+    .p-circle {
+      width: 326px;
+      height: 326px;
+      flex-shrink: 0;
+      border-radius: 426px;
+      background: rgba(61, 92, 255, 0.2);
+      filter: blur(150px);
+      position: absolute;
+      top: 30%;
+    }
 
     .dots-1 {
       position: absolute;

@@ -58,6 +58,7 @@ const HeroWrapper = styled.div`
         filter: blur(150px);
         position: absolute;
         border: 1px solid red;
+        right: 0;
       }
       .character-illustration {
         width: 90%;

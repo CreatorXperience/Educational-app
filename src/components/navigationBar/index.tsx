@@ -166,6 +166,31 @@ const NavigationWrapper = styled.div`
           height: 63px;
           animation: 1s infinite ease-in-out;
           cursor: pointer;
+          overflow: hidden;
+          transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .getStartedBtn:before {
+          content: "";
+          background-color: #ffffffd7;
+          width: 0px;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0px;
+          transition: width 0.3s ease;
+          z-index: -1;
+          color: white;
+          filter: blur(30px);
+        }
+
+        .getStartedBtn:hover {
+          transform: scale(1.05);
+        }
+
+        .getStartedBtn:hover::before {
+          animation: runover 0.5s ease-in-out 2 alternate;
+          width: 10%;
         }
       }
     }

@@ -56,6 +56,7 @@ const gitlabIcon = () => {
 const mondayIcon = () => {
   return <img src={monday} className="partnersIcon" alt="mondayIcon" />;
 };
+
 export {
   illustration,
   illustrationSm,

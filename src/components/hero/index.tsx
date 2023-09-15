@@ -6,9 +6,10 @@ const Hero = () => {
     <HeroWrapper>
       <div className="hero">
         <div className="illustration">{heroIllustration()}</div>
+
         <div className="character">
           <div className="circle"></div>
-          {illustration()}
+          <div className="hero-illustration">{illustration()}</div>
         </div>
       </div>
       <div className="inputWrapper">
@@ -38,6 +39,8 @@ const HeroWrapper = styled.div`
     justify-content: space-evenly;
     align-items: center;
     border: 1px solid red;
+    overflow: hidden;
+    position: relative;
 
     .illustration {
       width: 80%;
@@ -59,10 +62,33 @@ const HeroWrapper = styled.div`
         position: absolute;
         border: 1px solid red;
         right: 0;
+        overflow: hidden;
       }
       .character-illustration {
         width: 90%;
       }
+
+      .hero-illustration {
+        animation: jumpin 1.5s ease-in-out;
+        transform: translateY(0px);
+      }
+
+      @keyframes jumpin {
+        0% {
+          transform: translateY(-300px);
+        }
+
+        100% {
+          transform: translateY(0px);
+
+          transform: translateZ(-100px);
+        }
+      }
+    }
+
+    .movable {
+      position: absolute;
+      opacity: 0.3;
     }
   }
 
@@ -106,6 +132,44 @@ const HeroWrapper = styled.div`
         color: white;
         border: none;
         font-family: DM sans, sans-serif;
+        overflow: hidden;
+        transition: color 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+      }
+
+      .explorebtn:before {
+        content: "";
+        background-color: #ffffff;
+        width: 0px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0px;
+        transition: width 0.3s ease;
+        z-index: -1;
+        color: white;
+        filter: blur(20px);
+      }
+
+      @keyframes runover {
+        0% {
+          left: 0px;
+        }
+        50% {
+          left: 100px;
+        }
+        100% {
+          left: 0px;
+        }
+      }
+
+      .explorebtn:hover::before {
+        animation: runover 0.5s ease-in-out 2 alternate;
+        width: 10%;
+      }
+
+      .explorebtn:hover {
+        transform: scale(1.05);
       }
     }
   }

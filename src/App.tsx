@@ -1,16 +1,10 @@
 import "./App.css";
-import Hero from "./components/hero";
-import NavigationBar from "./components/navigationBar";
-import Partner from "./components/partners";
-import PopularCourses from "./components/popularCourses";
+import LandingPage from "./components/landingPage";
 
 function App() {
   return (
     <div className="App">
-      <NavigationBar />
-      <Hero />
-      <Partner />
-      {/* <PopularCourses /> */}
+      <LandingPage />
     </div>
   );
 }

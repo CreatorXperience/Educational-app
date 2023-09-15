@@ -108,6 +108,10 @@ const PartnerWrapper = styled.div`
       .partners-overallWrapper {
         height: 50%;
       }
+
+      .p-circle {
+        width: 100%;
+      }
     }
   }
 `;

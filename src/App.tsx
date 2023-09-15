@@ -10,7 +10,7 @@ function App() {
       <NavigationBar />
       <Hero />
       <Partner />
-      <PopularCourses />
+      {/* <PopularCourses /> */}
     </div>
   );
 }

@@ -1,20 +1,32 @@
 import styled from "styled-components";
-import Card from "../Card";
+import Card, { TData } from "../Card";
 import WireFrame from "../cardWireFrame/wireframe";
-
-const PopularCourse = ({ isData }: { isData: boolean }) => {
+import { useEffect, useRef, useState, useContext } from "react";
+import { TDatabase } from "../../types/type";
+// import { DataProvider } from "../landingPage";
+// TODO:  remove comment after fixing context
+const PopularCourse = ({
+  isData,
+  data,
+}: {
+  data: TDatabase[] | null | undefined;
+  isData: boolean;
+}) => {
+  // const getData = useContext(DataProvider)
   return (
     <CardWrapper>
       {isData ? (
         <>
           {" "}
-          <Card images="https://i.pinimg.com/564x/46/a3/e3/46a3e3ddbdade37866e3aaf24a04bbe6.jpg" />
-          <Card images="https://i.pinimg.com/564x/25/1a/4e/251a4eb0debab79925b3e2ef4f87557d.jpg" />
-          <Card images="https://i.pinimg.com/564x/6b/b9/17/6bb9177f1f2075cab554dbb6276f3732.jpg" />
-          <Card images="https://i.pinimg.com/564x/6b/b9/17/6bb9177f1f2075cab554dbb6276f3732.jpg" />{" "}
+          {data?.map((item) => {
+            return <Card key={item.id} data={item} />;
+          })}
         </>
       ) : (
         <>
+          <WireFrame />
+          <WireFrame />
+          <WireFrame />
           <WireFrame />
           <WireFrame />
           <WireFrame />
@@ -29,19 +41,23 @@ export default PopularCourse;
 const CardWrapper = styled.div`
   width: 100%;
   border: 1px solid magenta;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  place-items: center;
-  margin-top: 20px;
-  grid-row-gap: 20px;
+  margin-top: 30px;
+  columns: 4;
+  column-gap: 1px;
 
+  /* make this element fade in  */
   .card-container {
-    width: 60%;
-    height: 500px;
-
+    width: 90%;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
     border-radius: 30px;
-    /* border: 2px solid rgba(255, 255, 255, 0.20); */
+    cursor: pointer;
+    border: 2px groove rgba(255, 255, 255, 0.1);
     background: #381d74;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+    break-inside: avoid;
+    margin: 10px 0px 0px 20px;
+    z-index: -1;
 
     .card-image {
       width: 100%;
@@ -49,6 +65,7 @@ const CardWrapper = styled.div`
       overflow: hidden;
       border-top-left-radius: 30px;
       border-top-right-radius: 30px;
+      filter: brightness(90%);
     }
 
     .content-wrapper {
@@ -149,6 +166,46 @@ const CardWrapper = styled.div`
             /* TODO: DO this  */
             /* border-bottom: 1px solid rgba(218, 218, 247, 0.32); */
           }
+        }
+      }
+
+      .bottom-section {
+        display: flex;
+        justify-content: space-between;
+        width: 96%;
+        color: #d9ecff;
+        font-family: Inter;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px; /* 112.5% */
+        text-decoration-line: underline;
+        padding: 12px;
+      }
+    }
+  }
+
+  .card-container:hover {
+    transform: scale(1.03);
+    z-index: 100;
+
+    .card-image {
+      filter: blur(2px);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    columns: 1;
+  }
+
+  @media screen and (max-width: 1200px) and (min-width: 700px) {
+    columns: 3;
+
+    .card-container {
+      .content-wrapper {
+        .card-title {
+          font-size: 24px;
+          line-height: 35px;
         }
       }
     }

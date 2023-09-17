@@ -1,20 +1,28 @@
 import styled from "styled-components";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const WireFrame = () => {
+  const [fader, setFader] = useState<boolean>();
   const ref = useRef<HTMLDivElement | null>(null);
 
-  function callback(arr: any) {
-    console.log(callback);
+  function callback(entry: IntersectionObserverEntry[]) {
+    entry.forEach((intersect) => {
+      setFader(true);
+    });
   }
 
   let observer = new IntersectionObserver(callback, {
-    root: ref.current,
+    rootMargin: "0.3px",
+    threshold: 0.5,
   });
-  useEffect(() => {}, []);
+
+  useEffect(() => {
+    observer.observe(ref.current as Element);
+  }, []);
+  console.log(fader);
   return (
-    <WireFramesWrapper>
-      <div className="wireframe-container" ref={ref}>
+    <WireFramesWrapper ref={ref} className={`${fader ? "fader" : ""}`}>
+      <div className="wireframe-container">
         <div className="wireframes-images"></div>
 
         <div className="wireframes-title"></div>

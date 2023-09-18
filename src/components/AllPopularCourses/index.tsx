@@ -3,6 +3,7 @@ import Card, { TData } from "../Card";
 import WireFrame from "../cardWireFrame/wireframe";
 import { useEffect, useRef, useState, useContext } from "react";
 import { TDatabase } from "../../types/type";
+import ExploreBtn from "../ExploreBtn";
 // import { DataProvider } from "../landingPage";
 // TODO:  remove comment after fixing context
 const PopularCourse = ({

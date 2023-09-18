@@ -1,5 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/dm-sans');
 @import url('https://fonts.cdnfonts.com/css/caladea');
+@import url('https://fonts.cdnfonts.com/css/inter');
 
 *{
     margin: 0;
@@ -9,4 +10,5 @@
 
 body,html{
     background-color: #2C1F4A;
+
 }

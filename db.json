@@ -1,161 +1,224 @@
 {
   "data": [
     {
-      "id": 1,
-      "coverTitle": "Python for Financial Analysis Next and Algorithmic Trading",
-      "category": "Python",
       "author": {
         "name": "Adam Smith",
         "post": "Python Developer"
       },
-      "stars": 4.5,
-      "courseDescription": "This comprehensive course covers Python's applications in financial analysis and algorithmic trading. Learn data analysis, statistical modeling, and trading strategies in Python.",
-      "coverImage": "https://i.pinimg.com/564x/b5/57/27/b5572779de0108771ad125d0c095abe2.jpg",
+      "category": "Python",
       "courseContent": {
         "topic": [
           {
-            "title": "Introduction to Python for Finance",
-            "id": "t1",
             "description": "Learn the basics of Python for finance and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t1",
+            "title": "Introduction to Python for Finance",
             "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
           },
           {
-            "title": "Python for Financial Analysis",
-            "id": "t2",
             "description": "Learn how to use Python for financial analysis and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t2",
+            "title": "Python for Financial Analysis",
             "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
           },
           {
-            "title": "Python for Algorithmic Trading",
-            "id": "t3",
             "description": "Learn how to use Python for algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t3",
+            "title": "Python for Algorithmic Trading",
             "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
           }
         ]
-      }
+      },
+      "courseDescription": "This comprehensive course covers Python's applications in financial analysis and algorithmic trading. Learn data analysis, statistical modeling, and trading strategies in Python.",
+      "coverImage": "https://i.pinimg.com/564x/1c/86/84/1c8684b06bc7ad1e1f6b7b0099d87300.jpg",
+      "coverTitle": "Python for Financial Analysis Next and Algorithmic Trading",
+      "id": 1,
+      "stars": 4.5
     },
     {
-      "id": 2,
-      "coverTitle": "Data Science with Python",
-      "category": "Python",
       "author": {
         "name": "Emily Johnson",
         "post": "Data Scientist"
       },
-      "stars": 4.7,
-      "courseDescription": "Master data science techniques using Python. Dive into data analysis, machine learning, and data visualization with real-world projects.",
-      "coverImage": "https://i.pinimg.com/564x/38/cb/32/38cb32a6dac1fa47c41aed24cb0b653c.jpg",
+      "category": "Python",
       "courseContent": {
         "topic": [
           {
-            "title": "Introduction to Data Science with Python",
-            "id": "t4",
             "description": "Get started with data science and Python. Learn about data types, data cleaning, and basic data analysis.",
+            "id": "t4",
+            "title": "Introduction to Data Science with Python",
             "youtubeVideoId": "https://www.youtube.com/watch?v=pqrstuvwxyz"
           },
           {
-            "title": "Machine Learning with Python",
-            "id": "t5",
             "description": "Explore machine learning algorithms and their implementation in Python. Build predictive models and solve real-world problems.",
+            "id": "t5",
+            "title": "Machine Learning with Python",
             "youtubeVideoId": "https://www.youtube.com/watch?v=ijklmnop"
           },
           {
-            "title": "Data Visualization with Python",
-            "id": "t6",
             "description": "Learn to create informative and visually appealing data visualizations using Python libraries like Matplotlib and Seaborn.",
+            "id": "t6",
+            "title": "Data Visualization with Python",
             "youtubeVideoId": "https://www.youtube.com/watch?v=qrstuvw"
           }
         ]
-      }
+      },
+      "courseDescription": "Master data science techniques using Python. Dive into data analysis, machine learning, and data visualization with real-world projects.",
+      "coverImage": "https://i.pinimg.com/564x/1d/a2/1b/1da21bc48ebe5225dbf2eba752c8d78d.jpg",
+      "coverTitle": "Data Science with Python",
+      "id": 2,
+      "stars": 4.7
     },
     {
-      "id": 3,
-      "coverTitle": "Web Development with JavaScript",
-      "category": "Web Development",
       "author": {
         "name": "Sarah Davis",
         "post": "Full-Stack Developer"
       },
-      "stars": 4.6,
-      "courseDescription": "Learn web development from scratch using JavaScript. Build interactive websites and web applications.",
-      "coverImage": "https://i.pinimg.com/564x/7e/0f/64/7e0f64e278cabce4752abac1d8432389.jpg",
+      "category": "Web Development",
       "courseContent": {
         "topic": [
           {
-            "title": "Introduction to Web Development",
-            "id": "t7",
             "description": "Get started with web development and JavaScript. Learn about HTML, CSS, and the basics of JavaScript.",
+            "id": "t7",
+            "title": "Introduction to Web Development",
             "youtubeVideoId": "https://www.youtube.com/watch?v=uvwxyz12345"
           },
           {
-            "title": "JavaScript Fundamentals",
-            "id": "t8",
             "description": "Master the fundamentals of JavaScript, including variables, functions, and control structures.",
+            "id": "t8",
+            "title": "JavaScript Fundamentals",
             "youtubeVideoId": "https://www.youtube.com/watch?v=abcde98765"
           },
           {
-            "title": "Building Interactive Websites",
-            "id": "t9",
             "description": "Learn to build interactive web pages using JavaScript for adding interactivity and responsiveness.",
+            "id": "t9",
+            "title": "Building Interactive Websites",
             "youtubeVideoId": "https://www.youtube.com/watch?v=pqrs4567890"
           }
         ]
-      }
+      },
+      "courseDescription": "Learn web development from scratch using JavaScript. Build interactive websites and web applications.",
+      "coverImage": "https://i.pinimg.com/564x/83/00/d2/8300d20857e2de73a5fd08601dcf7f0e.jpg",
+      "coverTitle": "Web Development with JavaScript",
+      "id": 3,
+      "stars": 4.6
     },
     {
-      "id": 4,
-      "coverTitle": "Machine Learning Fundamentals",
-      "category": "Machine Learning",
       "author": {
         "name": "John Smith",
         "post": "Machine Learning Engineer"
       },
-      "stars": 4.8,
-      "courseDescription": "Explore the basics of machine learning with practical examples. Understand algorithms, data preprocessing, and model evaluation.",
-      "coverImage": "https://i.pinimg.com/564x/9d/a0/cc/9da0cc217103cc59c5b0bc7362fa7700.jpg",
+      "category": "Machine Learning",
       "courseContent": {
         "topic": [
           {
-            "title": "Introduction to Machine Learning",
-            "id": "t10",
             "description": "Get started with machine learning. Understand the machine learning workflow and terminology.",
+            "id": "t10",
+            "title": "Introduction to Machine Learning",
             "youtubeVideoId": "https://www.youtube.com/watch?v=12345abcdef"
           },
           {
-            "title": "Supervised Learning Algorithms",
-            "id": "t11",
             "description": "Explore supervised learning algorithms, including regression and classification.",
+            "id": "t11",
+            "title": "Supervised Learning Algorithms",
             "youtubeVideoId": "https://www.youtube.com/watch?v=67890mnopqr"
           },
           {
-            "title": "Unsupervised Learning and Clustering",
-            "id": "t12",
             "description": "Learn about unsupervised learning, clustering, and dimensionality reduction techniques.",
+            "id": "t12",
+            "title": "Unsupervised Learning and Clustering",
             "youtubeVideoId": "https://www.youtube.com/watch?v=ijklmnopqrs"
           }
         ]
-      }
+      },
+      "courseDescription": "Explore the basics of machine learning with practical examples. Understand algorithms, data preprocessing, and model evaluation.",
+      "coverImage": "https://i.pinimg.com/564x/83/b1/26/83b126804a2b9e9822bf8e03e8a44968.jpg",
+      "coverTitle": "Machine Learning Fundamentals",
+      "id": 4,
+      "stars": 4.8
     },
     {
-      "id": 5,
-      "coverTitle": "Mobile App Development with React Native",
-      "category": "Mobile Development",
       "author": {
         "name": "Michael Johnson",
         "post": "Mobile App Developer"
       },
-      "stars": 4.6,
-      "courseDescription": "Build cross-platform mobile apps using React Native. Develop apps for both iOS and Android with a single codebase.",
-      "coverImage": "https://i.pinimg.com/564x/36/52/39/3652395ca0c28066919a6e0a6f31f22c.jpg",
+      "category": "Mobile Development",
       "courseContent": {
         "topic": [
           {
-            "title": "Getting Started with React Native",
+            "description": "Begin your journey into mobile app development",
             "id": "t13",
-            "description": "Begin your journey into mobile app development"
+            "title": "Getting Started with React Native"
           }
         ]
-      }
+      },
+      "courseDescription": "Build cross-platform mobile apps using React Native. Develop apps for both iOS and Android with a single codebase.",
+      "coverImage": "https://i.pinimg.com/564x/f4/8b/3c/f48b3c6e87b2077be4ccdb38bb017de6.jpg",
+      "coverTitle": "Mobile App Development with React Native",
+      "id": 5,
+      "stars": 4.6
+    },
+    {
+      "author": {
+        "name": "Michael Johnson",
+        "post": "Mobile App Developer"
+      },
+      "category": "Mobile Development",
+      "courseContent": {
+        "topic": [
+          {
+            "description": "Begin your journey into mobile app development",
+            "id": "t13",
+            "title": "Getting Started with Typescript"
+          }
+        ]
+      },
+      "courseDescription": "Learn Typescript for strong typing",
+      "coverImage": "https://i.pinimg.com/564x/66/d5/23/66d5238900aab3d7b86dc5e53a77c817.jpg",
+      "coverTitle": "Typescript for web development",
+      "id": 6,
+      "stars": 4.6
+    },
+    {
+      "author": {
+        "name": "Michael Johnson",
+        "post": "Q.A developer"
+      },
+      "category": "Jest",
+      "courseContent": {
+        "topic": [
+          {
+            "description": "Begin your journey into mobile app development",
+            "id": "t13",
+            "title": "Getting Started with React Native"
+          }
+        ]
+      },
+      "courseDescription": "Learn unit testing with jest",
+      "coverImage": "https://i.pinimg.com/564x/e5/ff/9a/e5ff9a4d625b2255f17d14736b5e0fa1.jpg",
+      "coverTitle": "Unit test with jest",
+      "id": 7,
+      "stars": 4.6
+    },
+    {
+      "author": {
+        "name": "Tyson Johnson",
+        "post": "Web App Developer"
+      },
+      "category": "Mobile Development",
+      "courseContent": {
+        "topic": [
+          {
+            "description": "Begin your journey into mobile app development",
+            "id": "t13",
+            "title": "Getting Started with Angular App Development"
+          }
+        ]
+      },
+      "courseDescription": "Build web apps using Angular. Develop apps with a single codebase.",
+      "coverImage": "https://i.pinimg.com/564x/e6/c7/89/e6c78927c329fb705dcf8ef6c06a2ee2.jpg",
+      "coverTitle": "Web App Development with angular",
+      "id": 8,
+      "stars": 4.6
     }
   ]
 }

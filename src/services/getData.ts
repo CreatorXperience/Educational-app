@@ -2,7 +2,7 @@ import type { TDatabase } from "../types/type";
 import { getDatabase, onValue, ref } from "firebase/database";
 import app from "../config/firebase";
 
-const readData = (
+const getData = (
   appState: React.Dispatch<React.SetStateAction<TDatabase[] | null | undefined>>
 ) => {
   const db = getDatabase(app);
@@ -13,4 +13,4 @@ const readData = (
   });
 };
 
-export default readData;
+export default getData;

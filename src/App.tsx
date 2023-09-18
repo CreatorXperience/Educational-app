@@ -1,12 +1,10 @@
 import "./App.css";
-import Hero from "./components/hero";
-import NavigationBar from "./components/navigationBar";
+import LandingPage from "./components/landingPage";
 
 function App() {
   return (
     <div className="App">
-      <NavigationBar />
-      <Hero />
+      <LandingPage />
     </div>
   );
 }

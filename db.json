@@ -219,48 +219,6 @@
       "coverTitle": "Web App Development with angular",
       "id": 8,
       "stars": 4.6
-    },
-    {
-      "author": {
-        "name": "Mark tyson",
-        "post": "Mobile App Developer"
-      },
-      "category": "Mobile Development",
-      "courseContent": {
-        "topic": [
-          {
-            "description": "Begin your journey into mobile app development",
-            "id": "t13",
-            "title": "Getting Started with React Native"
-          }
-        ]
-      },
-      "courseDescription": "Build cross-platform mobile apps using Flutter. Develop apps for both iOS and Android with a single codebase.",
-      "coverImage": "https://i.pinimg.com/564x/e7/14/99/e714997d98ee31ec4c8ee0af85466a1c.jpg",
-      "coverTitle": "Mobile App Development with Flutter",
-      "id": 9,
-      "stars": 4.6
-    },
-    {
-      "author": {
-        "name": "Michael Johnson",
-        "post": "Graphics Designer"
-      },
-      "category": "Graphics Designer",
-      "courseContent": {
-        "topic": [
-          {
-            "description": "Begin your journey into mobile app development",
-            "id": "t13",
-            "title": "Learn Graphics Design using photoshop"
-          }
-        ]
-      },
-      "courseDescription": "Design eye catching with Adobe Photoshop",
-      "coverImage": "https://i.pinimg.com/564x/2a/7b/fb/2a7bfb514f4c70cf387658be40b6bfd5.jpg",
-      "coverTitle": "Adobe Photoshop",
-      "id": 10,
-      "stars": 4.6
     }
   ]
 }

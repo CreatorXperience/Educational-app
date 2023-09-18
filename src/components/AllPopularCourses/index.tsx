@@ -41,7 +41,7 @@ export default PopularCourse;
 const CardWrapper = styled.div`
   width: 100%;
   border: 1px solid magenta;
-  margin-top: 30px;
+  margin-top: 60px;
   columns: 4;
   column-gap: 1px;
 
@@ -57,21 +57,22 @@ const CardWrapper = styled.div`
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
     break-inside: avoid;
     margin: 10px 0px 0px 20px;
-    z-index: -1;
 
     .card-image {
       width: 100%;
-      height: 40%;
+      height: 20%;
       overflow: hidden;
       border-top-left-radius: 30px;
       border-top-right-radius: 30px;
       filter: brightness(90%);
+      overflow: hidden;
     }
 
     .content-wrapper {
       width: 100%;
       height: auto;
       margin-top: 10px;
+      border: 1px solid red;
 
       .card-content {
         width: 100%;
@@ -194,18 +195,31 @@ const CardWrapper = styled.div`
     }
   }
 
-  @media screen and (max-width: 768px) {
-    columns: 1;
+  @media screen and (max-width: 500px) {
+    columns: 0;
+    display: grid;
+    place-items: center;
+
+    .card-container {
+      margin: 5px;
+    }
   }
 
-  @media screen and (max-width: 1200px) and (min-width: 700px) {
+  @media screen and (max-width: 800px) and (min-width: 500px) {
+    columns: 2;
+
+    place-items: center;
+  }
+
+  @media screen and (max-width: 1200px) and (min-width: 800px) {
     columns: 3;
 
     .card-container {
       .content-wrapper {
         .card-title {
-          font-size: 24px;
-          line-height: 35px;
+          font-size: 20px;
+          line-height: 30px;
+          font-weight: 600;
         }
       }
     }

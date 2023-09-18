@@ -72,7 +72,6 @@ const CardWrapper = styled.div`
       width: 100%;
       height: auto;
       margin-top: 10px;
-      border: 1px solid red;
 
       .card-content {
         width: 100%;

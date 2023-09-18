@@ -8,6 +8,9 @@ import loom from "../../assets/loom.svg";
 import livechat from "../../assets/livechat.svg";
 import gitlab from "../../assets/gitlab.svg";
 import monday from "../../assets/monday.svg";
+import category1 from "../../assets/category1.svg";
+import category2 from "../../assets/category2.svg";
+
 const illustration = () => {
   return (
     <img
@@ -57,6 +60,27 @@ const mondayIcon = () => {
   return <img src={monday} className="partnersIcon" alt="mondayIcon" />;
 };
 
+const category1Icon = () => {
+  return (
+    <img
+      src={category1}
+      className="categoryIcon"
+      width="300px"
+      alt="category"
+    />
+  );
+};
+const category2Icon = () => {
+  return (
+    <img
+      src={category2}
+      className="categoryIcon"
+      width="400px"
+      alt="category"
+    />
+  );
+};
+
 export {
   illustration,
   illustrationSm,
@@ -68,4 +92,6 @@ export {
   livechatIcon,
   gitlabIcon,
   mondayIcon,
+  category1Icon,
+  category2Icon,
 };

@@ -8,6 +8,7 @@ import Partner from "../partners";
 import PopularCourses from "../popularCourses";
 import { useEffect, useState, useMemo, useRef, useContext } from "react";
 import ExploreBtn from "../ExploreBtn";
+import Category from "../Category";
 
 // FIXME:  Fix Context API
 // export const DataProvider = createContext<TDatabase[] | null>();
@@ -38,6 +39,7 @@ const LandingPage = () => {
 
       <PopularCourse isData={isData} data={data} />
       <ExploreBtn />
+      <Category />
     </div>
     // </DataProvider.provider>
   );

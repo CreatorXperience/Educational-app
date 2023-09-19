@@ -9,6 +9,7 @@ import PopularCourses from "../popularCourses";
 import { useEffect, useState, useMemo, useRef, useContext } from "react";
 import ExploreBtn from "../ExploreBtn";
 import Category from "../Category";
+import styled from "styled-components";
 
 // FIXME:  Fix Context API
 // export const DataProvider = createContext<TDatabase[] | null>();
@@ -29,18 +30,24 @@ const LandingPage = () => {
 
   return (
     // <DataProvider.provider value={{ memoizedData }}>
-    <div className="home-container">
-      <NavigationBar />
-      <Hero />
-      <Partner />
-      <PopularCourses />
-
-      <PopularCourse isData={isData} data={data} />
-      <ExploreBtn />
-      <Category />
-    </div>
+    <HomeWrapper>
+      <div className="home-container">
+        <NavigationBar />
+        <Hero />
+        <Partner />
+        <PopularCourses />
+        <PopularCourse isData={isData} data={data} />
+        <ExploreBtn />
+        <Category />
+      </div>
+    </HomeWrapper>
     // </DataProvider.provider>
   );
 };
 
 export default LandingPage;
+
+const HomeWrapper = styled.div`
+  max-width: 2000px;
+  margin: 0 auto;
+`;

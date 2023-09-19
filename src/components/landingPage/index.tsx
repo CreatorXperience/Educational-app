@@ -10,6 +10,7 @@ import { useEffect, useState, useMemo, useRef, useContext } from "react";
 import ExploreBtn from "../ExploreBtn";
 import Category from "../Category";
 import styled from "styled-components";
+import Platform from "../Platform";
 
 // FIXME:  Fix Context API
 // export const DataProvider = createContext<TDatabase[] | null>();
@@ -39,6 +40,7 @@ const LandingPage = () => {
         <PopularCourse isData={isData} data={data} />
         <ExploreBtn />
         <Category />
+        <Platform />
       </div>
     </HomeWrapper>
     // </DataProvider.provider>

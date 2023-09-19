@@ -12,6 +12,9 @@ import category1 from "../../assets/category1.svg";
 import category2 from "../../assets/category2.svg";
 import design from "../../assets/design.svg";
 import arrowup from "../../assets/ArrowUpRight.svg";
+import frame from "../../assets/Frame.svg";
+import rocket from "../../assets/rockets.svg";
+import star from "../../assets/star.svg";
 
 const illustration = () => {
   return (
@@ -91,6 +94,18 @@ const arrowUpRightIcon = () => {
   return <img src={arrowup} className="arrowUpRight" alt="arrowUpRight" />;
 };
 
+const frameIcon = () => {
+  return <img src={frame} className="frame" width="200px" alt="frame" />;
+};
+
+const rocketIcon = () => {
+  return <img src={rocket} className="rocket" width="100%" alt="rocket" />;
+};
+
+const starIcon = () => {
+  return <img src={star} className="partnersIcon" alt="starIcon" />;
+};
+
 export {
   illustration,
   illustrationSm,
@@ -106,4 +121,7 @@ export {
   category2Icon,
   designIcon,
   arrowUpRightIcon,
+  frameIcon,
+  rocketIcon,
+  starIcon,
 };

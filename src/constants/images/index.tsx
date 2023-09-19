@@ -10,6 +10,8 @@ import gitlab from "../../assets/gitlab.svg";
 import monday from "../../assets/monday.svg";
 import category1 from "../../assets/category1.svg";
 import category2 from "../../assets/category2.svg";
+import design from "../../assets/design.svg";
+import arrowup from "../../assets/ArrowUpRight.svg";
 
 const illustration = () => {
   return (
@@ -81,6 +83,14 @@ const category2Icon = () => {
   );
 };
 
+const designIcon = () => {
+  return <img src={design} className="designIcon" alt="design" />;
+};
+
+const arrowUpRightIcon = () => {
+  return <img src={arrowup} className="arrowUpRight" alt="arrowUpRight" />;
+};
+
 export {
   illustration,
   illustrationSm,
@@ -94,4 +104,6 @@ export {
   mondayIcon,
   category1Icon,
   category2Icon,
+  designIcon,
+  arrowUpRightIcon,
 };

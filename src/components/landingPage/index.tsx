@@ -17,9 +17,7 @@ const LandingPage = () => {
   const [data, setData] = useState<TDatabase[] | null | undefined>();
 
   useEffect(() => {
-    setTimeout(() => {
-      getData(setData);
-    }, 10000);
+    getData(setData);
   }, []);
 
   const memoizedData = useMemo(() => {

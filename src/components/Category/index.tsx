@@ -1,5 +1,11 @@
 import styled from "styled-components";
-import { category1Icon, category2Icon } from "../../constants/images";
+import {
+  arrowUpRightIcon,
+  category1Icon,
+  category2Icon,
+  designIcon,
+} from "../../constants/images";
+import CategoriesCard from "../CategoriesCard";
 
 const Category = () => {
   return (
@@ -11,6 +17,17 @@ const Category = () => {
         </h1>
         <div className="leftSideIcon">{category2Icon()}</div>
       </div>
+
+      <div className="categories-card">
+        <CategoriesCard />
+        <CategoriesCard />
+        <CategoriesCard />
+        <CategoriesCard />
+        <CategoriesCard />
+        <CategoriesCard />
+        <CategoriesCard />
+        <CategoriesCard />
+      </div>
     </CategoryWrapper>
   );
 };
@@ -21,7 +38,6 @@ const CategoryWrapper = styled.div`
   width: 100%;
   height: 250px;
   border: 1px solid red;
-  overflow: hidden;
 
   .category-container {
     display: flex;
@@ -63,6 +79,79 @@ const CategoryWrapper = styled.div`
       position: absolute;
       right: 2px;
       top: -300px;
+    }
+  }
+
+  .categories-card {
+    width: 100%;
+    height: 200px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    place-items: center;
+    margin-top: 40px;
+
+    .card {
+      width: 60%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      height: 80px;
+      padding: 12px;
+
+      .card-title {
+        color: #fff;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px; /* 100% */
+      }
+
+      .cardstaticIcon {
+        button {
+          border-radius: 5px;
+          background: #7f56d9;
+          padding: 5px;
+          border: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1200px) and (min-width: 1000px) {
+    .categories-card {
+      grid-template-columns: auto auto auto;
+      grid-gap: 20px;
+    }
+  }
+  @media screen and (max-width: 900px) and (min-width: 600px) {
+    .categories-card {
+      grid-template-columns: auto auto;
+      grid-gap: 20px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .category-container {
+      .rightSideIcon {
+        display: none;
+      }
+      .leftSideIcon {
+        display: none;
+      }
+      .category-title {
+        font-size: 30px;
+        line-height: 40px;
+
+        .category {
+          font-size: 30px;
+        }
+      }
+    }
+    .categories-card {
+      grid-template-columns: auto;
+      grid-gap: 20px;
     }
   }
 `;

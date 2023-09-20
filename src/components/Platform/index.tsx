@@ -71,11 +71,11 @@ const PlatformWrapper = styled.div`
       width: 100%;
       height: 100%;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-evenly;
       align-items: center;
 
       .rocketFrame {
-        width: 35%;
+        width: 45%;
       }
       .platform-content {
         width: 40%;
@@ -83,7 +83,7 @@ const PlatformWrapper = styled.div`
         .platform-title {
           color: #fff;
           font-family: Caladea;
-          font-size: 60px;
+          font-size: 70px;
           font-style: normal;
           font-weight: 700;
           line-height: 80px; /* 114.286% */
@@ -97,7 +97,7 @@ const PlatformWrapper = styled.div`
         .platform-text {
           color: #b0b0d1;
           font-family: Inter;
-          font-size: 20px;
+          font-size: 22px;
           font-style: normal;
           font-weight: 300;
           line-height: 40px; /* 181.818% */
@@ -122,7 +122,7 @@ const PlatformWrapper = styled.div`
     }
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 768px) {
     .platform-container {
       .mainFrame {
         flex-flow: column;
@@ -134,6 +134,33 @@ const PlatformWrapper = styled.div`
 
         .platform-content {
           text-align: center;
+
+          .platform-title {
+            font-size: 50px;
+            line-height: 50px;
+          }
+
+          .platform-text {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1200px) and (min-width: 768px) {
+    .platform-container {
+      .mainFrame {
+        .rocketFrame {
+          width: 40%;
+        }
+        .platform-content {
+          width: 50%;
+
+          .platform-title {
+            font-size: 50px;
+            line-height: 50px;
+          }
         }
       }
     }

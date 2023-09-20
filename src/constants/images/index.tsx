@@ -95,7 +95,7 @@ const arrowUpRightIcon = () => {
 };
 
 const frameIcon = () => {
-  return <img src={frame} className="frame" width="200px" alt="frame" />;
+  return <img src={frame} className="frame" width="300px" alt="frame" />;
 };
 
 const rocketIcon = () => {

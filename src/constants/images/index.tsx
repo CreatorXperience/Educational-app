@@ -15,6 +15,7 @@ import arrowup from "../../assets/ArrowUpRight.svg";
 import frame from "../../assets/Frame.svg";
 import rocket from "../../assets/rockets.svg";
 import star from "../../assets/star.svg";
+import Quote from "../../assets/Vector.svg";
 
 const illustration = () => {
   return (
@@ -106,6 +107,9 @@ const starIcon = () => {
   return <img src={star} className="partnersIcon" alt="starIcon" />;
 };
 
+const QuoteIcon = () => {
+  return <img src={Quote} className="quoteIcon" alt="quoteIcon" />;
+};
 export {
   illustration,
   illustrationSm,
@@ -124,4 +128,5 @@ export {
   frameIcon,
   rocketIcon,
   starIcon,
+  QuoteIcon,
 };

@@ -11,6 +11,7 @@ import ExploreBtn from "../ExploreBtn";
 import Category from "../Category";
 import styled from "styled-components";
 import Platform from "../Platform";
+import FeedBack from "../Feedback";
 
 // FIXME:  Fix Context API
 // export const DataProvider = createContext<TDatabase[] | null>();
@@ -41,6 +42,7 @@ const LandingPage = () => {
         <ExploreBtn />
         <Category />
         <Platform />
+        <FeedBack />
       </div>
     </HomeWrapper>
     // </DataProvider.provider>

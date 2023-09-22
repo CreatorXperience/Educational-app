@@ -14,7 +14,7 @@ import Platform from "../Platform";
 import FeedBack from "../Feedback";
 
 // FIXME:  Fix Context API
-// export const DataProvider = createContext<TDatabase[] | null>();
+// export const DataProvider = createContext();
 
 const LandingPage = () => {
   const [data, setData] = useState<TDatabase[] | null | undefined>();

@@ -5,6 +5,7 @@ const Platform = () => {
   return (
     <PlatformWrapper>
       <div className="platform-container">
+        <div className="circle"></div>
         <div className="rightSideFrame">{frameIcon()}</div>
         <div className="leftSideFrame">{frameIcon()}</div>
 
@@ -45,6 +46,16 @@ const PlatformWrapper = styled.div`
     height: 100%;
     position: relative;
     background: rgba(55, 38, 93, 0.43);
+
+    .circle {
+      position: absolute;
+      width: 30%;
+      height: 694px;
+      border-radius: 694px;
+      background: rgba(59, 90, 247, 0.242);
+      filter: blur(150px);
+      left: 0;
+    }
 
     .rightSideFrame,
     .leftSideFrame {
@@ -124,6 +135,15 @@ const PlatformWrapper = styled.div`
 
   @media screen and (max-width: 768px) {
     .platform-container {
+      .star {
+        right: 2px;
+      }
+
+      .leftSideFrame,
+      .rightSideFrame {
+        display: none;
+      }
+
       .mainFrame {
         flex-flow: column;
 
@@ -142,6 +162,8 @@ const PlatformWrapper = styled.div`
 
           .platform-text {
             font-size: 16px;
+            line-height: 30px;
+            margin-top: 10px;
           }
         }
       }

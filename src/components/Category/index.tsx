@@ -166,6 +166,10 @@ const CategoryWrapper = styled.div`
       .categories-card {
         grid-template-columns: auto;
         grid-gap: 20px;
+
+        .card {
+          width: 90%;
+        }
       }
     }
   }

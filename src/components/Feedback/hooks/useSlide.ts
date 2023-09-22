@@ -45,10 +45,11 @@ const useSlide = (content: number = 1) => {
       // @ts-ignore
       _singleDot.forEach((slide: HTMLElement, index: number) => {
         if (index !== active) {
-          _singleDot[index].style.backgroundColor = "#73717173";
+          _singleDot[index].style.background = "grey";
           _singleDot[index].style.width = "10px";
         } else {
-          _singleDot[index].style.backgroundColor = "#3d0270";
+          _singleDot[index].style.background =
+            "linear-gradient(180deg, #ffc27a 0%, #ffa337 100%)";
           _singleDot[index].style.width = "20px";
         }
       });
@@ -61,7 +62,7 @@ const useSlide = (content: number = 1) => {
   const slide = (current: number) => {
     console.log("moved");
     slide_container?.forEach((item: HTMLElement) => {
-      item.style.transform = `translateX(-${current * 325}%)`;
+      item.style.transform = `translateX(-${current * 105}%)`;
     });
   };
 

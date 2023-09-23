@@ -7,7 +7,7 @@ const CarouselCard = () => {
         <div className="profile">
           <img
             src="https://i.pinimg.com/564x/d0/4a/3f/d04a3f2c86467efc0b36edaa0865b638.jpg"
-            alt="profile-image"
+            alt="profile"
             width="40px"
           />
         </div>

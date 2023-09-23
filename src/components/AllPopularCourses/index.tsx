@@ -2,7 +2,6 @@ import styled from "styled-components";
 import Card from "../Card";
 import WireFrame from "../cardWireFrame/wireframe";
 import { useContext } from "react";
-import { TDatabase } from "../../types/type";
 import { DataProvider } from "../landingPage";
 
 const PopularCourse = ({ isData }: { isData: boolean }) => {

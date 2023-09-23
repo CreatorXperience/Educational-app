@@ -5,14 +5,7 @@ import Hero from "../hero";
 import NavigationBar from "../navigationBar";
 import Partner from "../partners";
 import PopularCourses from "../popularCourses";
-import {
-  useEffect,
-  useState,
-  useMemo,
-  useRef,
-  useContext,
-  createContext,
-} from "react";
+import { useEffect, useState, useMemo, createContext } from "react";
 import ExploreBtn from "../ExploreBtn";
 import Category from "../Category";
 import styled from "styled-components";

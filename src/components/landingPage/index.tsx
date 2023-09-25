@@ -12,6 +12,7 @@ import styled from "styled-components";
 import Platform from "../Platform";
 import FeedBack from "../Feedback";
 import Footer from "../Footer";
+import Earth from "../3d-earth";
 
 export const DataProvider = createContext<TDatabase[] | null | undefined>(null);
 
@@ -26,7 +27,6 @@ const LandingPage = () => {
     return data;
   }, [data]);
 
-  console.log(data);
   const isData = useMemo(() => (data ? true : false), [data]);
 
   return (
@@ -42,6 +42,7 @@ const LandingPage = () => {
           <Category />
           <Platform />
           <FeedBack />
+          <Earth />
           <Footer />
         </div>
       </HomeWrapper>

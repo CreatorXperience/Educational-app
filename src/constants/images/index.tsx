@@ -16,7 +16,9 @@ import frame from "../../assets/Frame.svg";
 import rocket from "../../assets/rockets.svg";
 import star from "../../assets/star.svg";
 import Quote from "../../assets/Vector.svg";
-
+import astro1 from "../../assets/astro1.png";
+import astro2 from "../../assets/astro2.png";
+import astro3 from "../../assets/astro3.png";
 const illustration = () => {
   return (
     <img
@@ -110,6 +112,22 @@ const starIcon = () => {
 const QuoteIcon = () => {
   return <img src={Quote} className="quoteIcon" alt="quoteIcon" />;
 };
+
+const astronaut1 = () => {
+  return (
+    <img src={astro1} className="astronaut" width="600px" alt="astronaut" />
+  );
+};
+
+const astronaut2 = () => {
+  return (
+    <img src={astro2} className="astronaut" width="400px" alt="astronaut" />
+  );
+};
+
+const astronaut3 = () => {
+  return <img src={astro3} className="astronaut" alt="astronaut" />;
+};
 export {
   illustration,
   illustrationSm,
@@ -129,4 +147,7 @@ export {
   rocketIcon,
   starIcon,
   QuoteIcon,
+  astronaut1,
+  astronaut2,
+  astronaut3,
 };

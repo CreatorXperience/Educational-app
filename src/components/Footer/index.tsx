@@ -206,42 +206,24 @@ const FooterWrapper = styled.div`
         line-height: 28px; /* 155.556% */
       }
     }
+  }
 
-    @media screen and (max-width: 768px) {
-      .footer-content {
-        flex-flow: column;
-        padding: 13px;
-
-        .footer-description {
-          width: 100%;
-          text-align: center;
-        }
-
-        .overall-wrapper {
-          flex-flow: column;
-        }
-
-        .contact-wrapper {
-          margin-top: 20px;
-          justify-content: center;
-
-          .phone,
-          .email {
-            justify-content: center;
-            text-align: center;
-          }
-        }
-      }
-
-      .socialicons {
-        flex-flow: column;
+  @media screen and (max-width: 800px) {
+    .footer-container {
+      .brand-footer-icon {
+        width: 100%;
+        height: 120px;
+        display: flex;
         justify-content: center;
-      }
-    }
 
-    @media screen and (min-width: 1400px) and (max-width: 1000px) {
+        .brand-logo {
+          margin-left: 0;
+        }
+      }
+
       .footer-content {
         padding: 13px;
+        flex-flow: column;
 
         .footer-description {
           width: 100%;

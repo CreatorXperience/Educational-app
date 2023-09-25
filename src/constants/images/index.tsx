@@ -32,9 +32,9 @@ const illustrationSm = () => {
   return <img src={"Illustration2"} width="50%" alt="illustration" />;
 };
 
-const brand = () => {
+const brand = (size: string = "40%") => {
   return (
-    <img className="brandIdentity" src={brandLogo} width="40%" alt="brand" />
+    <img className="brandIdentity" src={brandLogo} width={size} alt="brand" />
   );
 };
 

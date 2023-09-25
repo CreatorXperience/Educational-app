@@ -25,10 +25,16 @@ const FeedBack = () => {
           <CarouselCard />
           <CarouselCard />
           <button className="prev" onClick={() => handlePrev()}>
-            Prev
+            <i
+              className="fa-solid fa-angle-left"
+              style={{ color: "white" }}
+            ></i>
           </button>
           <button className="next" onClick={() => handleNext()}>
-            Next
+            <i
+              className="fa-solid fa-angle-right"
+              style={{ color: "white" }}
+            ></i>
           </button>
 
           <div className="dotted-container" ref={_sliderDot}>
@@ -51,13 +57,14 @@ const FeedBackWrapper = styled.div`
   border: 1px solid red;
   display: flex;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 200px;
 
   .feedback-container {
     width: 80%;
     height: auto;
     margin: auto;
     border: 1px solid yellow;
+    margin-top: 50px;
 
     .feedback-title,
     .feedback-purple {

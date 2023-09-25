@@ -11,6 +11,7 @@ import Category from "../Category";
 import styled from "styled-components";
 import Platform from "../Platform";
 import FeedBack from "../Feedback";
+import Footer from "../Footer";
 
 export const DataProvider = createContext<TDatabase[] | null | undefined>(null);
 
@@ -41,6 +42,7 @@ const LandingPage = () => {
           <Category />
           <Platform />
           <FeedBack />
+          <Footer />
         </div>
       </HomeWrapper>
     </DataProvider.Provider>

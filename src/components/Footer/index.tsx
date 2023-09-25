@@ -10,11 +10,6 @@ const Footer = () => {
           <div className="brand-name">Edujar</div>
         </div>
 
-        <div className="link-header">
-          <div className="quick-links">Quick Links</div>
-          <div className="contact-links">Contact us</div>
-        </div>
-
         <div className="footer-content">
           <div className="footer-description">
             Veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
@@ -24,11 +19,13 @@ const Footer = () => {
 
           <div className="overall-wrapper">
             <div className="links-wrapper">
+              <div className="quick-links">Quick Links</div>
               <div>About</div>
               <div>Course</div>
             </div>
 
             <div className="links-wrapper">
+              <div className="contact-links">Contact us</div>
               <div>Contact</div>
               <div>Home</div>
             </div>
@@ -95,7 +92,7 @@ export default Footer;
 
 const FooterWrapper = styled.div`
   width: 100%;
-  height: 400px;
+  height: auto;
   border: 1px solid red;
   margin-top: 150px;
   background: #37265d;
@@ -126,27 +123,6 @@ const FooterWrapper = styled.div`
       }
     }
 
-    .link-header {
-      display: flex;
-      height: 50px;
-      width: 25%;
-      justify-content: center;
-      color: #fff;
-      text-align: center;
-      font-family: Caladea;
-      font-size: 25px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 24px; /* 96% */
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
-
-      .quick-links {
-        margin-right: 200px;
-      }
-    }
-
     .footer-content {
       width: 100%;
       display: flex;
@@ -163,34 +139,47 @@ const FooterWrapper = styled.div`
         line-height: 28px;
         /* 155.556% */
       }
-    }
 
-    .overall-wrapper {
-      display: flex;
-
-      .links-wrapper {
-        color: #b0b0d1;
-        font-family: Inter;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 28px;
-        padding: 12px; /* 155.556% */
-      }
-    }
-
-    .contact-wrapper {
-      color: #b0b0d1;
-      font-family: Inter;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 18px; /* 100% */
-
-      .phone,
-      .email {
+      .overall-wrapper {
         display: flex;
-        margin: 10px;
+
+        .links-wrapper {
+          color: #b0b0d1;
+          font-family: Inter;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 28px;
+          padding: 12px; /* 155.556% */
+          text-align: center;
+
+          .contact-links,
+          .quick-links {
+            margin-bottom: 20px;
+            color: #fff;
+            text-align: center;
+            font-family: Caladea;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px; /* 96% */
+            position: relative;
+          }
+        }
+      }
+
+      .contact-wrapper {
+        .phone,
+        .email {
+          display: flex;
+          color: #b0b0d1;
+          font-family: Inter;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+
+          padding: 12px;
+        }
       }
     }
 
@@ -215,6 +204,69 @@ const FooterWrapper = styled.div`
         font-style: normal;
         font-weight: 400;
         line-height: 28px; /* 155.556% */
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .footer-content {
+        flex-flow: column;
+        padding: 13px;
+
+        .footer-description {
+          width: 100%;
+          text-align: center;
+        }
+
+        .overall-wrapper {
+          flex-flow: column;
+        }
+
+        .contact-wrapper {
+          margin-top: 20px;
+          justify-content: center;
+
+          .phone,
+          .email {
+            justify-content: center;
+            text-align: center;
+          }
+        }
+      }
+
+      .socialicons {
+        flex-flow: column;
+        justify-content: center;
+      }
+    }
+
+    @media screen and (min-width: 1400px) and (max-width: 1000px) {
+      .footer-content {
+        padding: 13px;
+
+        .footer-description {
+          width: 100%;
+          text-align: center;
+        }
+
+        .overall-wrapper {
+          flex-flow: column;
+        }
+
+        .contact-wrapper {
+          margin-top: 20px;
+          justify-content: center;
+
+          .phone,
+          .email {
+            justify-content: center;
+            text-align: center;
+          }
+        }
+      }
+
+      .socialicons {
+        flex-flow: column;
+        justify-content: center;
       }
     }
   }

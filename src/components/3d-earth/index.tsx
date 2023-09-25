@@ -153,5 +153,10 @@ const EarthWrapper = styled.div`
         width: 80%;
       }
     }
+
+    .ast1,
+    .ast2 {
+      display: none;
+    }
   }
 `;

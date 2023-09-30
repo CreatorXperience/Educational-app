@@ -9,15 +9,15 @@ const PopularCourses = () => {
         </div>
 
         <div className="courses-btnWrapper">
-          <button className="active">Design</button>
+          <button className="active">Development</button>
 
-          <button>Design</button>
+          <button>Data science</button>
 
-          <button>Design</button>
+          <button>C++</button>
 
-          <button>Design</button>
+          <button>React</button>
 
-          <button>Design</button>
+          <button>Java</button>
         </div>
       </div>
     </PopularWrapper>

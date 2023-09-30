@@ -18,14 +18,15 @@ export const DataProvider = createContext<TDatabase[] | null | undefined>(null);
 
 const LandingPage = () => {
   const [data, setData] = useState<TDatabase[] | null | undefined>();
+  const [value, setValue] = useState<string | undefined>("data");
 
   useEffect(() => {
-    getData(setData);
-  }, []);
+    getData(setData, value as string);
+  }, [value]);
 
   const memoizedData = useMemo(() => {
     return data;
-  }, [data]);
+  }, [data, value]);
 
   const isData = useMemo(() => (data ? true : false), [data]);
 

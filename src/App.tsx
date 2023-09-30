@@ -1,10 +1,12 @@
 import "./App.css";
 import LandingPage from "./components/landingPage";
+import { RouterProvider } from "react-router-dom";
+import router from "./router";
 
 function App() {
   return (
     <div className="App">
-      <LandingPage />
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }

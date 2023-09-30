@@ -1,7 +1,19 @@
 import { heroIllustration, illustration } from "../../constants/images";
 import styled from "styled-components";
+import { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
+  const ref = useRef<HTMLInputElement | null>(null);
+
+  const handleSubmit = (
+    e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>
+  ) => {
+    e.preventDefault();
+    navigate("/courses");
+  };
+
   return (
     <HeroWrapper>
       <div className="hero">
@@ -18,8 +30,13 @@ const Hero = () => {
             className="fa-solid fa-magnifying-glass"
             style={{ color: "lightgrey" }}
           ></i>
-          <input type="text" placeholder="Explore courses" />
-          <button className="explorebtn">Explore</button>
+
+          <form onSubmit={(e) => handleSubmit(e)}>
+            <input type="text" placeholder="Explore courses" ref={ref} />
+          </form>
+          <button className="explorebtn" onClick={(e) => handleSubmit(e)}>
+            Explore
+          </button>
         </div>
       </div>
     </HeroWrapper>

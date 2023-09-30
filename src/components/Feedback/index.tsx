@@ -42,8 +42,6 @@ const FeedBack = () => {
             <div className="dot" onClick={() => handleDotClick(1)}></div>
             <div className="dot" onClick={() => handleDotClick(2)}></div>
             <div className="dot" onClick={() => handleDotClick(3)}></div>
-            <div className="dot" onClick={() => handleDotClick(4)}></div>
-            <div className="dot" onClick={() => handleDotClick(5)}></div>
           </div>
         </div>
 

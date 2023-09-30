@@ -17,6 +17,7 @@ const ExploreBtnWrapper = styled.div`
   height: auto;
   display: flex;
   justify-content: center;
+  margin-top: 30px;
 
   button {
     border-radius: 47px;
@@ -37,6 +38,8 @@ const ExploreBtnWrapper = styled.div`
     font-weight: 600;
     line-height: 28px; /* 155.556% */
     transition: all 0.2s ease-in-out;
+    border: none;
+    cursor: pointer;
   }
 
   button:hover {

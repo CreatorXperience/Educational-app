@@ -1,32 +1,21 @@
 import styled from "styled-components";
-import Card, { TData } from "../Card";
+import Card from "../Card";
 import WireFrame from "../cardWireFrame/wireframe";
-import { useEffect, useRef, useState, useContext } from "react";
-import { TDatabase } from "../../types/type";
-import ExploreBtn from "../ExploreBtn";
-// import { DataProvider } from "../landingPage";
-// TODO:  remove comment after fixing context
-const PopularCourse = ({
-  isData,
-  data,
-}: {
-  data: TDatabase[] | null | undefined;
-  isData: boolean;
-}) => {
-  // const getData = useContext(DataProvider)
+import { useContext } from "react";
+import { DataProvider } from "../landingPage";
+
+const PopularCourse = ({ isData }: { isData: boolean }) => {
+  const data = useContext(DataProvider);
   return (
     <CardWrapper>
       {isData ? (
         <>
-          {" "}
           {data?.map((item) => {
             return <Card key={item.id} data={item} />;
           })}
         </>
       ) : (
         <>
-          <WireFrame />
-          <WireFrame />
           <WireFrame />
           <WireFrame />
           <WireFrame />

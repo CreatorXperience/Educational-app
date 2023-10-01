@@ -1,9 +1,12 @@
+import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
 const Courses = () => {
+  const { term } = useParams();
+  console.log(term);
   return (
     <CoursesWrapper>
-      <div>Courses</div>
+      <h1>{term}</h1>
     </CoursesWrapper>
   );
 };

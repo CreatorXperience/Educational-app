@@ -11,7 +11,7 @@ const Hero = () => {
     e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>
   ) => {
     e.preventDefault();
-    navigate("/courses");
+    navigate(`courses/${ref.current?.value}`);
   };
 
   return (

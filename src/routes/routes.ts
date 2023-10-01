@@ -1,6 +1,6 @@
 const ROUTES = {
   landingPage: "/",
-  course: "/course/:id",
+  course: "/courses/:term",
 };
 
 export default ROUTES;

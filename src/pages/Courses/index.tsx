@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 const Courses = () => {
   const { term } = useParams();
-  console.log(term);
   return (
     <CoursesWrapper>
       <h1>{term}</h1>

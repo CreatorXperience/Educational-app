@@ -32,7 +32,12 @@ const Hero = () => {
           ></i>
 
           <form onSubmit={(e) => handleSubmit(e)}>
-            <input type="text" placeholder="Explore courses" ref={ref} />
+            <input
+              type="text"
+              className="explore"
+              placeholder="Explore courses"
+              ref={ref}
+            />
           </form>
           <button className="explorebtn" onClick={(e) => handleSubmit(e)}>
             Explore
@@ -113,6 +118,7 @@ const HeroWrapper = styled.div`
     border: 1px solid red;
     height: 100px;
     position: relative;
+    width: 100%;
 
     .inputBar {
       width: 40%;
@@ -125,19 +131,27 @@ const HeroWrapper = styled.div`
       padding: 12px;
       border-radius: 30px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
 
-      input {
+      .fa-solid .fa-magnifying-glass {
+        width: 20px;
+      }
+
+      form {
         width: 80%;
-        height: 90%;
-        padding: 10px;
-        border: none;
-        outline: none;
-        border: 1px solid red;
-        font-size: 18px;
-        color: #979595;
-        font-family: DM sans, sans-serif;
+
+        input {
+          width: 100%;
+          height: 90%;
+          padding: 10px;
+          border: none;
+          outline: none;
+          border: 1px solid red;
+          font-size: 18px;
+          color: #979595;
+          font-family: DM sans, sans-serif;
+        }
       }
 
       .explorebtn {

@@ -9,13 +9,11 @@ const getData = (
   path: string
 ) => {
   const db = getDatabase(app);
-  if (path === "") {
-    path = "data";
-  }
-  const dbReferenece = ref(db, `${path}/`);
+
+  const dbReferenece = ref(db, `${path.toLowerCase()}/`);
   onValue(dbReferenece, (snapshot) => {
     const data = snapshot.val();
-      appState(data);
+    appState(data);
   });
 };
 

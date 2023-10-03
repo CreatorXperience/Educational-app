@@ -1,6 +1,17 @@
+import { useRef } from "react";
 import styled from "styled-components";
 
-const PopularCourses = () => {
+type TCourse = {
+  setCourse: React.Dispatch<React.SetStateAction<string | undefined>>;
+};
+const PopularCourses = ({ setCourse }: TCourse) => {
+  const ref = useRef<HTMLButtonElement | null>(null);
+  const handleSelectCourse = (
+    e: React.MouseEvent<HTMLButtonElement>,
+    type: string
+  ) => {
+    setCourse(type);
+  };
   return (
     <PopularWrapper>
       <div className="pop-container">
@@ -9,15 +20,26 @@ const PopularCourses = () => {
         </div>
 
         <div className="courses-btnWrapper">
-          <button className="active">Development</button>
+          <button
+            onClick={(e) => handleSelectCourse(e, "Development")}
+            ref={ref}
+            className="active"
+          >
+            Development
+          </button>
 
-          <button>Data science</button>
+          <button
+            ref={ref}
+            onClick={(e) => handleSelectCourse(e, "Data science")}
+          >
+            Data science
+          </button>
 
-          <button>C++</button>
+          <button onClick={(e) => handleSelectCourse(e, "C++")}>C++</button>
 
-          <button>React</button>
+          <button onClick={(e) => handleSelectCourse(e, "React")}>React</button>
 
-          <button>Java</button>
+          <button onClick={(e) => handleSelectCourse(e, "Java")}>Java</button>
         </div>
       </div>
     </PopularWrapper>

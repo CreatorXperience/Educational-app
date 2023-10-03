@@ -37,7 +37,7 @@ const LandingPage = () => {
           <NavigationBar />
           <Hero />
           <Partner />
-          <PopularCourses />
+          <PopularCourses setCourse={setValue} />
           <PopularCourse isData={isData} />
           <ExploreBtn />
           <Category />

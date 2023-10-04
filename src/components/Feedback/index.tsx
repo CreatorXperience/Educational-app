@@ -84,33 +84,16 @@ const FeedBackWrapper = styled.div`
       height: auto;
       border: 1px solid white;
       position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      overflow: hidden;
+
+      /* overflow: hidden; */
       margin-top: 50px;
       display: none;
 
       .next,
       .prev {
-        position: absolute;
-        padding: 8px;
-        border-radius: 5px;
-        cursor: pointer;
-        border: none;
-        background: linear-gradient(180deg, #ffc27a 0%, #ffa337 100%);
+        display: none;
         /* make the shadow more inset */
         box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
-      }
-
-      .next {
-        right: 0;
-        top: 50%;
-      }
-
-      .prev {
-        left: 0;
-        top: 50%;
       }
 
       .dotted-container {
@@ -343,14 +326,28 @@ const FeedBackWrapper = styled.div`
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 500px) {
     .feedback-container {
       .feedback-carousel {
         display: none;
       }
 
       .mobile-feedback {
-        display: block;
+        display: grid;
+        grid-template-columns: auto;
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) and (min-width: 500px) {
+    .feedback-container {
+      .feedback-carousel {
+        display: none;
+      }
+
+      .mobile-feedback {
+        display: grid;
+        grid-template-columns: auto auto;
       }
     }
   }

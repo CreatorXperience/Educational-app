@@ -13,7 +13,8 @@ const Courses = () => {
   const { data } = useContext(DataProvider);
 
   const filterData = () => {
-    console.log(data);
+    const splitTerm = term?.split(" ") as string[];
+
     let pageContent = data?.filter((data) => {
       if (data.courseDescription.toLowerCase().includes(term as string)) {
         console.log(data);

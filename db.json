@@ -219,6 +219,69 @@
       "coverTitle": "Web App Development with angular",
       "id": 8,
       "stars": 4
+    },
+    {
+      "author": {
+        "name": "Tyson Johnson",
+        "post": "Web App Developer"
+      },
+      "category": "Mobile Development",
+      "courseContent": {
+        "topic": [
+          {
+            "description": "Begin your journey into mobile app development",
+            "id": "t13",
+            "title": "Getting Started with Angular App Development"
+          }
+        ]
+      },
+      "courseDescription": "Build web apps using Angular. Develop apps with a single codebase.",
+      "coverImage": "https://i.pinimg.com/564x/e6/c7/89/e6c78927c329fb705dcf8ef6c06a2ee2.jpg",
+      "coverTitle": "Web App Development with angular",
+      "id": 8,
+      "stars": 4
+    },
+    {
+      "author": {
+        "name": "Tyson Johnson",
+        "post": "Web App Developer"
+      },
+      "category": "Mobile Development",
+      "courseContent": {
+        "topic": [
+          {
+            "description": "Begin your journey into mobile app development",
+            "id": "t13",
+            "title": "Getting Started with Angular App Development"
+          }
+        ]
+      },
+      "courseDescription": "Build web apps using Angular. Develop apps with a single codebase.",
+      "coverImage": "https://i.pinimg.com/564x/e6/c7/89/e6c78927c329fb705dcf8ef6c06a2ee2.jpg",
+      "coverTitle": "Web App Development with angular",
+      "id": 8,
+      "stars": 4
+    },
+    {
+      "author": {
+        "name": "Tyson Johnson",
+        "post": "Web App Developer"
+      },
+      "category": "Mobile Development",
+      "courseContent": {
+        "topic": [
+          {
+            "description": "Begin your journey into mobile app development",
+            "id": "t13",
+            "title": "Getting Started with Angular App Development"
+          }
+        ]
+      },
+      "courseDescription": "Build web apps using Angular. Develop apps with a single codebase.",
+      "coverImage": "https://i.pinimg.com/564x/e6/c7/89/e6c78927c329fb705dcf8ef6c06a2ee2.jpg",
+      "coverTitle": "Web App Development with angular",
+      "id": 8,
+      "stars": 4
     }
   ]
 }

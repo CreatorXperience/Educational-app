@@ -86,19 +86,19 @@ export default Card;
 const CardWrapper = styled.div`
   .card-container {
     width: 90%;
-    height: auto;
+    height: 450px;
     transition: transform 0.2s ease-in-out;
     border-radius: 30px;
     cursor: pointer;
     border: 2px groove rgba(255, 255, 255, 0.1);
     background: #381d74;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
-    break-inside: avoid;
-    margin: 10px 0px 0px 20px;
+
+    /* margin: 0 auto; */
 
     .card-image {
       width: 100%;
-      height: 20%;
+      height: 200px;
       overflow: hidden;
       border-top-left-radius: 30px;
       border-top-right-radius: 30px;
@@ -145,12 +145,13 @@ const CardWrapper = styled.div`
       .card-title {
         color: #d9ecff;
         font-family: Inter;
-        font-size: 28px;
+        font-size: 25px;
         font-style: normal;
         font-weight: 700;
         line-height: 40px; /* 133.333% */
         margin-left: 10px;
         border-bottom: 1px solid rgba(218, 218, 247, 0.32);
+        width: 95;
       }
 
       .author-section {
@@ -234,6 +235,22 @@ const CardWrapper = styled.div`
 
   @media screen and (max-width: 1200px) and (min-width: 800px) {
     .card-container {
+      width: 98%;
+
+      .content-wrapper {
+        .card-title {
+          font-size: 20px;
+          line-height: 30px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) and (min-width: 500px) {
+    .card-container {
+      width: 100%;
+
       .content-wrapper {
         .card-title {
           font-size: 20px;
@@ -246,7 +263,17 @@ const CardWrapper = styled.div`
 
   @media screen and (max-width: 500px) {
     .card-container {
-      margin: 5px;
+      margin: 10px 40px;
+      width: 80%;
+      height: 420px;
+
+      .content-wrapper {
+        .card-title {
+          font-size: 20px;
+          line-height: 30px;
+          font-weight: 600;
+        }
+      }
     }
   }
 `;

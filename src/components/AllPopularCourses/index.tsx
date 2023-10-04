@@ -32,9 +32,12 @@ const CardWrapper = styled.div`
   width: 100%;
   border: 1px solid magenta;
   margin-top: 60px;
-  columns: 4;
-  column-gap: 1px;
-
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  place-items: center;
+  padding: 50px;
+  padding-left: 80px;
+  grid-gap: 10px;
   /* make this element fade in  */
 
   .card-container:hover {
@@ -47,23 +50,18 @@ const CardWrapper = styled.div`
   }
 
   @media screen and (max-width: 500px) {
-    columns: 0;
-    display: grid;
-    place-items: center;
-
-    .card-container {
-      margin: 5px;
-    }
+    grid-template-columns: auto;
+    padding: 0;
   }
 
   @media screen and (max-width: 800px) and (min-width: 500px) {
-    columns: 2;
-
+    padding: 12px;
+    grid-template-columns: auto auto;
     place-items: center;
   }
 
-  @media screen and (max-width: 1200px) and (min-width: 800px) {
-    columns: 3;
+  @media screen and (max-width: 1600px) and (min-width: 800px) {
+    grid-template-columns: auto auto auto;
 
     .card-container {
       .content-wrapper {

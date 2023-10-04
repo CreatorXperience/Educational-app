@@ -1,5 +1,5 @@
 import mainIllustration from "../../assets/illustration1.svg";
-import teachers from "../../assets/Saly.svg";
+import student from "../../assets/student.svg";
 import brandLogo from "../../assets/brand.svg";
 import navIcon from "../../assets/navIcon.svg";
 import heroText from "../../assets/hero-text.svg";
@@ -19,11 +19,12 @@ import Quote from "../../assets/Vector.svg";
 import astro1 from "../../assets/astro1.png";
 import astro2 from "../../assets/astro2.png";
 import astro3 from "../../assets/astro3.png";
+
 const illustration = () => {
   return (
     <img
-      src={teachers}
-      style={{ marginTop: "-150px" }}
+      src={student}
+      // style={{ marginTop: "-150px" }}
       alt="illustration"
       className="character-illustration"
     />
@@ -102,7 +103,7 @@ const frameIcon = () => {
 };
 
 const rocketIcon = () => {
-  return <img src={rocket} className="rocket" width="100%" alt="rocket" />;
+  return <img src={rocket} className="rocket" width="70%" alt="rocket" />;
 };
 
 const starIcon = () => {

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import svg from "../../constants/svgs/stars";
 
 export type TData = {
   data: {
@@ -16,6 +17,26 @@ export type TData = {
   };
 };
 const Card = ({ data }: TData) => {
+  const calculatePoints = (point: number) => {
+    let wholeNumber = Math.round(point);
+    let fixedStarsCount = 5;
+    let yellow = wholeNumber;
+    let white = fixedStarsCount - yellow;
+
+    let yellowStars = [];
+
+    let whiteStars = [];
+    for (let i = 0; i < yellow; i++) {
+      yellowStars.push(svg.yellowStars());
+    }
+    for (let i = 0; i < white; i++) {
+      whiteStars.push(svg.whiteStars());
+    }
+
+    yellowStars = [...yellowStars, ...whiteStars];
+
+    return yellowStars;
+  };
   return (
     <CardWrapper>
       <div className="card-container">
@@ -51,7 +72,7 @@ const Card = ({ data }: TData) => {
             </div>
           </div>
           <div className="bottom-section">
-            <p className="stars"></p>
+            <p className="stars">{calculatePoints(data.stars)}</p>
             <p>Enroll Now</p>
           </div>
         </div>

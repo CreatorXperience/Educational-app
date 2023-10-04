@@ -1,17 +1,22 @@
 import { useRef } from "react";
 import styled from "styled-components";
+import { useSearchParams } from "react-router-dom";
 
 type TCourse = {
   setCourse: React.Dispatch<React.SetStateAction<string | undefined>>;
 };
 const PopularCourses = ({ setCourse }: TCourse) => {
+  const [searchParams, setSearchParam] = useSearchParams("");
   const ref = useRef<HTMLButtonElement | null>(null);
+
   const handleSelectCourse = (
     e: React.MouseEvent<HTMLButtonElement>,
     type: string
   ) => {
+    setSearchParam(type);
     setCourse(type);
   };
+
   return (
     <PopularWrapper>
       <div className="pop-container">
@@ -21,25 +26,41 @@ const PopularCourses = ({ setCourse }: TCourse) => {
 
         <div className="courses-btnWrapper">
           <button
-            onClick={(e) => handleSelectCourse(e, "Development")}
+            onClick={(e) => handleSelectCourse(e, "data")}
             ref={ref}
-            className="active"
+            className={`${searchParams.has("data") ? "active" : ""}`}
           >
-            Development
+            All courses
           </button>
 
           <button
             ref={ref}
             onClick={(e) => handleSelectCourse(e, "Data science")}
+            className={`${searchParams.has("Data science") ? "active" : ""}`}
           >
             Data science
           </button>
 
-          <button onClick={(e) => handleSelectCourse(e, "C++")}>C++</button>
+          <button
+            onClick={(e) => handleSelectCourse(e, "programming")}
+            className={`${searchParams.has("programming") ? "active" : ""}`}
+          >
+            Programming
+          </button>
 
-          <button onClick={(e) => handleSelectCourse(e, "React")}>React</button>
+          <button
+            onClick={(e) => handleSelectCourse(e, "React")}
+            className={`${searchParams.has("React") ? "active" : ""}`}
+          >
+            Frontend
+          </button>
 
-          <button onClick={(e) => handleSelectCourse(e, "Java")}>Java</button>
+          <button
+            className={`${searchParams.has("Backend") ? "active" : ""}`}
+            onClick={(e) => handleSelectCourse(e, "Backend")}
+          >
+            Backend
+          </button>
         </div>
       </div>
     </PopularWrapper>

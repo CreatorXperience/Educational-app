@@ -34,7 +34,6 @@ const LandingPage = () => {
     <DataProvider.Provider value={memoizedData}>
       <HomeWrapper>
         <div className="home-container">
-          <NavigationBar />
           <Hero />
           <Partner />
           <PopularCourses setCourse={setValue} />

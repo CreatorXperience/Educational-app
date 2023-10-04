@@ -35,7 +35,7 @@ const Hero = () => {
             <input
               type="text"
               className="explore"
-              placeholder="Explore courses"
+              placeholder="Search for courses e.g Javascript, python Node ...."
               ref={ref}
             />
           </form>

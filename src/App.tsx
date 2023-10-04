@@ -4,6 +4,7 @@ import { RouterProvider } from "react-router-dom";
 import router from "./router";
 import { useEffect } from "react";
 import auth from "./auth/auth";
+import NavigationBar from "./components/navigationBar";
 
 function App() {
   useEffect(() => {
@@ -11,6 +12,7 @@ function App() {
   }, []);
   return (
     <div className="App">
+      <NavigationBar />
       <RouterProvider router={router}></RouterProvider>
     </div>
   );

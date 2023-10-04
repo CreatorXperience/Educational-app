@@ -1,4 +1,278 @@
 {
+  "node": [
+    {
+      "author": {
+        "name": "Adam Smith",
+        "post": "Full-Stack Developer"
+      },
+      "category": "C++",
+      "courseContent": {
+        "topic": [
+          {
+            "description": "Learn the basics of Python for finance and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t1",
+            "title": "Introduction to NodeJS",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          },
+          {
+            "description": "Learn how to use Python for financial analysis and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t2",
+            "title": "Python for Financial Analysis",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          },
+          {
+            "description": "Learn how to use Python for algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t3",
+            "title": "Python for Algorithmic Trading",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          }
+        ]
+      },
+      "courseDescription": "This comprehensive course covers Python's applications in financial analysis and algorithmic trading. Learn data analysis, statistical modeling, and trading strategies in Python.",
+      "coverImage": "https://i.pinimg.com/564x/21/d4/86/21d4867ce208419fb6b5cf6ffb52a9b8.jpg",
+      "coverTitle": "Python for Financial Analysis Next and Algorithmic Trading",
+      "id": 1,
+      "stars": 4.5
+    },
+    {
+      "author": {
+        "name": "Adam Smith",
+        "post": "Full-Stack Developer"
+      },
+      "category": "C++",
+      "courseContent": {
+        "topic": [
+          {
+            "description": "Learn the basics of Python for finance and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t1",
+            "title": "Introduction to NodeJS",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          },
+          {
+            "description": "Learn how to use Python for financial analysis and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t2",
+            "title": "Python for Financial Analysis",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          },
+          {
+            "description": "Learn how to use Python for algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t3",
+            "title": "Python for Algorithmic Trading",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          }
+        ]
+      },
+      "courseDescription": "This comprehensive course covers Python's applications in financial analysis and algorithmic trading. Learn data analysis, statistical modeling, and trading strategies in Python.",
+      "coverImage": "https://i.pinimg.com/564x/21/d4/86/21d4867ce208419fb6b5cf6ffb52a9b8.jpg",
+      "coverTitle": "Python for Financial Analysis Next and Algorithmic Trading",
+      "id": 1,
+      "stars": 4.5
+    },
+    {
+      "author": {
+        "name": "Adam Smith",
+        "post": "Full-Stack Developer"
+      },
+      "category": "C++",
+      "courseContent": {
+        "topic": [
+          {
+            "description": "Learn the basics of Python for finance and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t1",
+            "title": "Introduction to NodeJS",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          },
+          {
+            "description": "Learn how to use Python for financial analysis and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t2",
+            "title": "Python for Financial Analysis",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          },
+          {
+            "description": "Learn how to use Python for algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t3",
+            "title": "Python for Algorithmic Trading",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          }
+        ]
+      },
+      "courseDescription": "This comprehensive course covers Python's applications in financial analysis and algorithmic trading. Learn data analysis, statistical modeling, and trading strategies in Python.",
+      "coverImage": "https://i.pinimg.com/564x/21/d4/86/21d4867ce208419fb6b5cf6ffb52a9b8.jpg",
+      "coverTitle": "Python for Financial Analysis Next and Algorithmic Trading",
+      "id": 1,
+      "stars": 4.5
+    },
+    {
+      "author": {
+        "name": "Adam Smith",
+        "post": "Full-Stack Developer"
+      },
+      "category": "C++",
+      "courseContent": {
+        "topic": [
+          {
+            "description": "Learn the basics of Python for finance and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t1",
+            "title": "Introduction to NodeJS",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          },
+          {
+            "description": "Learn how to use Python for financial analysis and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t2",
+            "title": "Python for Financial Analysis",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          },
+          {
+            "description": "Learn how to use Python for algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t3",
+            "title": "Python for Algorithmic Trading",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          }
+        ]
+      },
+      "courseDescription": "This comprehensive course covers Python's applications in financial analysis and algorithmic trading. Learn data analysis, statistical modeling, and trading strategies in Python.",
+      "coverImage": "https://i.pinimg.com/564x/21/d4/86/21d4867ce208419fb6b5cf6ffb52a9b8.jpg",
+      "coverTitle": "Python for Financial Analysis Next and Algorithmic Trading",
+      "id": 1,
+      "stars": 4.5
+    },
+    {
+      "author": {
+        "name": "Adam Smith",
+        "post": "Full-Stack Developer"
+      },
+      "category": "C++",
+      "courseContent": {
+        "topic": [
+          {
+            "description": "Learn the basics of Python for finance and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t1",
+            "title": "Introduction to NodeJS",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          },
+          {
+            "description": "Learn how to use Python for financial analysis and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t2",
+            "title": "Python for Financial Analysis",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          },
+          {
+            "description": "Learn how to use Python for algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t3",
+            "title": "Python for Algorithmic Trading",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          }
+        ]
+      },
+      "courseDescription": "This comprehensive course covers Python's applications in financial analysis and algorithmic trading. Learn data analysis, statistical modeling, and trading strategies in Python.",
+      "coverImage": "https://i.pinimg.com/564x/21/d4/86/21d4867ce208419fb6b5cf6ffb52a9b8.jpg",
+      "coverTitle": "Python for Financial Analysis Next and Algorithmic Trading",
+      "id": 1,
+      "stars": 4.5
+    },
+    {
+      "author": {
+        "name": "Adam Smith",
+        "post": "Full-Stack Developer"
+      },
+      "category": "C++",
+      "courseContent": {
+        "topic": [
+          {
+            "description": "Learn the basics of Python for finance and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t1",
+            "title": "Introduction to NodeJS",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          },
+          {
+            "description": "Learn how to use Python for financial analysis and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t2",
+            "title": "Python for Financial Analysis",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          },
+          {
+            "description": "Learn how to use Python for algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t3",
+            "title": "Python for Algorithmic Trading",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          }
+        ]
+      },
+      "courseDescription": "This comprehensive course covers Python's applications in financial analysis and algorithmic trading. Learn data analysis, statistical modeling, and trading strategies in Python.",
+      "coverImage": "https://i.pinimg.com/564x/21/d4/86/21d4867ce208419fb6b5cf6ffb52a9b8.jpg",
+      "coverTitle": "Python for Financial Analysis Next and Algorithmic Trading",
+      "id": 1,
+      "stars": 4.5
+    },
+    {
+      "author": {
+        "name": "Adam Smith",
+        "post": "Full-Stack Developer"
+      },
+      "category": "C++",
+      "courseContent": {
+        "topic": [
+          {
+            "description": "Learn the basics of Python for finance and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t1",
+            "title": "Introduction to NodeJS",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          },
+          {
+            "description": "Learn how to use Python for financial analysis and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t2",
+            "title": "Python for Financial Analysis",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          },
+          {
+            "description": "Learn how to use Python for algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t3",
+            "title": "Python for Algorithmic Trading",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          }
+        ]
+      },
+      "courseDescription": "This comprehensive course covers Python's applications in financial analysis and algorithmic trading. Learn data analysis, statistical modeling, and trading strategies in Python.",
+      "coverImage": "https://i.pinimg.com/564x/21/d4/86/21d4867ce208419fb6b5cf6ffb52a9b8.jpg",
+      "coverTitle": "Python for Financial Analysis Next and Algorithmic Trading",
+      "id": 1,
+      "stars": 4.5
+    },
+    {
+      "author": {
+        "name": "Adam Smith",
+        "post": "Full-Stack Developer"
+      },
+      "category": "C++",
+      "courseContent": {
+        "topic": [
+          {
+            "description": "Learn the basics of Python for finance and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t1",
+            "title": "Introduction to NodeJS",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          },
+          {
+            "description": "Learn how to use Python for financial analysis and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t2",
+            "title": "Python for Financial Analysis",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          },
+          {
+            "description": "Learn how to use Python for algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t3",
+            "title": "Python for Algorithmic Trading",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          }
+        ]
+      },
+      "courseDescription": "This comprehensive course covers Python's applications in financial analysis and algorithmic trading. Learn data analysis, statistical modeling, and trading strategies in Python.",
+      "coverImage": "https://i.pinimg.com/564x/21/d4/86/21d4867ce208419fb6b5cf6ffb52a9b8.jpg",
+      "coverTitle": "Python for Financial Analysis Next and Algorithmic Trading",
+      "id": 1,
+      "stars": 4.5
+    }
+  ],
   "data": [
     {
       "author": {
@@ -32,7 +306,7 @@
       "coverImage": "https://i.pinimg.com/564x/34/01/ee/3401ee2dbb27776d850e77c6a2bee3d2.jpg",
       "coverTitle": "Python for Financial Analysis Next and Algorithmic Trading",
       "id": 1,
-      "stars": 4.5
+      "stars": 3
     },
     {
       "author": {
@@ -66,7 +340,7 @@
       "coverImage": "https://i.pinimg.com/564x/2f/25/5e/2f255e310dd21bb64cfeddcaddb7a1d3.jpg",
       "coverTitle": "Data Science with Python",
       "id": 2,
-      "stars": 4.7
+      "stars": 4
     },
     {
       "author": {
@@ -100,7 +374,7 @@
       "coverImage": "https://i.pinimg.com/564x/83/00/d2/8300d20857e2de73a5fd08601dcf7f0e.jpg",
       "coverTitle": "Web Development with JavaScript",
       "id": 3,
-      "stars": 4.6
+      "stars": 5
     },
     {
       "author": {
@@ -176,7 +450,7 @@
       "coverImage": "https://i.pinimg.com/564x/c9/a0/1c/c9a01c580b4a23ae60d043941238a1ab.jpg",
       "coverTitle": "Typescript for web development",
       "id": 6,
-      "stars": 4.6
+      "stars": 5
     },
     {
       "author": {
@@ -197,7 +471,7 @@
       "coverImage": "https://i.pinimg.com/564x/9c/ca/b4/9ccab4b666b512b7d60020266b3ca296.jpg",
       "coverTitle": "Unit test with jest",
       "id": 7,
-      "stars": 4.6
+      "stars": 3
     },
     {
       "author": {
@@ -218,7 +492,43 @@
       "coverImage": "https://i.pinimg.com/564x/e6/c7/89/e6c78927c329fb705dcf8ef6c06a2ee2.jpg",
       "coverTitle": "Web App Development with angular",
       "id": 8,
-      "stars": 4.6
+      "stars": 4
+    }
+  ],
+  "data science": [
+    {
+      "author": {
+        "name": "Adam Smith",
+        "post": "Data Scientist"
+      },
+      "category": "Python",
+      "courseContent": {
+        "topic": [
+          {
+            "description": "Learn the basics of Python for finance and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t1",
+            "title": "Introduction to Data science",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          },
+          {
+            "description": "Learn how to use Python for financial analysis and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t2",
+            "title": "Python for Financial Analysis",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          },
+          {
+            "description": "Learn how to use Python for algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t3",
+            "title": "Python for Algorithmic Trading",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          }
+        ]
+      },
+      "courseDescription": "This comprehensive course covers Python's applications in financial analysis and algorithmic trading. Learn data analysis, statistical modeling, and trading strategies in Python.",
+      "coverImage": "https://i.pinimg.com/564x/34/01/ee/3401ee2dbb27776d850e77c6a2bee3d2.jpg",
+      "coverTitle": "Python for Financial Analysis Next and Algorithmic Trading",
+      "id": 1,
+      "stars": 4.5
     }
   ],
   "javascript": [
@@ -252,79 +562,6 @@
       },
       "courseDescription": "This comprehensive course covers Python's applications in financial analysis and algorithmic trading. Learn data analysis, statistical modeling, and trading strategies in Python.",
       "coverImage": "https://i.pinimg.com/564x/1c/86/84/1c8684b06bc7ad1e1f6b7b0099d87300.jpg",
-      "coverTitle": "Python for Financial Analysis Next and Algorithmic Trading",
-      "id": 1,
-      "stars": 4.5
-    }
-  ],
-  "python": [
-    {
-      "author": {
-        "name": "Adam Smith",
-        "post": "Python Developer"
-      },
-      "category": "Python",
-      "courseContent": {
-        "topic": [
-          {
-            "description": "Learn the basics of Python for finance and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
-            "id": "t1",
-            "title": "Introduction to Python for Finance",
-            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
-          },
-          {
-            "description": "Learn how to use Python for financial analysis and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
-            "id": "t2",
-            "title": "Python for Financial Analysis",
-            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
-          },
-          {
-            "description": "Learn how to use Python for algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
-            "id": "t3",
-            "title": "Python for Algorithmic Trading",
-            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
-          }
-        ]
-      },
-      "courseDescription": "This comprehensive course covers Python's applications in financial analysis and algorithmic trading. Learn data analysis, statistical modeling, and trading strategies in Python.",
-      "coverImage": "https://i.pinimg.com/564x/34/01/ee/3401ee2dbb27776d850e77c6a2bee3d2.jpg",
-      "coverTitle": "Python for Financial Analysis Next and Algorithmic Trading",
-      "id": 1,
-      "stars": 4.5
-    }
-  ],
-
-  "data science": [
-    {
-      "author": {
-        "name": "Adam Smith",
-        "post": "Data Scientist"
-      },
-      "category": "Python",
-      "courseContent": {
-        "topic": [
-          {
-            "description": "Learn the basics of Python for finance and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
-            "id": "t1",
-            "title": "Introduction to Data science",
-            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
-          },
-          {
-            "description": "Learn how to use Python for financial analysis and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
-            "id": "t2",
-            "title": "Python for Financial Analysis",
-            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
-          },
-          {
-            "description": "Learn how to use Python for algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
-            "id": "t3",
-            "title": "Python for Algorithmic Trading",
-            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
-          }
-        ]
-      },
-      "courseDescription": "This comprehensive course covers Python's applications in financial analysis and algorithmic trading. Learn data analysis, statistical modeling, and trading strategies in Python.",
-      "coverImage": "https://i.pinimg.com/564x/34/01/ee/3401ee2dbb27776d850e77c6a2bee3d2.jpg",
       "coverTitle": "Python for Financial Analysis Next and Algorithmic Trading",
       "id": 1,
       "stars": 4.5
@@ -366,19 +603,19 @@
       "stars": 4.5
     }
   ],
-  "backend": [
+  "python": [
     {
       "author": {
         "name": "Adam Smith",
-        "post": "Full-Stack Developer"
+        "post": "Python Developer"
       },
-      "category": "C++",
+      "category": "Python",
       "courseContent": {
         "topic": [
           {
             "description": "Learn the basics of Python for finance and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
             "id": "t1",
-            "title": "Introduction to NodeJS",
+            "title": "Introduction to Python for Finance",
             "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
           },
           {
@@ -396,7 +633,109 @@
         ]
       },
       "courseDescription": "This comprehensive course covers Python's applications in financial analysis and algorithmic trading. Learn data analysis, statistical modeling, and trading strategies in Python.",
-      "coverImage": "https://i.pinimg.com/564x/21/d4/86/21d4867ce208419fb6b5cf6ffb52a9b8.jpg",
+      "coverImage": "https://i.pinimg.com/564x/34/01/ee/3401ee2dbb27776d850e77c6a2bee3d2.jpg",
+      "coverTitle": "Python for Financial Analysis Next and Algorithmic Trading",
+      "id": 1,
+      "stars": 4.5
+    },
+    {
+      "author": {
+        "name": "Adam Smith",
+        "post": "Python Developer"
+      },
+      "category": "Python",
+      "courseContent": {
+        "topic": [
+          {
+            "description": "Learn the basics of Python for finance and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t1",
+            "title": "Introduction to Python for Finance",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          },
+          {
+            "description": "Learn how to use Python for financial analysis and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t2",
+            "title": "Python for Financial Analysis",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          },
+          {
+            "description": "Learn how to use Python for algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t3",
+            "title": "Python for Algorithmic Trading",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          }
+        ]
+      },
+      "courseDescription": "This comprehensive course covers Python's applications in financial analysis and algorithmic trading. Learn data analysis, statistical modeling, and trading strategies in Python.",
+      "coverImage": "https://i.pinimg.com/564x/34/01/ee/3401ee2dbb27776d850e77c6a2bee3d2.jpg",
+      "coverTitle": "Python for Financial Analysis Next and Algorithmic Trading",
+      "id": 1,
+      "stars": 4.5
+    },
+    {
+      "author": {
+        "name": "Adam Smith",
+        "post": "Python Developer"
+      },
+      "category": "Python",
+      "courseContent": {
+        "topic": [
+          {
+            "description": "Learn the basics of Python for finance and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t1",
+            "title": "Introduction to Python for Finance",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          },
+          {
+            "description": "Learn how to use Python for financial analysis and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t2",
+            "title": "Python for Financial Analysis",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          },
+          {
+            "description": "Learn how to use Python for algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t3",
+            "title": "Python for Algorithmic Trading",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          }
+        ]
+      },
+      "courseDescription": "This comprehensive course covers Python's applications in financial analysis and algorithmic trading. Learn data analysis, statistical modeling, and trading strategies in Python.",
+      "coverImage": "https://i.pinimg.com/564x/34/01/ee/3401ee2dbb27776d850e77c6a2bee3d2.jpg",
+      "coverTitle": "Python for Financial Analysis Next and Algorithmic Trading",
+      "id": 1,
+      "stars": 4.5
+    },
+    {
+      "author": {
+        "name": "Adam Smith",
+        "post": "Python Developer"
+      },
+      "category": "Python",
+      "courseContent": {
+        "topic": [
+          {
+            "description": "Learn the basics of Python for finance and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t1",
+            "title": "Introduction to Python for Finance",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          },
+          {
+            "description": "Learn how to use Python for financial analysis and algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t2",
+            "title": "Python for Financial Analysis",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          },
+          {
+            "description": "Learn how to use Python for algorithmic trading. This course will teach you the fundamentals of Python programming and its applications in finance.",
+            "id": "t3",
+            "title": "Python for Algorithmic Trading",
+            "youtubeVideoId": "https://www.youtube.com/watch?v=abcdef12345"
+          }
+        ]
+      },
+      "courseDescription": "This comprehensive course covers Python's applications in financial analysis and algorithmic trading. Learn data analysis, statistical modeling, and trading strategies in Python.",
+      "coverImage": "https://i.pinimg.com/564x/34/01/ee/3401ee2dbb27776d850e77c6a2bee3d2.jpg",
       "coverTitle": "Python for Financial Analysis Next and Algorithmic Trading",
       "id": 1,
       "stars": 4.5

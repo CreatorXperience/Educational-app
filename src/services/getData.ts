@@ -10,23 +10,11 @@ const getData = (
 ) => {
   const db = getDatabase(app);
 
-  let routes = ["python", "javascript", "node", "data"];
-
-  const splitPath = path.split(" ");
-  console.log(splitPath);
-
-  for (let Apath of splitPath) {
-    for (let route of routes) {
-      if (Apath === route) {
-        console.log(Apath, route);
-        const dbReferenece = ref(db, `${route.toLowerCase()}/`);
-        onValue(dbReferenece, (snapshot) => {
-          const data = snapshot.val();
-          appState(data);
-        });
-      }
-    }
-  }
+  const dbReferenece = ref(db, `${path.toLowerCase()}/`);
+  onValue(dbReferenece, (snapshot) => {
+    const data = snapshot.val();
+    appState(data);
+  });
 };
 
 export default getData;

@@ -2,10 +2,10 @@ import styled from "styled-components";
 import Card from "../Card";
 import WireFrame from "../cardWireFrame/wireframe";
 import { useContext } from "react";
-import { DataProvider } from "../landingPage";
+import { DataProvider } from "../../context/DataProvider";
 
 const PopularCourse = ({ isData }: { isData: boolean }) => {
-  const data = useContext(DataProvider);
+  const { data } = useContext(DataProvider);
   return (
     <CardWrapper>
       {isData ? (

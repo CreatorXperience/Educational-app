@@ -1,18 +1,30 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import getData from "../../services/getData";
 import { TDatabase } from "../../types/type";
 import Card from "../../components/Card";
+import { DataProvider } from "../../context/DataProvider";
 
 const Courses = () => {
   const { term } = useParams();
   const [result, setResult] = useState<TDatabase[] | null | undefined>();
 
-  useEffect(() => {
-    getData(setResult, term as string);
-  }, [term]);
+  const { data } = useContext(DataProvider);
 
+  const filterData = () => {
+    console.log(data);
+    let pageContent = data?.filter((data) => {
+      if (data.courseDescription.toLowerCase().includes(term as string)) {
+        console.log(data);
+        return data;
+      }
+    });
+
+    console.log(pageContent);
+
+    return pageContent;
+  };
   return (
     <CoursesWrapper>
       <div className="top-section">
@@ -22,7 +34,7 @@ const Courses = () => {
       </div>
       <div className="courses-section">
         <div className="courses-inner">
-          {result?.map((data) => {
+          {filterData()?.map((data) => {
             return <Card data={data} key={data.id} />;
           })}
         </div>

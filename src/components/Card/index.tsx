@@ -265,7 +265,7 @@ const CardWrapper = styled.div`
     .card-container {
       margin: 10px 40px;
       width: 80%;
-      height: 420px;
+      height: 470px;
 
       .content-wrapper {
         .card-title {

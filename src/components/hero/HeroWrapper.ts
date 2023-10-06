@@ -6,7 +6,7 @@ const HeroWrapper = styled.div`
   .hero {
     margin-top: 40px;
     width: 100%;
-    height: 420px;
+    height: 500px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;

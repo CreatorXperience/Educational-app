@@ -18,11 +18,12 @@ import Quote from "../../assets/Vector.svg";
 import astro1 from "../../assets/astro1.png";
 import astro2 from "../../assets/astro2.png";
 import astro3 from "../../assets/astro3.png";
+import Mockup from "../../assets/GROUND2E4.png";
 
 const illustration = () => {
   return (
     <img
-      src={student}
+      src={Mockup}
       // style={{ marginTop: "-150px" }}
       alt="illustration"
       className="character-illustration"

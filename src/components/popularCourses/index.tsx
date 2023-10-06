@@ -1,21 +1,11 @@
-import { useRef } from "react";
 import styled from "styled-components";
-import { useSearchParams } from "react-router-dom";
+import useSelectCourse from "./hooks/useSelectCourse";
 
 type TCourse = {
   setCourse: React.Dispatch<React.SetStateAction<string | undefined>>;
 };
 const PopularCourses = ({ setCourse }: TCourse) => {
-  const [searchParams, setSearchParam] = useSearchParams("");
-  const ref = useRef<HTMLButtonElement | null>(null);
-
-  const handleSelectCourse = (
-    e: React.MouseEvent<HTMLButtonElement>,
-    type: string
-  ) => {
-    setSearchParam(type);
-    setCourse(type);
-  };
+  const { handleSelectCourse, searchParams, ref } = useSelectCourse(setCourse);
 
   return (
     <PopularWrapper>

@@ -23,7 +23,7 @@ const App = () => {
 
   const memoizedData = useMemo(() => {
     return data;
-  }, [data, value]);
+  }, [data]);
 
   const isData = useMemo(() => (data ? true : false), [data]);
 

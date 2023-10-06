@@ -20,6 +20,7 @@ const Courses = () => {
       ) {
         return data;
       }
+      return "";
     });
 
     return pageContent;

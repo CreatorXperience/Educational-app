@@ -12,6 +12,7 @@ const PopularCourse = ({ isData }: { isData: boolean }) => {
         <>
           {data?.map((item, i) => {
             if (i < 8) return <Card key={item.id} data={item} />;
+            return "";
           })}
         </>
       ) : (

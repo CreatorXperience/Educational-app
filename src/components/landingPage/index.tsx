@@ -1,11 +1,8 @@
-import getData from "../../services/getData";
-import { TDatabase } from "../../types/type";
 import PopularCourse from "../AllPopularCourses";
 import Hero from "../hero";
-import NavigationBar from "../navigationBar";
 import Partner from "../partners";
 import PopularCourses from "../popularCourses";
-import { useEffect, useState, useMemo, createContext, useContext } from "react";
+import { useContext } from "react";
 import ExploreBtn from "../ExploreBtn";
 import Category from "../Category";
 import styled from "styled-components";

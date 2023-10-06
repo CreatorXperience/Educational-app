@@ -1,6 +1,6 @@
 import { heroIllustration, illustration } from "../../constants/images";
 import styled from "styled-components";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Hero = () => {

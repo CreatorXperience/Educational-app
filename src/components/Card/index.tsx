@@ -1,42 +1,8 @@
 import styled from "styled-components";
-import svg from "../../constants/svgs/stars";
+import type { TData } from "./types/TData";
+import calculatePoints from "../../utils/calculatePoints";
 
-export type TData = {
-  data: {
-    author: {
-      name: string;
-      post: string;
-    };
-    category: string;
-    courseContent: {};
-    courseDescription: string;
-    coverImage: string;
-    coverTitle: string;
-    id: number;
-    stars: number;
-  };
-};
 const Card = ({ data }: TData) => {
-  const calculatePoints = (point: number) => {
-    let wholeNumber = Math.round(point);
-    let fixedStarsCount = 5;
-    let yellow = wholeNumber;
-    let white = fixedStarsCount - yellow;
-
-    let yellowStars = [];
-
-    let whiteStars = [];
-    for (let i = 0; i < yellow; i++) {
-      yellowStars.push(svg.yellowStars());
-    }
-    for (let i = 0; i < white; i++) {
-      whiteStars.push(svg.whiteStars());
-    }
-
-    yellowStars = [...yellowStars, ...whiteStars];
-
-    return yellowStars;
-  };
   return (
     <CardWrapper>
       <div className="card-container">

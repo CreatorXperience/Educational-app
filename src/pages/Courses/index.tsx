@@ -1,18 +1,15 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import Card from "../../components/Card";
 import { DataProvider } from "../../context/DataProvider";
 import Footer from "../../components/Footer";
-import { TDatabase } from "../../types/type";
 
 const Courses = () => {
   const { term } = useParams();
-  const [count, setCount] = useState<number>(4);
   const [initialCount, setInitialCount] = useState<number>(0);
   const [tempCount, setTempCount] = useState<number>(2);
   const { data } = useContext(DataProvider);
-  // const [pageContent, setPageContent] = useState<TDatabase[] | undefined>();
 
   const filterData = () => {
     let pageContent = data?.filter((data) => {
@@ -26,12 +23,7 @@ const Courses = () => {
     });
 
     return pageContent;
-    // setPageContent(pageContent);
   };
-
-  // useEffect(() => {
-  //   filterData();
-  // });
 
   const paginateData = () => {
     const pageContent = filterData();

@@ -5,21 +5,6 @@ const WireFrame = () => {
   const [fader, setFader] = useState<boolean>();
   const ref = useRef<HTMLDivElement | null>(null);
 
-  function callback(entry: IntersectionObserverEntry[]) {
-    entry.forEach((intersect) => {
-      setFader(true);
-    });
-  }
-
-  let observer = new IntersectionObserver(callback, {
-    rootMargin: "0.3px",
-    threshold: 0.5,
-  });
-
-  useEffect(() => {
-    observer.observe(ref.current as Element);
-  }, []);
-  console.log(fader);
   return (
     <WireFramesWrapper ref={ref} className={`${fader ? "fader" : ""}`}>
       <div className="wireframe-container">

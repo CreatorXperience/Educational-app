@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import useSlide from "./hooks/useSlide";
-import { QuoteIcon } from "../../constants/images";
 import CarouselCard from "../CarouselCard";
 
 const FeedBack = () => {

@@ -5,7 +5,6 @@ import Card from "../../components/Card";
 import { DataProvider } from "../../context/DataProvider";
 import Footer from "../../components/Footer";
 import { TDatabase } from "../../types/type";
-import { JsxElement } from "typescript";
 
 const Courses = () => {
   const { term } = useParams();
@@ -13,7 +12,7 @@ const Courses = () => {
   const [initialCount, setInitialCount] = useState<number>(0);
   const [tempCount, setTempCount] = useState<number>(2);
   const { data } = useContext(DataProvider);
-  const [pageContent, setPageContent] = useState<TDatabase[] | undefined>();
+  // const [pageContent, setPageContent] = useState<TDatabase[] | undefined>();
 
   const filterData = () => {
     let pageContent = data?.filter((data) => {
@@ -26,14 +25,16 @@ const Courses = () => {
       }
     });
 
-    setPageContent(pageContent);
+    return pageContent;
+    // setPageContent(pageContent);
   };
 
-  useEffect(() => {
-    filterData();
-  });
+  // useEffect(() => {
+  //   filterData();
+  // });
 
   const paginateData = () => {
+    const pageContent = filterData();
     if (pageContent) {
       let paginate = [];
       for (let i = initialCount; i < tempCount; i++) {
@@ -63,7 +64,7 @@ const Courses = () => {
       <div className="btn-wrapper">
         <button
           onClick={() => {
-            if (pageContent && tempCount !== 2) {
+            if (filterData() && tempCount !== 2) {
               setTempCount((count) => count - 2);
               setInitialCount((count) => count - 2);
             }
@@ -73,7 +74,7 @@ const Courses = () => {
         </button>
         <button
           onClick={() => {
-            if (pageContent && tempCount !== pageContent?.length) {
+            if (filterData() && tempCount !== filterData()?.length) {
               setTempCount((count) => count + 2);
               setInitialCount((count) => count + 2);
             }

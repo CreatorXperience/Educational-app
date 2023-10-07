@@ -17,7 +17,16 @@ const Hero = () => {
   return (
     <HeroWrapper>
       <div className="hero">
-        <div className="illustration">{heroIllustration()}</div>
+        <div className="illustration">
+          <h1 className="illustration-title">
+            <span className="course"> Best courses </span> are waiting to enrich
+            your skills
+          </h1>
+          <p className="hero-description">
+            Provides you with the latest online learning system and material
+            that help your knowledge growing
+          </p>
+        </div>
 
         <div className="character">
           <div className="circle"></div>

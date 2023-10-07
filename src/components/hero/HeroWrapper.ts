@@ -4,18 +4,42 @@ const HeroWrapper = styled.div`
   width: 100%;
 
   .hero {
-    margin-top: 40px;
     width: 100%;
-    height: 500px;
+    height: 600px;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
     border: 1px solid red;
     overflow: hidden;
-    position: relative;
+    background: rgba(55, 38, 93, 0.43);
 
     .illustration {
       width: 80%;
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid red;
+
+      .hero-description {
+        color: lightgrey;
+        font-family: Inter;
+        font-size: 14px;
+        padding: 16px;
+        font-size: 20px;
+        width: 70%;
+      }
+
+      .illustration-title {
+        font-size: 5rem;
+        color: white;
+        width: 70%;
+        font-family: Caladea;
+
+        .course {
+          color: #7f56d9;
+        }
+      }
 
       .course-text {
         width: 90%;
@@ -24,6 +48,8 @@ const HeroWrapper = styled.div`
 
     .character {
       position: relative;
+      height: auto;
+
       .circle {
         position: absolute;
         width: 30%;
@@ -31,7 +57,6 @@ const HeroWrapper = styled.div`
         border-radius: 426px;
         background: rgba(61, 93, 255, 0.534);
         filter: blur(150px);
-        position: absolute;
         border: 1px solid red;
         right: 0;
         overflow: hidden;
@@ -155,23 +180,96 @@ const HeroWrapper = styled.div`
     }
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1400px) and (min-width: 600px) {
     .hero {
-      flex-direction: column;
-      justify-content: space-evenly;
-      height: 600px;
-      margin-top: 0px;
-
       .illustration {
         width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 12px;
+
         .course-text {
           width: 100%;
+        }
+
+        .hero-description {
+          font-size: 14px;
+          width: 90%;
+        }
+
+        .illustration-title {
+          font-size: 3rem;
+          color: white;
+          width: 90%;
+          font-family: Caladea;
+
+          .course {
+            color: #7f56d9;
+          }
         }
       }
 
       .character {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .circle {
+          display: none;
+        }
         .character-illustration {
           width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .hero {
+      flex-direction: column;
+      height: 100vh;
+
+      .illustration {
+        width: 100%;
+        height: 40%;
+        text-align: center;
+        padding: 12px;
+
+        .course-text {
+          width: 100%;
+        }
+
+        .hero-description {
+          font-size: 14px;
+          width: 90%;
+        }
+
+        .illustration-title {
+          font-size: 1.7rem;
+          color: white;
+          width: 90%;
+          font-family: Caladea;
+
+          .course {
+            color: #7f56d9;
+          }
+        }
+      }
+
+      .character {
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .circle {
+          display: none;
+        }
+        .character-illustration {
+          width: 100%;
+          height: auto;
         }
       }
     }

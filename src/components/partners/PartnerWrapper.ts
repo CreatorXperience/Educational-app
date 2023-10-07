@@ -73,14 +73,15 @@ const PartnerWrapper = styled.div`
     }
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 800px) {
     .p-container {
       .partners-overallWrapper {
         height: 50%;
       }
 
       .p-circle {
-        width: 100%;
+        width: 0;
+        display: none;
       }
     }
   }

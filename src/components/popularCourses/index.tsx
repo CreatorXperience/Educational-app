@@ -132,6 +132,8 @@ const PopularWrapper = styled.div`
   @media screen and (max-width: 800px) {
     .pop-container {
       width: 100%;
+      height: auto;
+
       flex-direction: column;
       align-items: center;
       text-align: center;
@@ -142,6 +144,13 @@ const PopularWrapper = styled.div`
       }
       .courses-btnWrapper {
         width: 90%;
+        height: 300px;
+        border-radius: 10px;
+        flex-direction: column;
+
+        button {
+          width: 100%;
+        }
       }
     }
   }

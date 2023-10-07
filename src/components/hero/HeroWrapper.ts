@@ -5,7 +5,7 @@ const HeroWrapper = styled.div`
 
   .hero {
     width: 100%;
-    height: 600px;
+    height: 500px;
     display: flex;
     align-items: center;
     border: 1px solid red;
@@ -13,7 +13,7 @@ const HeroWrapper = styled.div`
     background: rgba(55, 38, 93, 0.43);
 
     .illustration {
-      width: 80%;
+      width: 60%;
       height: 100%;
       display: flex;
       flex-flow: column;
@@ -48,6 +48,7 @@ const HeroWrapper = styled.div`
 
     .character {
       position: relative;
+      width: 40%;
       height: auto;
 
       .circle {
@@ -180,7 +181,7 @@ const HeroWrapper = styled.div`
     }
   }
 
-  @media screen and (max-width: 1400px) and (min-width: 600px) {
+  @media screen and (max-width: 1200px) and (min-width: 600px) {
     .hero {
       .illustration {
         width: 100%;
@@ -229,11 +230,11 @@ const HeroWrapper = styled.div`
   @media screen and (max-width: 600px) {
     .hero {
       flex-direction: column;
-      height: 100vh;
+      height: auto;
 
       .illustration {
         width: 100%;
-        height: 40%;
+        height: auto;
         text-align: center;
         padding: 12px;
 
@@ -247,7 +248,7 @@ const HeroWrapper = styled.div`
         }
 
         .illustration-title {
-          font-size: 1.7rem;
+          font-size: 3rem;
           color: white;
           width: 90%;
           font-family: Caladea;
@@ -263,6 +264,8 @@ const HeroWrapper = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
+        height: auto;
 
         .circle {
           display: none;

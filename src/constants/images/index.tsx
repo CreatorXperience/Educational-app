@@ -27,6 +27,7 @@ const illustration = () => {
       // style={{ marginTop: "-150px" }}
       alt="illustration"
       className="character-illustration"
+      width="100px"
     />
   );
 };

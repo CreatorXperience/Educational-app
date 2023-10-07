@@ -8,7 +8,6 @@ import Category from "../Category";
 import styled from "styled-components";
 import Platform from "../Platform";
 import FeedBack from "../Feedback";
-import Footer from "../Footer";
 import Earth from "../3d-earth";
 import { DataProvider } from "../../context/DataProvider";
 
@@ -32,7 +31,6 @@ const LandingPage = () => {
         <Platform />
         <FeedBack />
         <Earth />
-        <Footer />
       </div>
     </HomeWrapper>
   );

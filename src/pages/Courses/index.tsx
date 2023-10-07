@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import Card from "../../components/Card";
 import { DataProvider } from "../../context/DataProvider";
-import Footer from "../../components/Footer";
 
 const Courses = () => {
   const { term } = useParams();
@@ -97,7 +96,6 @@ const Courses = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </CoursesWrapper>
   );
 };

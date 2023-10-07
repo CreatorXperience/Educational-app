@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const NavigationWrapper = styled.div`
   width: 100%;
-  height: auto;
 
   .navigationCircle {
     border: 1px solid red;

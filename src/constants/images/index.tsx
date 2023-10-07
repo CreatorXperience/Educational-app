@@ -1,4 +1,3 @@
-import student from "../../assets/student.svg";
 import brandLogo from "../../assets/brand.svg";
 import navIcon from "../../assets/navIcon.svg";
 import heroText from "../../assets/hero-text.svg";

@@ -8,6 +8,8 @@ import NavigationBar from "./components/navigationBar";
 import getData from "./services/getData";
 import { TDatabase } from "./types/type";
 import { DataProvider } from "./context/DataProvider";
+import styled from "styled-components";
+import Footer from "./components/Footer";
 
 const App = () => {
   useEffect(() => {
@@ -28,15 +30,23 @@ const App = () => {
   const isData = useMemo(() => (data ? true : false), [data]);
 
   return (
-    <div className="App">
-      <DataProvider.Provider
-        value={{ data: memoizedData, setCourse: setValue, isData: isData }}
-      >
-        <NavigationBar />
-        <RouterProvider router={router}></RouterProvider>
-      </DataProvider.Provider>
-    </div>
+    <Appwrapper>
+      <div className="App">
+        <DataProvider.Provider
+          value={{ data: memoizedData, setCourse: setValue, isData: isData }}
+        >
+          <NavigationBar />
+          <RouterProvider router={router}></RouterProvider>
+          <Footer />
+        </DataProvider.Provider>
+      </div>
+    </Appwrapper>
   );
 };
 
 export default App;
+
+const Appwrapper = styled.div`
+  display: flex;
+  flex-flow: column;
+`;

@@ -1,4 +1,4 @@
-import { heroIllustration, illustration } from "../../constants/images";
+import { illustration } from "../../constants/images";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import HeroWrapper from "./HeroWrapper";

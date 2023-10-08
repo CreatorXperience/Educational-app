@@ -55,7 +55,10 @@ const Courses = () => {
       <div className="btn-wrapper">
         <button
           onClick={() => {
-            if (paginateData() && paginateData()?.length !== data?.length) {
+            if (
+              paginateData() &&
+              paginateData()?.length !== filterData()?.length
+            ) {
               setCount((count) => count + 2);
             }
           }}
@@ -183,6 +186,56 @@ const CoursesWrapper = styled.div`
           font-style: normal;
           font-weight: 400;
           line-height: 40px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1400px) and (min-width: 500px) {
+    .courses-section {
+      .courses-inner {
+        width: 80%;
+        grid-template-columns: auto auto;
+
+        .card-container {
+          height: 500px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .top-section {
+      flex-direction: column;
+
+      .inner-section {
+        flex-direction: column;
+        justify-content: center;
+
+        .search-term {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .courses-section {
+      .courses-inner {
+        width: 100%;
+        grid-template-columns: auto;
+
+        .card-container {
+          height: 500px;
+        }
+      }
+    }
+
+    .searches-container {
+      .search-wrapper {
+        width: 80%;
+
+        .other-searches {
+          display: flex;
+          flex-flow: column;
         }
       }
     }

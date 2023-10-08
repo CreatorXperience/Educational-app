@@ -6,9 +6,8 @@ import { DataProvider } from "../../context/DataProvider";
 
 const Courses = () => {
   const { term } = useParams();
-  const [initialCount, setInitialCount] = useState<number>(0);
-  const [tempCount, setTempCount] = useState<number>(2);
   const { data } = useContext(DataProvider);
+  const [count, setCount] = useState(2);
 
   const filterData = () => {
     let pageContent = data?.filter((data) => {
@@ -28,11 +27,11 @@ const Courses = () => {
   const paginateData = () => {
     const pageContent = filterData();
     if (pageContent) {
-      let paginate = [];
-      for (let i = initialCount; i < tempCount; i++) {
-        paginate.push(pageContent[i]);
+      let arr = [];
+      for (let i = 0; i < count; i++) {
+        arr.push(pageContent[i]);
       }
-      return paginate;
+      return arr;
     }
   };
   return (
@@ -47,7 +46,7 @@ const Courses = () => {
       </div>
       <div className="courses-section">
         <div className="courses-inner">
-          {paginateData()?.map((data, index) => {
+          {paginateData()?.map((data) => {
             return <Card data={data} key={data.id} />;
           })}
         </div>
@@ -56,23 +55,12 @@ const Courses = () => {
       <div className="btn-wrapper">
         <button
           onClick={() => {
-            if (filterData() && tempCount !== 2) {
-              setTempCount((count) => count - 2);
-              setInitialCount((count) => count - 2);
+            if (paginateData() && paginateData()?.length !== data?.length) {
+              setCount((count) => count + 2);
             }
           }}
         >
-          1
-        </button>
-        <button
-          onClick={() => {
-            if (filterData() && tempCount !== filterData()?.length) {
-              setTempCount((count) => count + 2);
-              setInitialCount((count) => count + 2);
-            }
-          }}
-        >
-          2
+          Load More
         </button>
       </div>
 
@@ -153,7 +141,7 @@ const CoursesWrapper = styled.div`
     margin-top: 20px;
 
     button {
-      width: 50px;
+      width: 200px;
       padding: 12px;
       border-radius: 6px;
       background-color: #7f56d9;

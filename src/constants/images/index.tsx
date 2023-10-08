@@ -18,6 +18,7 @@ import astro1 from "../../assets/astro1.png";
 import astro2 from "../../assets/astro2.png";
 import astro3 from "../../assets/astro3.png";
 import Mockup from "../../assets/GROUND2E4.png";
+import lightning from "../../assets/Lightning.svg";
 
 const illustration = () => {
   return (
@@ -129,6 +130,10 @@ const astronaut2 = () => {
 const astronaut3 = () => {
   return <img src={astro3} className="astronaut" alt="astronaut" />;
 };
+
+const lightningIcon = () => {
+  return <img src={lightning} className="astronaut" alt="ligh" />;
+};
 export {
   illustration,
   illustrationSm,
@@ -151,4 +156,5 @@ export {
   astronaut1,
   astronaut2,
   astronaut3,
+  lightningIcon,
 };

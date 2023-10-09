@@ -1,6 +1,12 @@
 import styled from "styled-components";
+import useSelectCourse from "./hooks/useSelectCourse";
 
-const PopularCourses = () => {
+type TCourse = {
+  setCourse: React.Dispatch<React.SetStateAction<string | undefined>>;
+};
+const PopularCourses = ({ setCourse }: TCourse) => {
+  const { handleSelectCourse, searchParams, ref } = useSelectCourse(setCourse);
+
   return (
     <PopularWrapper>
       <div className="pop-container">
@@ -9,15 +15,42 @@ const PopularCourses = () => {
         </div>
 
         <div className="courses-btnWrapper">
-          <button className="active">Design</button>
+          <button
+            onClick={(e) => handleSelectCourse(e, "data")}
+            ref={ref}
+            className={`${searchParams.has("data") ? "active" : ""}`}
+          >
+            All courses
+          </button>
 
-          <button>Design</button>
+          <button
+            ref={ref}
+            onClick={(e) => handleSelectCourse(e, "Data science")}
+            className={`${searchParams.has("Data science") ? "active" : ""}`}
+          >
+            Data science
+          </button>
 
-          <button>Design</button>
+          <button
+            onClick={(e) => handleSelectCourse(e, "programming")}
+            className={`${searchParams.has("programming") ? "active" : ""}`}
+          >
+            Programming
+          </button>
 
-          <button>Design</button>
+          <button
+            onClick={(e) => handleSelectCourse(e, "React")}
+            className={`${searchParams.has("React") ? "active" : ""}`}
+          >
+            Frontend
+          </button>
 
-          <button>Design</button>
+          <button
+            className={`${searchParams.has("Backend") ? "active" : ""}`}
+            onClick={(e) => handleSelectCourse(e, "Backend")}
+          >
+            Backend
+          </button>
         </div>
       </div>
     </PopularWrapper>
@@ -99,6 +132,8 @@ const PopularWrapper = styled.div`
   @media screen and (max-width: 800px) {
     .pop-container {
       width: 100%;
+      height: auto;
+
       flex-direction: column;
       align-items: center;
       text-align: center;
@@ -109,6 +144,13 @@ const PopularWrapper = styled.div`
       }
       .courses-btnWrapper {
         width: 90%;
+        height: 300px;
+        border-radius: 10px;
+        flex-direction: column;
+
+        button {
+          width: 100%;
+        }
       }
     }
   }

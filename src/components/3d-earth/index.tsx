@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Spline from "@splinetool/react-spline";
-import { astronaut1, astronaut2, astronaut3 } from "../../constants/images";
+import { astronaut1, astronaut2 } from "../../constants/images";
 
 const Earth = () => {
   return (

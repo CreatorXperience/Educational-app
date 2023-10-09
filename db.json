@@ -29,10 +29,10 @@
         ]
       },
       "courseDescription": "This comprehensive course covers Python's applications in financial analysis and algorithmic trading. Learn data analysis, statistical modeling, and trading strategies in Python.",
-      "coverImage": "https://i.pinimg.com/564x/1c/86/84/1c8684b06bc7ad1e1f6b7b0099d87300.jpg",
+      "coverImage": "https://i.pinimg.com/564x/34/01/ee/3401ee2dbb27776d850e77c6a2bee3d2.jpg",
       "coverTitle": "Python for Financial Analysis Next and Algorithmic Trading",
       "id": 1,
-      "stars": 4.5
+      "stars": 3
     },
     {
       "author": {
@@ -63,10 +63,10 @@
         ]
       },
       "courseDescription": "Master data science techniques using Python. Dive into data analysis, machine learning, and data visualization with real-world projects.",
-      "coverImage": "https://i.pinimg.com/564x/1d/a2/1b/1da21bc48ebe5225dbf2eba752c8d78d.jpg",
+      "coverImage": "https://i.pinimg.com/564x/2f/25/5e/2f255e310dd21bb64cfeddcaddb7a1d3.jpg",
       "coverTitle": "Data Science with Python",
       "id": 2,
-      "stars": 4.7
+      "stars": 4
     },
     {
       "author": {
@@ -100,7 +100,7 @@
       "coverImage": "https://i.pinimg.com/564x/83/00/d2/8300d20857e2de73a5fd08601dcf7f0e.jpg",
       "coverTitle": "Web Development with JavaScript",
       "id": 3,
-      "stars": 4.6
+      "stars": 5
     },
     {
       "author": {
@@ -131,7 +131,7 @@
         ]
       },
       "courseDescription": "Explore the basics of machine learning with practical examples. Understand algorithms, data preprocessing, and model evaluation.",
-      "coverImage": "https://i.pinimg.com/564x/83/b1/26/83b126804a2b9e9822bf8e03e8a44968.jpg",
+      "coverImage": "https://i.pinimg.com/564x/c5/3e/e0/c53ee081252602c320c5493822002708.jpg",
       "coverTitle": "Machine Learning Fundamentals",
       "id": 4,
       "stars": 4.8
@@ -173,10 +173,10 @@
         ]
       },
       "courseDescription": "Learn Typescript for strong typing",
-      "coverImage": "https://i.pinimg.com/564x/66/d5/23/66d5238900aab3d7b86dc5e53a77c817.jpg",
+      "coverImage": "https://i.pinimg.com/564x/c9/a0/1c/c9a01c580b4a23ae60d043941238a1ab.jpg",
       "coverTitle": "Typescript for web development",
       "id": 6,
-      "stars": 4.6
+      "stars": 5
     },
     {
       "author": {
@@ -194,10 +194,10 @@
         ]
       },
       "courseDescription": "Learn unit testing with jest",
-      "coverImage": "https://i.pinimg.com/564x/e5/ff/9a/e5ff9a4d625b2255f17d14736b5e0fa1.jpg",
+      "coverImage": "https://i.pinimg.com/564x/9c/ca/b4/9ccab4b666b512b7d60020266b3ca296.jpg",
       "coverTitle": "Unit test with jest",
       "id": 7,
-      "stars": 4.6
+      "stars": 3
     },
     {
       "author": {
@@ -218,7 +218,154 @@
       "coverImage": "https://i.pinimg.com/564x/e6/c7/89/e6c78927c329fb705dcf8ef6c06a2ee2.jpg",
       "coverTitle": "Web App Development with angular",
       "id": 8,
-      "stars": 4.6
+      "stars": 4
+    },
+    {
+      "author": {
+        "name": "Tyson Johnson",
+        "post": "Web App Developer"
+      },
+      "category": "Mobile Development",
+      "courseContent": {
+        "topic": [
+          {
+            "description": "Begin your journey into mobile app development",
+            "id": "t13",
+            "title": "Getting Started with Angular App Development"
+          }
+        ]
+      },
+      "courseDescription": "Build web apps using Angular. Develop apps with a single codebase.",
+      "coverImage": "https://i.pinimg.com/564x/e6/c7/89/e6c78927c329fb705dcf8ef6c06a2ee2.jpg",
+      "coverTitle": "Web App Development with angular",
+      "id": 8,
+      "stars": 4
+    },
+    {
+      "author": {
+        "name": "Tyson Johnson",
+        "post": "Web App Developer"
+      },
+      "category": "Mobile Development",
+      "courseContent": {
+        "topic": [
+          {
+            "description": "Begin your journey into mobile app development",
+            "id": "t13",
+            "title": "Getting Started with Angular App Development"
+          }
+        ]
+      },
+      "courseDescription": "Build web apps using Angular. Develop apps with a single codebase.",
+      "coverImage": "https://i.pinimg.com/564x/e6/c7/89/e6c78927c329fb705dcf8ef6c06a2ee2.jpg",
+      "coverTitle": "Web App Development with angular",
+      "id": 8,
+      "stars": 4
+    },
+    {
+      "author": {
+        "name": "Tyson Johnson",
+        "post": "Web App Developer"
+      },
+      "category": "Mobile Development",
+      "courseContent": {
+        "topic": [
+          {
+            "description": "Begin your journey into mobile app development",
+            "id": "t13",
+            "title": "Getting Started with Angular App Development"
+          }
+        ]
+      },
+      "courseDescription": "Build web apps using Angular. Develop apps with a single codebase.",
+      "coverImage": "https://i.pinimg.com/564x/e6/c7/89/e6c78927c329fb705dcf8ef6c06a2ee2.jpg",
+      "coverTitle": "Web App Development with angular",
+      "id": 8,
+      "stars": 4
+    },
+    {
+      "author": {
+        "name": "Tyson Johnson",
+        "post": "Full-Stack Developer"
+      },
+      "category": "Backend Development",
+      "courseContent": {
+        "topic": [
+          {
+            "description": "Begin your journey into mobile app development",
+            "id": "t13",
+            "title": "Getting Started with Node JS"
+          }
+        ]
+      },
+      "courseDescription": "Build Backend application using Node",
+      "coverImage": "https://i.pinimg.com/564x/21/d4/86/21d4867ce208419fb6b5cf6ffb52a9b8.jpg",
+      "coverTitle": "Web App Development with angular",
+      "id": 8,
+      "stars": 4
+    },
+    {
+      "author": {
+        "name": "Tyson Johnson",
+        "post": "Full-Stack Developer"
+      },
+      "category": "Backend Development",
+      "courseContent": {
+        "topic": [
+          {
+            "description": "Begin your journey into mobile app development",
+            "id": "t13",
+            "title": "Getting Started with Node JS"
+          }
+        ]
+      },
+      "courseDescription": "Build Backend application using Node",
+      "coverImage": "https://i.pinimg.com/564x/21/d4/86/21d4867ce208419fb6b5cf6ffb52a9b8.jpg",
+      "coverTitle": "Web App Development with angular",
+      "id": 8,
+      "stars": 4
+    },
+    {
+      "author": {
+        "name": "Tyson Johnson",
+        "post": "Full-Stack Developer"
+      },
+      "category": "Backend Development",
+      "courseContent": {
+        "topic": [
+          {
+            "description": "Begin your journey into mobile app development",
+            "id": "t13",
+            "title": "Getting Started with Node JS"
+          }
+        ]
+      },
+      "courseDescription": "Build Backend application using Node",
+      "coverImage": "https://i.pinimg.com/564x/21/d4/86/21d4867ce208419fb6b5cf6ffb52a9b8.jpg",
+      "coverTitle": "Web App Development with angular",
+      "id": 8,
+      "stars": 4
+    },
+    {
+      "author": {
+        "name": "Tyson Johnson",
+        "post": "Full-Stack Developer"
+      },
+      "category": "Backend Development",
+      "courseContent": {
+        "topic": [
+          {
+            "description": "Begin your journey into mobile app development",
+            "id": "t13",
+            "title": "Getting Started with Node JS"
+          }
+        ]
+      },
+      "courseDescription": "Build Backend application using Node",
+      "coverImage": "https://i.pinimg.com/564x/21/d4/86/21d4867ce208419fb6b5cf6ffb52a9b8.jpg",
+      "coverTitle": "Web App Development with angular",
+      "id": 8,
+      "stars": 4
     }
   ]
 }

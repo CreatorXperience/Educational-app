@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 
 const useSlide = (content: number = 1) => {
   const $ref = useRef<HTMLDivElement>(null);
@@ -60,17 +60,26 @@ const useSlide = (content: number = 1) => {
   const slide_container =
     $ref.current?.querySelectorAll<HTMLElement>(".carousel-card");
 
-  const slide = (current: number) => {
-    slide_container?.forEach((item: HTMLElement) => {
-      item.style.transform = `translateX(-${current * 108}%)`;
-    });
-  };
+  // const slide = (current: number) => {
+  //   slide_container?.forEach((item: HTMLElement) => {
+  //     item.style.transform = `translateX(-${current * 108}%)`;
+  //   });
+  // };
+
+  const slide = useCallback(
+    (current: number) => {
+      slide_container?.forEach((item: HTMLElement) => {
+        item.style.transform = `translateX(-${current * 108}%)`;
+      });
+    },
+    [slide_container]
+  );
 
   useEffect(() => {
     if (window.innerWidth < 1400) {
       setSlideAmount((slide_container?.length as number) - 1);
     }
-  });
+  }, [setSlideAmount, slide_container?.length]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -86,7 +95,7 @@ const useSlide = (content: number = 1) => {
     slide(_currentSlide);
     activeSlide(_currentSlide);
     return () => clearInterval(interval);
-  }, [_currentSlide]);
+  }, [_currentSlide, slide, slideAmount]);
 
   return {
     handleNext,

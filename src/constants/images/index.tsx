@@ -1,5 +1,3 @@
-import mainIllustration from "../../assets/illustration1.svg";
-import teachers from "../../assets/Saly.svg";
 import brandLogo from "../../assets/brand.svg";
 import navIcon from "../../assets/navIcon.svg";
 import heroText from "../../assets/hero-text.svg";
@@ -19,13 +17,17 @@ import Quote from "../../assets/Vector.svg";
 import astro1 from "../../assets/astro1.png";
 import astro2 from "../../assets/astro2.png";
 import astro3 from "../../assets/astro3.png";
+import Mockup from "../../assets/GROUND2E4.png";
+import lightning from "../../assets/Lightning.svg";
+
 const illustration = () => {
   return (
     <img
-      src={teachers}
-      style={{ marginTop: "-150px" }}
+      src={Mockup}
+      // style={{ marginTop: "-150px" }}
       alt="illustration"
       className="character-illustration"
+      width="100px"
     />
   );
 };
@@ -102,7 +104,7 @@ const frameIcon = () => {
 };
 
 const rocketIcon = () => {
-  return <img src={rocket} className="rocket" width="100%" alt="rocket" />;
+  return <img src={rocket} className="rocket" width="70%" alt="rocket" />;
 };
 
 const starIcon = () => {
@@ -128,6 +130,10 @@ const astronaut2 = () => {
 const astronaut3 = () => {
   return <img src={astro3} className="astronaut" alt="astronaut" />;
 };
+
+const lightningIcon = () => {
+  return <img src={lightning} className="astronaut" alt="ligh" />;
+};
 export {
   illustration,
   illustrationSm,
@@ -150,4 +156,5 @@ export {
   astronaut1,
   astronaut2,
   astronaut3,
+  lightningIcon,
 };

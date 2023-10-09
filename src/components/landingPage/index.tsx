@@ -1,52 +1,38 @@
-import getData from "../../services/getData";
-import { TDatabase } from "../../types/type";
 import PopularCourse from "../AllPopularCourses";
 import Hero from "../hero";
-import NavigationBar from "../navigationBar";
 import Partner from "../partners";
 import PopularCourses from "../popularCourses";
-import { useEffect, useState, useMemo, createContext } from "react";
+import { useContext } from "react";
 import ExploreBtn from "../ExploreBtn";
 import Category from "../Category";
 import styled from "styled-components";
 import Platform from "../Platform";
 import FeedBack from "../Feedback";
-import Footer from "../Footer";
 import Earth from "../3d-earth";
-
-export const DataProvider = createContext<TDatabase[] | null | undefined>(null);
+import { DataProvider } from "../../context/DataProvider";
 
 const LandingPage = () => {
-  const [data, setData] = useState<TDatabase[] | null | undefined>();
-
-  useEffect(() => {
-    getData(setData);
-  }, []);
-
-  const memoizedData = useMemo(() => {
-    return data;
-  }, [data]);
-
-  const isData = useMemo(() => (data ? true : false), [data]);
-
+  const { isData, setCourse } = useContext(DataProvider);
   return (
-    <DataProvider.Provider value={memoizedData}>
-      <HomeWrapper>
-        <div className="home-container">
-          <NavigationBar />
-          <Hero />
-          <Partner />
-          <PopularCourses />
-          <PopularCourse isData={isData} />
-          <ExploreBtn />
-          <Category />
-          <Platform />
-          <FeedBack />
-          <Earth />
-          <Footer />
-        </div>
-      </HomeWrapper>
-    </DataProvider.Provider>
+    <HomeWrapper>
+      <div className="home-container">
+        <Hero />
+        <Partner />
+        <PopularCourses
+          setCourse={
+            setCourse as React.Dispatch<
+              React.SetStateAction<string | undefined>
+            >
+          }
+        />
+        <PopularCourse isData={isData} />
+        <ExploreBtn />
+        <Category />
+        <Platform />
+        <FeedBack />
+        <Earth />
+      </div>
+    </HomeWrapper>
   );
 };
 

@@ -33,6 +33,7 @@ const Courses = () => {
       }
       return arr;
     }
+    return;
   };
   return (
     <CoursesWrapper>
@@ -45,11 +46,13 @@ const Courses = () => {
         </div>
       </div>
       <div className="courses-section">
+        (
         <div className="courses-inner">
-          {paginateData()?.map((data) => {
+          {paginateData()?.map((data, i) => {
             return <Card data={data} key={data.id} />;
           })}
         </div>
+        )
       </div>
 
       <div className="btn-wrapper">

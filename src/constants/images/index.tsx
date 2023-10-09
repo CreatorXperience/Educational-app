@@ -132,7 +132,7 @@ const astronaut3 = () => {
 };
 
 const lightningIcon = () => {
-  return <img src={lightning} className="astronaut" alt="ligh" />;
+  return <img src={lightning} className="astronaut" width="100%" alt="light" />;
 };
 export {
   illustration,

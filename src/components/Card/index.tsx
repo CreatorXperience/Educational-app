@@ -1,7 +1,7 @@
 import type { TData } from "./types/TData";
 import calculatePoints from "../../utils/calculatePoints";
 import CardWrapper from "./CardWrapper";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Card = ({ data }: TData) => {
   const navigate = useNavigate();

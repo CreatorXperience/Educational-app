@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-const CardWrapper = styled.div`
+const CardWrapper = styled.div<{ img: string }>`
   .card-container {
-    width: 90%;
+    width: 80%;
     height: 450px;
     transition: transform 0.2s ease-in-out;
     border-radius: 30px;
@@ -15,12 +15,13 @@ const CardWrapper = styled.div`
 
     .card-image {
       width: 100%;
-      height: 200px;
+      height: 28%;
       overflow: hidden;
       border-top-left-radius: 30px;
       border-top-right-radius: 30px;
       filter: brightness(90%);
-      overflow: hidden;
+      background-image: url("${(props) => props.img}");
+      background-size: cover;
     }
 
     .content-wrapper {
@@ -66,9 +67,10 @@ const CardWrapper = styled.div`
         font-style: normal;
         font-weight: 700;
         line-height: 40px; /* 133.333% */
-        margin-left: 10px;
+        padding-left: 20px;
         border-bottom: 1px solid rgba(218, 218, 247, 0.32);
-        width: 95;
+        width: 100%;
+        border: 1px solid red;
       }
 
       .author-section {
@@ -182,7 +184,7 @@ const CardWrapper = styled.div`
     .card-container {
       margin: 10px 40px;
       width: 80%;
-      height: 470px;
+      height: 370px;
 
       .content-wrapper {
         .card-title {

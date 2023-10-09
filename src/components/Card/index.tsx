@@ -1,7 +1,7 @@
 import type { TData } from "./types/TData";
 import calculatePoints from "../../utils/calculatePoints";
 import CardWrapper from "./CardWrapper";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Card = ({ data }: TData) => {
   const navigate = useNavigate();
@@ -10,11 +10,9 @@ const Card = ({ data }: TData) => {
     window.scrollTo(0, 0);
   };
   return (
-    <CardWrapper onClick={() => handleNavigate()}>
+    <CardWrapper img={data.coverImage} onClick={() => handleNavigate()}>
       <div className="card-container">
-        <div className="card-image">
-          <img src={data.coverImage} alt="content" width="100%" />
-        </div>
+        <div className="card-image"></div>
 
         <div className="content-wrapper">
           <div className="card-content">

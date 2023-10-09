@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import getData from "../../services/getData";
 import { TDatabase } from "../../types/type";
-import Card from "../../components/Card";
 import styled from "styled-components";
 import { lightningIcon } from "../../constants/images";
 import CourseBlock from "../../components/courseBlock";
@@ -14,7 +13,7 @@ const CoursDescription = () => {
 
   useEffect(() => {
     getData<TDatabase | undefined>(setCourse, `data/${id}`);
-  }, []);
+  }, [id]);
 
   const handleExpand = () => {
     setIsExpand(!isExpand);
@@ -23,49 +22,52 @@ const CoursDescription = () => {
   return (
     <CourseDescriptionWrapper
       img={course?.coverImage as string}
-      isExpand={isExpand}
+      isexpand={isExpand}
     >
       {/* <div>{course && <Card data={course as TDatabase} />}</div> */}
 
       <div className="content-wrapper">
-        <div className="course-card">
-          <div className="course-image"></div>
-          <div className="course-desc">
-            Join 1,000,000+ students enrolled in ZTM courses!
-          </div>
-
-          <button className="start-btn">Start Learning Now</button>
-
-          <div className="line"></div>
-
-          <div className="course-header">This course includes:</div>
-
-          <ul className="course-package">
-            <li>Access to exclusive ZTM community</li>
-            <li>Certificate of Completion</li>
-            <li>Learn and master web development with zero prior knowledge</li>
-            <li>
-              Unlimited access to all courses, workshops, career paths and
-              resources
-            </li>
-          </ul>
-
-          <div className="line"></div>
-
-          <div className="course-header">Prerequisites:</div>
-
-          <ul className="course-package">
-            <li>A willingness and enthusiasm to learn</li>
-            <li>
-              A computer (Windows, Mac, or Linux) with an internet connection
-            </li>
-          </ul>
-        </div>
         <div className="course-content">
           <div className="go-back"></div>
           <div className="content">
             <h1>{course?.coverTitle}</h1>
             <p>{course?.courseDescription}</p>
+          </div>
+
+          <div className="course-card">
+            <div className="course-image"></div>
+            <div className="course-desc">
+              Join 1,000,000+ students enrolled in ZTM courses!
+            </div>
+
+            <button className="start-btn">Start Learning Now</button>
+
+            <div className="line"></div>
+
+            <div className="course-header">This course includes:</div>
+
+            <ul className="course-package">
+              <li>Access to exclusive ZTM community</li>
+              <li>Certificate of Completion</li>
+              <li>
+                Learn and master web development with zero prior knowledge
+              </li>
+              <li>
+                Unlimited access to all courses, workshops, career paths and
+                resources
+              </li>
+            </ul>
+
+            <div className="line"></div>
+
+            <div className="course-header">Prerequisites:</div>
+
+            <ul className="course-package">
+              <li>A willingness and enthusiasm to learn</li>
+              <li>
+                A computer (Windows, Mac, or Linux) with an internet connection
+              </li>
+            </ul>
           </div>
         </div>
         <div className="course-nav">
@@ -97,11 +99,11 @@ const CoursDescription = () => {
           <div className="main-overview">
             <div className="title">WHAT YOU'LL LEARN</div>
             <div className="greeting">
-              Welcome to <span>[Course Name]</span> , an engaging and
-              comprehensive educational experience designed to empower you with
-              valuable knowledge and skills. This course is crafted to cater to
-              learners of all backgrounds and levels of expertise, making it
-              accessible and beneficial for everyone.
+              Welcome to <span>{course?.coverTitle} course</span> , an engaging
+              and comprehensive educational experience designed to empower you
+              with valuable knowledge and skills. This course is crafted to
+              cater to learners of all backgrounds and levels of expertise,
+              making it accessible and beneficial for everyone.
             </div>
 
             <div className="obj-title">Course Objectives:</div>
@@ -114,8 +116,7 @@ const CoursDescription = () => {
               course={[
                 {
                   title: "Understanding Fundamentals",
-                  content:
-                    "Gain a solid understanding of the fundamental concepts, theories, and principles related to [Course Topic]. Whether you're a beginner or an advanced learner, we will build a strong foundation for your knowledge.",
+                  content: `Gain a solid understanding of the fundamental concepts, theories, and principles related to  ${course?.coverTitle}. Whether you're a beginner or an advanced learner, we will build a strong foundation for your knowledge.`,
                 },
                 {
                   title: "Self-paced Learning",
@@ -132,21 +133,20 @@ const CoursDescription = () => {
 
             <div className="obj-title">Course Structure:</div>
             <div className="obj-desc">
-              [Course Name] is structured to provide a well-rounded educational
-              experience. Here's an overview of the course structure:
+              The {course?.coverTitle} course is structured to provide a
+              well-rounded educational experience. Here's an overview of the
+              course structure:
             </div>
 
             <CourseBlock
               course={[
                 {
-                  title: "Introduction to [Course Topic]:",
-                  content:
-                    "We will begin with an exploration of the core concepts and background of [Course Topic], ensuring everyone is on the same page.",
+                  title: `Introduction to ${course?.coverTitle}`,
+                  content: `We will begin with an exploration of the core concepts and background of  ${course?.coverTitle}, ensuring everyone is on the same page.`,
                 },
                 {
                   title: "In-depth Modules:",
-                  content:
-                    "Dive into the heart of the course through a series of in-depth modules. Each module will cover specific aspects of [Course Topic] and include lectures, readings, assignments, and assessments.",
+                  content: `Dive into the heart of the course through a series of in-depth modules. Each module will cover specific aspects of  ${course?.coverTitle} and include lectures, readings, assignments, and assessments.`,
                 },
                 {
                   title: "Resources and Support:",
@@ -155,8 +155,7 @@ const CoursDescription = () => {
                 },
                 {
                   title: "Communication Skills:",
-                  content:
-                    "Enhance your communication skills, both written and verbal, to effectively convey your ideas and insights about [Course Topic]. Clear and concise communication is a vital skill in any field.",
+                  content: `Enhance your communication skills, both written and verbal, to effectively convey your ideas and insights about  ${course?.coverTitle}. Clear and concise communication is a vital skill in any field.`,
                 },
               ]}
             />
@@ -194,8 +193,7 @@ const CoursDescription = () => {
               course={[
                 {
                   title: "A Strong Knowledge Base:",
-                  content:
-                    "A deep understanding of [Course Topic] and its practical applications.",
+                  content: `A deep understanding of  ${course?.coverTitle} and its practical applications.`,
                 },
                 {
                   title: "Enhanced Skills:",
@@ -214,14 +212,15 @@ const CoursDescription = () => {
               We look forward to embarking on this educational journey with you.
               Remember that learning is a continuous process, and this course is
               just the beginning. Let's explore, discover, and grow together in
-              the world of [Course Topic].
+              the world of {course?.coverTitle}.
             </div>
 
-            <div className="caret">
+            <div className="overlay">
               <button onClick={() => handleExpand()}>
-                Expand
+                {isExpand ? "Collapse" : "Expand"}
                 <i className="fa-solid fa-caret-down"></i>{" "}
               </button>
+              <div className="caret"></div>
             </div>
           </div>
           <div className="start-card">
@@ -242,90 +241,22 @@ const CoursDescription = () => {
 };
 export default CoursDescription;
 
-const CourseDescriptionWrapper = styled.div<{ img: string; isExpand: boolean }>`
+const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
+  width: 100%;
+
   .content-wrapper {
     position: relative;
-
-    .course-card {
-      width: 500px;
-      height: 900px;
-      background-color: white;
-      display: flex;
-      flex-flow: column;
-      align-items: center;
-      border: 1px;
-      position: absolute;
-      right: 200px;
-      top: 100px;
-      border-radius: 5px;
-
-      .course-image {
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        width: 100%;
-        height: 220px;
-        background-image: url(${(props) => props.img});
-        background-size: cover;
-      }
-
-      .course-desc {
-        font-size: 20px;
-        font-family: Inter;
-        text-align: center;
-        font-weight: 700;
-        margin-top: 20px;
-      }
-
-      .start-btn {
-        width: 90%;
-        padding: 24px;
-        border-radius: 35px;
-        margin-top: 20px;
-        border: none;
-        background-color: #7f56d9;
-        font-size: 20px;
-        color: white;
-        font-weight: 700;
-      }
-
-      .line {
-        width: 90%;
-        height: 1px;
-        background-color: lightgrey;
-        margin-top: 50px;
-      }
-
-      .course-header {
-        text-align: center;
-        font-size: 22px;
-        font-weight: 700;
-        font-family: Inter;
-        margin-top: 10px;
-      }
-
-      .course-package {
-        padding: 0 40px;
-        li {
-          margin: 10px;
-          font-size: 18px;
-          font-family: Inter;
-          font-weight: 200;
-        }
-
-        li::marker {
-          color: #7f56d9;
-        }
-      }
-    }
+    width: 100%;
 
     .course-content {
       width: 100%;
-      height: 300px;
+      height: auto;
       background: linear-gradient(180deg, #c1d8fc, #e1c1ff);
+      display: flex;
 
       .content {
         width: 80%;
-        margin-left: 200px;
+        padding-left: 200px;
 
         h1 {
           width: 50%;
@@ -338,6 +269,79 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isExpand: boolean }>`
           font-size: 25px;
           font-family: Inter;
           width: 60%;
+          padding: 12px;
+        }
+      }
+
+      .course-card {
+        width: 25%;
+        height: 900px;
+        background-color: white;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        border: 1px;
+        position: absolute;
+        right: 200px;
+        top: 100px;
+        border-radius: 5px;
+
+        .course-image {
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          width: 100%;
+          height: 220px;
+          background-image: url(${(props) => props.img});
+          background-size: cover;
+        }
+
+        .course-desc {
+          font-size: 20px;
+          font-family: Inter;
+          text-align: center;
+          font-weight: 700;
+          margin-top: 20px;
+        }
+
+        .start-btn {
+          width: 90%;
+          padding: 24px;
+          border-radius: 35px;
+          margin-top: 20px;
+          border: none;
+          background-color: #7f56d9;
+          font-size: 20px;
+          color: white;
+          font-weight: 700;
+        }
+
+        .line {
+          width: 90%;
+          height: 1px;
+          background-color: lightgrey;
+          margin-top: 50px;
+        }
+
+        .course-header {
+          text-align: center;
+          font-size: 22px;
+          font-weight: 700;
+          font-family: Inter;
+          margin-top: 10px;
+        }
+
+        .course-package {
+          padding: 0 40px;
+          li {
+            margin: 10px;
+            font-size: 18px;
+            font-family: Inter;
+            font-weight: 200;
+          }
+
+          li::marker {
+            color: #7f56d9;
+          }
         }
       }
     }
@@ -398,7 +402,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isExpand: boolean }>`
 
       .main-overview {
         width: 55%;
-        height: ${(props) => (props.isExpand ? "1600px" : "520px")};
+        height: ${(props) => (props.isexpand ? "1700px" : "520px")};
         background-color: white;
         padding: 10px;
         position: relative;
@@ -406,12 +410,10 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isExpand: boolean }>`
         border-radius: 20px;
         margin-top: 20px;
 
-        .caret {
+        .overlay {
           position: absolute;
           bottom: 0;
-          left: 50%;
-          font-size: 30px;
-          transform: translateX(-50%);
+          width: 100%;
 
           button {
             width: 200px;
@@ -423,6 +425,21 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isExpand: boolean }>`
             background-color: transparent;
             border-radius: 20px;
             color: #7f56d9;
+            position: ${(props) => (props.isexpand ? "relative" : "absolute")};
+            top: ${(props) => (props.isexpand ? "5px" : "50px")};
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 8;
+          }
+
+          .caret {
+            font-size: 30px;
+            width: 100%;
+            height: 150px;
+            background: white;
+            filter: blur(50px);
+            display: ${(props) => (props.isexpand ? "none" : "block")};
+            z-index: 5;
           }
         }
 
@@ -481,7 +498,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isExpand: boolean }>`
 
       .start-card {
         width: 40%;
-        height: 300px;
+        height: auto;
         background-color: white;
         margin-top: 30px;
         border-radius: 20px;
@@ -514,6 +531,240 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isExpand: boolean }>`
           font-family: Inter;
           color: white;
           margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .content-wrapper {
+      .course-content {
+        width: 100%;
+        height: auto;
+        background: linear-gradient(180deg, #c1d8fc, #e1c1ff);
+        flex-flow: column;
+        align-items: center;
+        border: 2px solid red;
+
+        .content {
+          width: 100%;
+          border: 2px solid green;
+          padding: 12px;
+
+          h1 {
+            width: 100%;
+            font-size: 40px;
+
+            text-align: center;
+          }
+
+          p {
+            font-size: 18px;
+            font-family: Inter;
+            width: 100%;
+            text-align: center;
+          }
+        }
+
+        .course-card {
+          width: 98%;
+          border: 2px solid blue;
+          right: auto;
+          position: relative;
+          top: auto;
+        }
+      }
+
+      .course-nav {
+        height: 120px;
+
+        .nav-content {
+          flex-flow: column;
+          align-items: center;
+          width: 100%;
+          margin-left: 0;
+          padding: 12px;
+
+          p {
+            font-size: 18px;
+
+            margin: 8px;
+          }
+        }
+      }
+
+      .overview-wrapper {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        margin-left: 0px;
+
+        .overview {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          .overview-header {
+            text-align: center;
+            font-size: 30px;
+          }
+
+          .content {
+            font-size: 16px;
+            font-weight: 500;
+            padding: 12px;
+            text-align: center;
+          }
+        }
+
+        .main-overview {
+          width: 90%;
+          height: ${(props) => (props.isexpand ? "3000px" : "520px")};
+          background-color: white;
+          padding: 10px;
+          position: relative;
+          overflow: hidden;
+          border-radius: 20px;
+          margin-top: 20px;
+          margin: 0 auto;
+        }
+
+        .start-card {
+          width: 90%;
+          background-color: white;
+          margin: 0 auto;
+          margin-top: 20px;
+
+          button {
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1500px) and (min-width: 800px) {
+    .content-wrapper {
+      .course-content {
+        display: flex;
+
+        .content {
+          width: 80%;
+          padding-left: 0;
+          height: 400px;
+          border: 3px solid green;
+          padding: 20px;
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+
+          h1 {
+            width: 50%;
+            padding-top: 0px;
+            font-size: 30px;
+            font-family: Inter;
+          }
+
+          p {
+            font-size: 20px;
+            font-family: Inter;
+            width: 60%;
+            padding: 12px;
+          }
+        }
+
+        .course-card {
+          margin-top: 20px;
+          width: 40%;
+          height: 900px;
+          background-color: white;
+          display: flex;
+          flex-flow: column;
+          align-items: center;
+          border: 1px;
+          position: absolute;
+          right: 10px;
+          top: 0px;
+          border-radius: 5px;
+
+          .course-desc {
+            font-size: 18px;
+          }
+
+          .start-btn {
+            width: 70%;
+            font-size: 18px;
+          }
+        }
+      }
+
+      .course-nav {
+        height: 100px;
+
+        .nav-content {
+          flex-flow: row;
+          align-items: center;
+          justify-content: start;
+          width: 100%;
+          margin-left: 0;
+          padding: 12px;
+
+          p {
+            font-size: 18px;
+
+            margin: 8px;
+          }
+        }
+      }
+
+      .overview-wrapper {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        margin-left: 0px;
+
+        .overview {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          .overview-header {
+            text-align: center;
+            font-size: 30px;
+          }
+
+          .content {
+            font-size: 16px;
+            font-weight: 500;
+            padding: 12px;
+            text-align: center;
+          }
+        }
+
+        .main-overview {
+          width: 50%;
+          height: ${(props) => (props.isexpand ? "2000px" : "520px")};
+          background-color: white;
+          padding: 10px;
+          position: relative;
+          overflow: hidden;
+          border-radius: 20px;
+          margin: 50px 50px;
+        }
+
+        .start-card {
+          width: 90%;
+          background-color: white;
+          margin: 0 auto;
+          margin-top: 20px;
+
+          button {
+            width: 40%;
+          }
         }
       }
     }

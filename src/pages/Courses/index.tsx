@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import Card from "../../components/Card";
 import { DataProvider } from "../../context/DataProvider";
+import { TDatabase } from "../../types/type";
 
 const Courses = () => {
   const { term } = useParams();
@@ -26,14 +27,12 @@ const Courses = () => {
 
   const paginateData = () => {
     const pageContent = filterData();
-    if (pageContent) {
-      let arr = [];
-      for (let i = 0; i < count; i++) {
-        arr.push(pageContent[i]);
-      }
-      return arr;
+    let arr: TDatabase[] = [];
+
+    for (let i = 0; i < count; i++) {
+      if (pageContent && pageContent[i]) arr.push(pageContent[i]);
     }
-    return;
+    return arr;
   };
   return (
     <CoursesWrapper>
@@ -49,7 +48,7 @@ const Courses = () => {
         (
         <div className="courses-inner">
           {paginateData()?.map((data, i) => {
-            return <Card data={data} key={data.id} />;
+            return <Card data={data} key={i} />;
           })}
         </div>
         )

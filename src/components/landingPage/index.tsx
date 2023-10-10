@@ -30,7 +30,6 @@ const LandingPage = () => {
         <Category />
         <Platform />
         <FeedBack />
-        <Earth />
       </div>
     </HomeWrapper>
   );

@@ -226,7 +226,7 @@ const CoursesWrapper = styled.div`
         grid-template-columns: auto;
 
         .card-container {
-          height: 500px;
+          height: 400px;
         }
       }
     }

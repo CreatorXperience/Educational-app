@@ -74,9 +74,34 @@ const PartnerWrapper = styled.div`
   }
 
   @media screen and (max-width: 800px) {
+    height: 500px;
+    padding: 10px;
+
     .p-container {
+      height: 100%;
+      width: 98%;
+      padding: 20px;
+
+      .dots-1 {
+        top: 16px;
+        left: 54.4%;
+      }
+
+      .dots-2 {
+        top: 24px;
+        left: 6.5%;
+      }
+      .partner-text {
+        top: 0;
+        left: 30px;
+        padding: 0;
+        font-size: 14px;
+      }
       .partners-overallWrapper {
-        height: 50%;
+        height: 100%;
+        flex-flow: column;
+        padding: 10px;
+        width: 100%;
       }
 
       .p-circle {

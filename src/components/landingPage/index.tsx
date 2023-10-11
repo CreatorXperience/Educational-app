@@ -8,7 +8,6 @@ import Category from "../Category";
 import styled from "styled-components";
 import Platform from "../Platform";
 import FeedBack from "../Feedback";
-import Earth from "../3d-earth";
 import { DataProvider } from "../../context/DataProvider";
 
 const LandingPage = () => {

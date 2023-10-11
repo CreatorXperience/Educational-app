@@ -567,7 +567,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
         }
 
         .course-card {
-          width: 98%;
+          width: 90%;
           border: 2px solid blue;
           right: auto;
           position: relative;

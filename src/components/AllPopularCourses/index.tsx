@@ -30,7 +30,7 @@ const PopularCourse = ({ isData }: { isData: boolean }) => {
 export default PopularCourse;
 
 const CardWrapper = styled.div`
-  width: 100%;
+  width: 92%;
   border: 1px solid magenta;
   margin-top: 60px;
   display: grid;
@@ -38,7 +38,8 @@ const CardWrapper = styled.div`
   place-items: center;
   padding: 50px;
   padding-left: 80px;
-  grid-gap: 10px;
+  grid-gap: 20px;
+  margin: auto;
   /* make this element fade in  */
 
   .card-container:hover {

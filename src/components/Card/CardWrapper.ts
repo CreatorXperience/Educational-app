@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const CardWrapper = styled.div<{ img: string }>`
   .card-container {
-    width: 80%;
     height: 450px;
     transition: transform 0.2s ease-in-out;
     border-radius: 30px;

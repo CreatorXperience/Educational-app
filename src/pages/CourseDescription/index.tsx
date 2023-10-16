@@ -254,16 +254,38 @@ const CoursDescription = () => {
               );
             })}
           </div>
+        </div>
+        <div className="instructor-section">
+          <div>
+            <h1 className="instructor-header">Meet your instructor</h1>
+            <p className="instructor-content">
+              Your instructor (Andrei) isn't just an expert with years of
+              real-world professional experience. He has been in your shoes. He
+              makes learning fun. He makes complex topics feel simple. He will
+              motivate you. He will push you. And he will go above and beyond to
+              help you succeed.
+            </p>
+          </div>
 
-          <div className="instructor-section">
-            <div>
-              <h1 className="instructor-header">Meet your instructor</h1>
-              <p className="instructor-content">
-                Your instructor (Andrei) isn't just an expert with years of
-                real-world professional experience. He has been in your shoes.
-                He makes learning fun. He makes complex topics feel simple. He
-                will motivate you. He will push you. And he will go above and
-                beyond to help you succeed.
+          <div className="instructor-container">
+            <div className="instructors-image"></div>
+            <div className="instructor-wrapper">
+              <h1 className="instructors-name">Hi, I'm Andrei Neagoie!</h1>
+              <p className="instructors-description">
+                Andrei, lead instructor of Zero To Mastery Academy, has taught
+                1,000,000+ students worldwide how to code and get hired. ZTM
+                grads work for world-class companies like Apple, Google, Amazon,
+                Tesla, IBM, Facebook, Shopify and many more.
+              </p>
+
+              <p className="instructors-name small">Andrei Neagoie</p>
+              <p className="instructors-post">Senior Software Developer</p>
+              <p className="instructors-handle">
+                <i className="fa-brands fa-facebook"></i>
+                <i className="fa-brands fa-github"></i>
+                <i className="fa-brands fa-youtube"></i>
+                <i className="fa-brands fa-x-twitter"></i>
+                <i className="fa-brands fa-instagram"></i>
               </p>
             </div>
           </div>

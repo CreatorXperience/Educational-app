@@ -1,9 +1,9 @@
 import PopularCourse from "../AllPopularCourses";
 import Hero from "../hero";
 import Partner from "../partners";
-import PopularCourses from "../popularCourses";
+import ExploreCourses from "../popularCourses";
 import { useContext } from "react";
-import ExploreBtn from "../ExploreBtn";
+// import ExploreBtn from "../ExploreBtn";
 import Category from "../Category";
 import styled from "styled-components";
 import Platform from "../Platform";
@@ -17,7 +17,7 @@ const LandingPage = () => {
       <div className="home-container">
         <Hero />
         <Partner />
-        <PopularCourses
+        <ExploreCourses
           setCourse={
             setCourse as React.Dispatch<
               React.SetStateAction<string | undefined>
@@ -25,8 +25,8 @@ const LandingPage = () => {
           }
         />
         <PopularCourse isData={isData} />
-        <ExploreBtn />
-        <Category />
+        {/* <ExploreBtn /> */}
+        {/* <Category /> */}
         <Platform />
         <FeedBack />
       </div>

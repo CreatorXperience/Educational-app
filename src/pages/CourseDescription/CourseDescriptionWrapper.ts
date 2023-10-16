@@ -44,7 +44,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
       .course-card {
         width: 25%;
         height: 900px;
-        background: linear-gradient(180deg, #5841ce 0%, #2c1f4a 100%);
+        background: linear-gradient(180deg, #5841ce 0%, #2c1f6a 100%);
         display: flex;
         flex-flow: column;
         align-items: center;
@@ -53,7 +53,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
         right: 200px;
         top: 100px;
         border-radius: 5px;
-        filter: drop-shadow(-34px 53px 4px rgba(0, 0, 0, 0.25));
+        filter: drop-shadow(-34px 53px 4px rgba(0, 0, 0, 0.1));
         color: white;
 
         .course-image {
@@ -316,28 +316,115 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
           font-family: DM sans;
         }
       }
-      .instructor-section {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20px;
+    }
 
-        .instructor-header {
-          font-size: 30px;
-          font-family: Inter;
-          font-weight: 700;
-          color: white;
+    .instructor-section {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      background: #37265d;
+      margin-top: 100px;
+
+      .instructor-container {
+        width: 30%;
+        height: 550px;
+        border: 1px solid white;
+        position: relative;
+        margin-top: 50px;
+
+        .instructors-image {
+          background-image: url(${(props) => props.img});
+
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          background-size: cover;
+          position: absolute;
+          top: -20px;
+          z-index: 9;
+          left: 50px;
+          border: 2px solid white;
         }
 
-        .instructor-content {
-          font-size: 16px;
-          font-family: Inter;
-          font-weight: 200;
-          color: white;
-          padding: 12px;
-          text-align: center;
+        .instructor-wrapper {
+          background-color: white;
+          border-radius: 30px;
+          position: absolute;
+          top: 40px;
+          z-index: 2;
+          padding: 80px;
+          height: 500px;
+
+          .instructors-name {
+            color: #7f56d9;
+            font-family: Inter;
+          }
+
+          .instructors-handle {
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            color: #7f56d9;
+            margin-top: 25px;
+          }
+
+          .instructors-handle i {
+            font-size: 25px;
+            border: 1px solid #7f56d9;
+            padding: 12px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+          }
+
+          .instructors-handle i:hover {
+            transform: scale(1.2);
+          }
+
+          .small {
+            font-size: 25px;
+            font-weight: 500;
+            margin-top: 20px;
+          }
+
+          .instructors-description,
+          .instructors-post {
+            font-family: Inter;
+            font-weight: 300;
+            font-size: 18px;
+            color: gray;
+            margin-top: 20px;
+            line-height: 28px;
+          }
+
+          .instructors-post {
+            font-weight: 500;
+            line-height: 5px;
+          }
         }
+      }
+
+      .instructor-header {
+        font-size: 40px;
+        font-family: Inter;
+        font-weight: 700;
+        text-align: center;
+        color: white;
+        margin-top: 80px;
+      }
+
+      .instructor-content {
+        font-size: 18px;
+        font-family: Inter;
+        font-weight: 400;
+        color: white;
+        padding: 12px;
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
       }
     }
   }
@@ -448,6 +535,101 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
             width: 80%;
             top: ${(props) => (props.isexpand ? "5px" : "20px")};
           }
+        }
+      }
+
+      .instructor-section {
+        width: 100%;
+        .instructor-container {
+          width: 100%;
+          height: 720px;
+          display: flex;
+          justify-content: center;
+
+          .instructors-image {
+            background-image: url(${(props) => props.img});
+          }
+
+          .instructor-wrapper {
+            background-color: white;
+            border-radius: 30px;
+            position: absolute;
+            top: 40px;
+            z-index: 2;
+            padding: 80px 30px;
+            height: auto;
+            width: 90%;
+            margin: 0 auto;
+
+            .instructors-name {
+              color: #7f56d9;
+              font-family: Inter;
+              font-size: 20px;
+            }
+
+            .instructors-handle {
+              width: 70%;
+              display: flex;
+              justify-content: space-between;
+              color: #7f56d9;
+              margin-top: 25px;
+            }
+
+            .instructors-handle i {
+              font-size: 18px;
+              border: 1px solid #7f56d9;
+              padding: 12px;
+              border-radius: 50%;
+              cursor: pointer;
+              transition: transform 0.2s ease-in-out;
+            }
+
+            .instructors-handle i:hover {
+              transform: scale(1.2);
+            }
+
+            .small {
+              font-size: 25px;
+              font-weight: 500;
+              margin-top: 20px;
+            }
+
+            .instructors-description,
+            .instructors-post {
+              font-family: Inter;
+              font-weight: 300;
+              font-size: 18px;
+              color: gray;
+              margin-top: 20px;
+            }
+
+            .instructors-post {
+              font-weight: 500;
+              line-height: 5px;
+              line-height: 30px;
+            }
+          }
+        }
+
+        .instructor-header {
+          font-size: 25px;
+          font-family: Inter;
+          font-weight: 700;
+          text-align: center;
+          color: white;
+          margin-top: 80px;
+        }
+
+        .instructor-content {
+          font-size: 16px;
+          font-family: Inter;
+          font-weight: 200;
+
+          color: white;
+          padding: 12px;
+          text-align: center;
+          width: 90%;
+          margin: 0 auto;
         }
       }
     }
@@ -575,6 +757,101 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
           button {
             width: 40%;
           }
+        }
+      }
+
+      .instructor-section {
+        width: 100%;
+        .instructor-container {
+          width: 100%;
+          height: 720px;
+          display: flex;
+          justify-content: center;
+
+          .instructors-image {
+            background-image: url(${(props) => props.img});
+          }
+
+          .instructor-wrapper {
+            background-color: white;
+            border-radius: 30px;
+            position: absolute;
+            top: 40px;
+            z-index: 2;
+            padding: 80px 30px;
+            height: auto;
+            width: 90%;
+            margin: 0 auto;
+
+            .instructors-name {
+              color: #7f56d9;
+              font-family: Inter;
+              font-size: 20px;
+            }
+
+            .instructors-handle {
+              width: 70%;
+              display: flex;
+              justify-content: space-between;
+              color: #7f56d9;
+              margin-top: 25px;
+            }
+
+            .instructors-handle i {
+              font-size: 18px;
+              border: 1px solid #7f56d9;
+              padding: 12px;
+              border-radius: 50%;
+              cursor: pointer;
+              transition: transform 0.2s ease-in-out;
+            }
+
+            .instructors-handle i:hover {
+              transform: scale(1.2);
+            }
+
+            .small {
+              font-size: 25px;
+              font-weight: 500;
+              margin-top: 20px;
+            }
+
+            .instructors-description,
+            .instructors-post {
+              font-family: Inter;
+              font-weight: 300;
+              font-size: 18px;
+              color: gray;
+              margin-top: 20px;
+            }
+
+            .instructors-post {
+              font-weight: 500;
+              line-height: 5px;
+              line-height: 30px;
+            }
+          }
+        }
+
+        .instructor-header {
+          font-size: 25px;
+          font-family: Inter;
+          font-weight: 700;
+          text-align: center;
+          color: white;
+          margin-top: 80px;
+        }
+
+        .instructor-content {
+          font-size: 16px;
+          font-family: Inter;
+          font-weight: 200;
+
+          color: white;
+          padding: 12px;
+          text-align: center;
+          width: 90%;
+          margin: 0 auto;
         }
       }
     }

@@ -4,14 +4,14 @@ import useSelectCourse from "./hooks/useSelectCourse";
 type TCourse = {
   setCourse: React.Dispatch<React.SetStateAction<string | undefined>>;
 };
-const PopularCourses = ({ setCourse }: TCourse) => {
+const ExploreCourses = ({ setCourse }: TCourse) => {
   const { handleSelectCourse, searchParams, ref } = useSelectCourse(setCourse);
 
   return (
     <PopularWrapper>
       <div className="pop-container">
         <div className="popText">
-          Popular <span className="purpleText">Courses</span>
+          Explore <span className="purpleText">Courses</span>
         </div>
 
         <div className="courses-btnWrapper">
@@ -57,7 +57,7 @@ const PopularCourses = ({ setCourse }: TCourse) => {
   );
 };
 
-export default PopularCourses;
+export default ExploreCourses;
 
 const PopularWrapper = styled.div`
   width: 100%;

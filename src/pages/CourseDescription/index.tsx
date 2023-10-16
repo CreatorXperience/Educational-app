@@ -4,7 +4,7 @@ import getData from "../../services/getData";
 import { TDatabase } from "../../types/type";
 import { lightningIcon } from "../../constants/images";
 import CourseBlock from "../../components/courseBlock";
-import CourseDescriptionWrapper from "./CourseDescriptionWrapperCourseDescriptionWrapper";
+import CourseDescriptionWrapper from "./CourseDescriptionWrapper";
 import Accordion from "../../components/Accordion";
 
 const CoursDescription = () => {
@@ -17,9 +17,10 @@ const CoursDescription = () => {
   }, [id]);
 
   const handleExpand = () => {
-    if (window.innerWidth < 800 && isExpand) {
-      window.scrollTo(0, window.innerHeight - 200);
-    } else if (isExpand) {
+    if (isExpand) {
+      if (window.innerWidth < 800) {
+        window.scrollTo(0, window.innerHeight - 800);
+      }
       window.scrollTo(0, window.innerHeight / 2);
     }
     setIsExpand(!isExpand);

@@ -315,7 +315,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
       .course-content {
         width: 100%;
         height: auto;
-        background: linear-gradient(180deg, #c1d8fc, #e1c1ff);
+        background: transparent;
         flex-flow: column;
         align-items: center;
         border: 2px solid red;
@@ -324,6 +324,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
           width: 100%;
           border: 2px solid green;
           padding: 12px;
+          background: linear-gradient(94deg, #62ace7 4.68%, #5641ce 29.09%);
 
           h1 {
             width: 100%;

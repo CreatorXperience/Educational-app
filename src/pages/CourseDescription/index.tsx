@@ -17,6 +17,11 @@ const CoursDescription = () => {
   }, [id]);
 
   const handleExpand = () => {
+    if (window.innerWidth < 800 && isExpand) {
+      window.scrollTo(0, window.innerHeight - 200);
+    } else if (isExpand) {
+      window.scrollTo(0, window.innerHeight / 2);
+    }
     setIsExpand(!isExpand);
   };
 

@@ -49,24 +49,24 @@ const AccordionWrapper = styled.div`
       display: flex;
       height: 100%;
       padding: 5px;
-
       justify-content: space-between;
 
       .accordion-title {
-        font-weight: 900;
+        font-weight: 200;
         display: flex;
         width: 70%;
         height: 100%;
         align-items: center;
-        color: #7f56d9;
+        color: black;
+        font-size: 20px;
       }
 
       .accordion-icon {
-        color: #000000;
+        color: #93939380;
         width: 50px;
         height: 50px;
         border-radius: 100%;
-        background: #7f56d9;
+        background: linear-gradient(94deg, #8c3cdd 4.68%, #5b57d6 98.4%);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -79,6 +79,19 @@ const AccordionWrapper = styled.div`
       padding: 12px;
       font-size: 18px;
       font-family: DM sans;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .accordion-container {
+      width: 90%;
+      margin: 0 auto;
+
+      .content-container {
+        .accordion-title {
+          font-size: 16px;
+        }
+      }
     }
   }
 `;

@@ -10,7 +10,13 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
     .course-content {
       width: 100%;
       height: auto;
-      background: linear-gradient(180deg, #c1d8fc, #e1c1ff);
+      background: linear-gradient(
+        94deg,
+        #62ace7 4.68%,
+        #5641ce 29.09%,
+        #9747dd 57.89%,
+        #f7cfae 98.4%
+      );
       display: flex;
 
       .content {
@@ -22,20 +28,23 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
           padding-top: 50px;
           font-size: 60px;
           font-family: Inter;
+          color: white;
         }
 
         p {
-          font-size: 25px;
+          color: white;
+          font-size: 20px;
           font-family: Inter;
           width: 60%;
           padding: 12px;
+          font-weight: 300;
         }
       }
 
       .course-card {
         width: 25%;
         height: 900px;
-        background-color: white;
+        background: linear-gradient(180deg, #5841ce 0%, #2c1f4a 100%);
         display: flex;
         flex-flow: column;
         align-items: center;
@@ -44,6 +53,8 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
         right: 200px;
         top: 100px;
         border-radius: 5px;
+        filter: drop-shadow(-34px 53px 4px rgba(0, 0, 0, 0.25));
+        color: white;
 
         .course-image {
           border-top-left-radius: 5px;
@@ -68,7 +79,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
           border-radius: 35px;
           margin-top: 20px;
           border: none;
-          background-color: #7f56d9;
+          background: linear-gradient(94deg, #8c3cdd 4.68%, #5b57d6 98.4%);
           font-size: 20px;
           color: white;
           font-weight: 700;
@@ -190,8 +201,9 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
             position: ${(props) => (props.isexpand ? "relative" : "absolute")};
             top: ${(props) => (props.isexpand ? "5px" : "20px")};
             left: 50%;
-            transform: translateX(-50%);
+            transform: translateX(-60%);
             z-index: 8;
+            background: linear-gradient(94deg, #8c3cdd 4.68%, #5b57d6 98.4%);
           }
 
           .caret {
@@ -288,7 +300,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
           padding: 15px;
           border-radius: 35px;
           border: none;
-          background-color: #7f56d9;
+          background: linear-gradient(94deg, #8c3cdd 4.68%, #5b57d6 98.4%);
           font-size: 14px;
           font-family: Inter;
           color: white;
@@ -401,6 +413,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
 
           button {
             width: 80%;
+            top: ${(props) => (props.isexpand ? "5px" : "20px")};
           }
         }
       }
@@ -440,7 +453,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
         .course-card {
           margin-top: 20px;
           width: 40%;
-          height: 900px;
+          height: 800px;
           background-color: white;
           display: flex;
           flex-flow: column;
@@ -450,6 +463,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
           right: 10px;
           top: 0px;
           border-radius: 5px;
+          z-index: 0;
 
           .course-desc {
             font-size: 18px;
@@ -508,14 +522,15 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
         }
 
         .main-overview {
-          width: 50%;
+          width: 80%;
           height: ${(props) => (props.isexpand ? "2000px" : "520px")};
           background-color: white;
           padding: 10px;
           position: relative;
           overflow: hidden;
           border-radius: 20px;
-          margin: 50px 50px;
+          margin: 0 auto;
+          z-index: 1;
         }
 
         .start-card {

@@ -254,6 +254,19 @@ const CoursDescription = () => {
               );
             })}
           </div>
+
+          <div className="instructor-section">
+            <div>
+              <h1 className="instructor-header">Meet your instructor</h1>
+              <p className="instructor-content">
+                Your instructor (Andrei) isn't just an expert with years of
+                real-world professional experience. He has been in your shoes.
+                He makes learning fun. He makes complex topics feel simple. He
+                will motivate you. He will push you. And he will go above and
+                beyond to help you succeed.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </CourseDescriptionWrapper>

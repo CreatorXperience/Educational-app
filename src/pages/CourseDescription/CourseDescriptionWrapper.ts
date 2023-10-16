@@ -307,6 +307,38 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
           margin-top: 20px;
         }
       }
+
+      .accordion-container {
+        margin-top: 20px;
+
+        h1 {
+          color: white;
+          font-family: DM sans;
+        }
+      }
+      .instructor-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+
+        .instructor-header {
+          font-size: 30px;
+          font-family: Inter;
+          font-weight: 700;
+          color: white;
+        }
+
+        .instructor-content {
+          font-size: 16px;
+          font-family: Inter;
+          font-weight: 200;
+          color: white;
+          padding: 12px;
+          text-align: center;
+        }
+      }
     }
   }
 

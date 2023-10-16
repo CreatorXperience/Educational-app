@@ -242,7 +242,8 @@ const CoursDescription = () => {
             <button>START LEARNING NOW</button>
           </div>
 
-          <div>
+          <div className="accordion-container">
+            <h1>Curriculum</h1>
             {course?.courseContent.topic.map((course) => {
               return (
                 <Accordion

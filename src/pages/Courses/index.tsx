@@ -100,7 +100,7 @@ const Courses = () => {
         <div className="checkConnection">
           <p>oop's sorry, can't find "{term}"</p>
           <p>
-            try seaching for a more generic term e.g node, angular, javascript
+            try sear ching for a more generic term e.g node, angular, javascript
           </p>
         </div>
       )}

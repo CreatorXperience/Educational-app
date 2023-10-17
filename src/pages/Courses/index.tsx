@@ -44,51 +44,66 @@ const Courses = () => {
           </div>
         </div>
       </div>
-      <div className="courses-section">
-        (
-        <div className="courses-inner">
-          {paginateData()?.map((data, i) => {
-            return <Card data={data} key={i} />;
-          })}
-        </div>
-        )
-      </div>
-
-      <div className="btn-wrapper">
-        <button
-          onClick={() => {
-            if (
-              paginateData() &&
-              paginateData()?.length !== filterData()?.length
-            ) {
-              setCount((count) => count + 2);
-            }
-          }}
-        >
-          Load More
-        </button>
-      </div>
-
-      <div className="searches-container">
-        <div className="search-wrapper">
-          <h3 className="search-title">Searches related to {term}</h3>
-
-          <div className="other-searches">
-            <div className="search-item">
-              <p>nodejs</p>
-              <p>nodejs</p>
-              <p>node.js para principiantes: establece tu servidor con http</p>
-              <p>node.js backend básico con buenas prácticas.</p>
+      {data && filterData() ? (
+        <>
+          <div className="courses-section">
+            (
+            <div className="courses-inner">
+              {paginateData()?.map((data, i) => {
+                return <Card data={data} key={i} />;
+              })}
             </div>
-            <div className="search-item">
-              <p>node.js backend basics with best practices</p>
-              <p>nodejs</p>
-              <p>node.js: interceptando peticiones a un api con middlewares</p>
-              <p>hello node kubernetes</p>
+            )
+          </div>
+
+          <div className="btn-wrapper">
+            <button
+              onClick={() => {
+                if (
+                  paginateData() &&
+                  paginateData()?.length !== filterData()?.length
+                ) {
+                  setCount((count) => count + 2);
+                }
+              }}
+            >
+              Load More
+            </button>
+          </div>
+
+          <div className="searches-container">
+            <div className="search-wrapper">
+              <h3 className="search-title">Searches related to {term}</h3>
+
+              <div className="other-searches">
+                <div className="search-item">
+                  <p>nodejs</p>
+                  <p>nodejs</p>
+                  <p>
+                    node.js para principiantes: establece tu servidor con http
+                  </p>
+                  <p>node.js backend básico con buenas prácticas.</p>
+                </div>
+                <div className="search-item">
+                  <p>node.js backend basics with best practices</p>
+                  <p>nodejs</p>
+                  <p>
+                    node.js: interceptando peticiones a un api con middlewares
+                  </p>
+                  <p>hello node kubernetes</p>
+                </div>
+              </div>
             </div>
           </div>
+        </>
+      ) : (
+        <div className="checkConnection">
+          <p>oop's sorry, can't find "{term}"</p>
+          <p>
+            try seaching for a more generic term e.g node, angular, javascript
+          </p>
         </div>
-      </div>
+      )}
     </CoursesWrapper>
   );
 };
@@ -120,6 +135,32 @@ const CoursesWrapper = styled.div`
       }
     }
   }
+
+  .checkConnection {
+    width: 80%;
+    height: 300px;
+    margin: 0 auto;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    p:first-child {
+      font-size: 30px;
+      font-family: Inter;
+      color: white;
+      font-weight: 800;
+    }
+
+    p:last-child {
+      font-size: 12px;
+      font-family: Inter;
+      font-weight: 200;
+      color: white;
+    }
+  }
+
   .courses-section {
     width: 100%;
     display: flex;
@@ -217,6 +258,24 @@ const CoursesWrapper = styled.div`
         .search-term {
           font-size: 20px;
         }
+      }
+    }
+
+    .checkConnection {
+      p:first-child {
+        font-size: 20px;
+        font-family: Inter;
+        color: white;
+        font-weight: 800;
+        text-align: center;
+      }
+
+      p:last-child {
+        font-size: 12px;
+        font-family: Inter;
+        font-weight: 200;
+        color: white;
+        text-align: center;
       }
     }
 

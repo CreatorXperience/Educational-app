@@ -24,7 +24,7 @@ const LandingPage = () => {
             >
           }
         />
-        <PopularCourse isData={isData} />
+        {isData && <PopularCourse isData={isData} />}
         <ExploreBtn />
         <Category />
         <Platform />

@@ -3,12 +3,13 @@ import useSelectCourse from "./hooks/useSelectCourse";
 
 type TCourse = {
   setCourse: React.Dispatch<React.SetStateAction<string | undefined>>;
+  size?: string;
 };
-const ExploreCourses = ({ setCourse }: TCourse) => {
+const ExploreCourses = ({ setCourse, size }: TCourse) => {
   const { handleSelectCourse, searchParams, ref } = useSelectCourse(setCourse);
 
   return (
-    <PopularWrapper>
+    <PopularWrapper size={size}>
       <div className="pop-container">
         <div className="popText">
           Explore <span className="purpleText">Courses</span>
@@ -59,7 +60,7 @@ const ExploreCourses = ({ setCourse }: TCourse) => {
 
 export default ExploreCourses;
 
-const PopularWrapper = styled.div`
+const PopularWrapper = styled.div<{ size?: string }>`
   width: 100%;
   height: 100%;
   display: flex;
@@ -67,7 +68,7 @@ const PopularWrapper = styled.div`
   align-items: center;
 
   .pop-container {
-    width: 85%;
+    width: ${({ size }) => (size ? size : "85%")};
     height: 90px;
     display: flex;
     justify-content: space-between;

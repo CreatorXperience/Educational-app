@@ -20,7 +20,11 @@ const App = () => {
   const [value, setValue] = useState<string | undefined>("data");
 
   useEffect(() => {
-    getData<TDatabase[] | null | undefined>(setData, value as string);
+    try {
+      getData<TDatabase[] | null | undefined>(setData, value as string);
+    } catch (e) {
+      console.log("caught an error");
+    }
   }, [value]);
 
   const memoizedData = useMemo(() => {

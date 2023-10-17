@@ -314,6 +314,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
         h1 {
           color: white;
           font-family: DM sans;
+          width: 80%;
         }
       }
     }
@@ -357,6 +358,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
           z-index: 2;
           padding: 80px;
           height: 500px;
+          width: 100%;
 
           .instructors-name {
             color: #7f56d9;
@@ -364,11 +366,13 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
           }
 
           .instructors-handle {
-            width: 70%;
+            width: 100%;
             display: flex;
             justify-content: space-between;
             color: #7f56d9;
             margin-top: 25px;
+            margin: 25px auto;
+            border: 1px solid red;
           }
 
           .instructors-handle i {
@@ -558,7 +562,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
             z-index: 2;
             padding: 80px 30px;
             height: auto;
-            width: 90%;
+            width: 100%;
             margin: 0 auto;
 
             .instructors-name {
@@ -568,7 +572,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
             }
 
             .instructors-handle {
-              width: 70%;
+              width: 100%;
               display: flex;
               justify-content: space-between;
               color: #7f56d9;

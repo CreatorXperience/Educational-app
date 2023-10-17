@@ -9,12 +9,13 @@ const CardWrapper = styled.div<{ img: string }>`
     border: 2px groove rgba(255, 255, 255, 0.1);
     background: #381d74;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
 
     /* margin: 0 auto; */
 
     .card-image {
       width: 100%;
-      height: 28%;
+      height: 40%;
       overflow: hidden;
       border-top-left-radius: 30px;
       border-top-right-radius: 30px;
@@ -155,6 +156,10 @@ const CardWrapper = styled.div<{ img: string }>`
     .card-container {
       width: 98%;
 
+      .card-image {
+        height: 25%;
+      }
+
       .content-wrapper {
         .card-title {
           font-size: 20px;
@@ -168,6 +173,10 @@ const CardWrapper = styled.div<{ img: string }>`
   @media screen and (max-width: 800px) and (min-width: 500px) {
     .card-container {
       width: 100%;
+
+      .card-image {
+        height: 28%;
+      }
 
       .content-wrapper {
         .card-title {
@@ -184,6 +193,10 @@ const CardWrapper = styled.div<{ img: string }>`
       margin: 10px 40px;
       width: 80%;
       height: 370px;
+
+      .card-image {
+        height: 28%;
+      }
 
       .content-wrapper {
         .card-title {

@@ -63,7 +63,7 @@ const FeedBackWrapper = styled.div`
         margin: 12px;
         transition: all 0.3s ease-in-out;
         position: relative;
-        padding: 12px;
+        padding: 5px;
         /* transform: translateX(-100%); */
 
         .carousel-profile {
@@ -85,7 +85,7 @@ const FeedBackWrapper = styled.div`
           .carousel-title {
             color: #000;
             font-family: DM sans;
-            font-size: 22px;
+            font-size: 18px;
             font-style: normal;
             font-weight: 600;
             line-height: 32px; /* 133.333% */
@@ -95,7 +95,7 @@ const FeedBackWrapper = styled.div`
               color: #000;
               /* Body/Regular/400 */
               font-family: Inter;
-              font-size: 16px;
+              font-size: 12px;
               font-style: normal;
               font-weight: 400;
               line-height: 24px; /* 150% */
@@ -107,10 +107,10 @@ const FeedBackWrapper = styled.div`
           color: var(--gray-700, #363a3d);
           /* Body/Regular/400 */
           font-family: Inter;
-          font-size: 14px;
+          font-size: 12px;
           font-style: normal;
           font-weight: 400;
-          line-height: 16px; /* 150% */
+          line-height: 14px; /* 150% */
           width: 80%;
           margin: 20px auto;
         }

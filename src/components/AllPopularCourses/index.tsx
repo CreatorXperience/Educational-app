@@ -52,6 +52,7 @@ const CardWrapper = styled.div`
   }
 
   @media screen and (max-width: 500px) {
+    width: 100%;
     grid-template-columns: auto;
     padding: 0;
   }
@@ -64,6 +65,7 @@ const CardWrapper = styled.div`
 
   @media screen and (max-width: 1600px) and (min-width: 800px) {
     grid-template-columns: auto auto auto;
+    padding: 0px;
 
     .card-container {
       .content-wrapper {

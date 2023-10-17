@@ -31,7 +31,7 @@ export default Accordion;
 const AccordionWrapper = styled.div`
   width: 100%;
   height: auto;
-  margin-top: 20px;
+
   border: 1px solid white;
 
   .accordion-container {
@@ -44,6 +44,7 @@ const AccordionWrapper = styled.div`
     font-size: 18px;
     font-family: DM sans;
     transition: height 1s ease-in-out;
+    margin-left: 40px;
 
     .content-container {
       display: flex;
@@ -52,13 +53,14 @@ const AccordionWrapper = styled.div`
       justify-content: space-between;
 
       .accordion-title {
-        font-weight: 200;
+        font-weight: 400;
         display: flex;
         width: 70%;
         height: 100%;
         align-items: center;
         color: black;
         font-size: 20px;
+        padding: 12px;
       }
 
       .accordion-icon {
@@ -77,7 +79,7 @@ const AccordionWrapper = styled.div`
 
     .accordion-desc {
       padding: 12px;
-      font-size: 18px;
+      font-size: 14px;
       font-family: DM sans;
     }
   }

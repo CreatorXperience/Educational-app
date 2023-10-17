@@ -32,8 +32,8 @@ const WireFramesWrapper = styled.div`
   }
 
   .wireframe-container {
-    width: 60%;
-    height: 500px;
+    width: 100%;
+    height: 400px;
     background: #353b6c;
     border-radius: 30px;
     margin-top: 20px;

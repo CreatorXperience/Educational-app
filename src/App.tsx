@@ -40,7 +40,9 @@ const App = () => {
           value={{ data: memoizedData, setCourse: setValue, isData: isData }}
         >
           <NavigationBar />
-          <RouterProvider router={router}></RouterProvider>
+          <div className="content">
+            <RouterProvider router={router}></RouterProvider>
+          </div>
           <Footer />
         </DataProvider.Provider>
       </div>
@@ -51,6 +53,13 @@ const App = () => {
 export default App;
 
 const Appwrapper = styled.div`
+  position: relative;
   display: flex;
   flex-flow: column;
+
+  .content {
+    height: 100%;
+
+    overflow-y: auto;
+  }
 `;

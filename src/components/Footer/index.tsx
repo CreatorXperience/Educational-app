@@ -4,7 +4,7 @@ import FooterWrapper from "./FooterWrapper";
 const Footer = () => {
   return (
     <FooterWrapper>
-      <div className="footer-container">
+      <div className="footer-container" data-testid="footer-container">
         <div className="brand-footer-icon">
           <div className="brand-logo">{brand("120px")}</div>
           <div className="brand-name">Edujar</div>

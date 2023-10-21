@@ -46,7 +46,7 @@ const Courses = () => {
       </div>
       {data && filterData() ? (
         <>
-          <div className="courses-section">
+          <div className="courses-section" data-testid="card-wrapper">
             (
             <div className="courses-inner">
               {paginateData()?.map((data, i) => {

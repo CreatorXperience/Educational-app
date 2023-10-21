@@ -10,7 +10,11 @@ const Card = ({ data }: TData) => {
     window.scrollTo(0, 0);
   };
   return (
-    <CardWrapper img={data.coverImage} onClick={() => handleNavigate()}>
+    <CardWrapper
+      img={data.coverImage}
+      onClick={() => handleNavigate()}
+      data-testid="card-wrapper"
+    >
       <div className="card-container">
         <div className="card-image"></div>
 

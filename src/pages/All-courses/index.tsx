@@ -162,7 +162,7 @@ const AllCoursesWrapper = styled.div`
 
         .upper-btn {
           display: grid;
-          grid-template-columns: auto auto auto auto auto auto auto;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
           margin-top: 10px;
 
@@ -176,6 +176,7 @@ const AllCoursesWrapper = styled.div`
             color: white;
             cursor: pointer;
             margin: 2px;
+            width: 100%;
           }
 
           button:hover {
@@ -225,7 +226,7 @@ const AllCoursesWrapper = styled.div`
       .explore-courses-wrapper {
         width: 100%;
         border: 1px solid red;
-        height: 300px;
+        height: 800px;
         position: relative;
 
         h1 {
@@ -242,28 +243,15 @@ const AllCoursesWrapper = styled.div`
         .explore-container {
           width: 100%;
           height: 200px;
-          border: 1px solid gray;
           top: 50px;
-          position: absolute;
-          z-index: 0;
           padding-top: 50px;
-          border-radius: 15px;
 
           .upper-btn {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
+            margin-top: 80px;
+            place-items: center;
 
             button {
-              padding: 12px;
-              border-radius: 30px;
-              font-family: Inter;
-              font-size: 14px;
-              border: 3px solid #7f56d9;
-              background: transparent;
-              color: white;
-              cursor: pointer;
-              margin: 2px;
+              width: 80%;
             }
 
             button:hover {

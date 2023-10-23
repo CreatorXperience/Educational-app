@@ -133,7 +133,7 @@ const HeroWrapper = styled.div`
       .explorebtn {
         padding: 16px 28px;
         border-radius: 47px;
-        background: #7f56d9;
+        background: linear-gradient(94deg, #8c3cdd 4.68%, #5b57d6 98.4%);
         /* Shadow/xs */
         box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
         color: white;

@@ -11,7 +11,11 @@ const Hero = () => {
     e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>
   ) => {
     e.preventDefault();
-    navigate(`courses/${ref.current?.value}`);
+    if (
+      ref.current?.value &&
+      !/[^\d*A-Za-z\S*\d*A-Za-z$]/.exec(ref.current?.value) //FIXME: fix whitespace issue on course input
+    )
+      navigate(`courses/${ref.current?.value}`);
     window.scrollTo(0, 0);
   };
 

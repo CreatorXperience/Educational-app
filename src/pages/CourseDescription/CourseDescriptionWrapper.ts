@@ -19,6 +19,10 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
       );
       display: flex;
 
+      div.circle {
+        right: 0;
+      }
+
       .content {
         width: 80%;
         padding-left: 200px;

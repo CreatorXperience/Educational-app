@@ -9,6 +9,7 @@ import styled from "styled-components";
 import Platform from "../Platform";
 import FeedBack from "../Feedback";
 import { DataProvider } from "../../context/DataProvider";
+import BlurredCircle from "../blurredCircle/circle";
 
 const LandingPage = () => {
   const { isData, setCourse } = useContext(DataProvider);
@@ -29,6 +30,7 @@ const LandingPage = () => {
         <Category />
         <Platform />
         <FeedBack />
+        <BlurredCircle />
       </div>
     </HomeWrapper>
   );

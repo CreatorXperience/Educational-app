@@ -1,4 +1,3 @@
-import type { TDatabase } from "../types/type";
 import { getDatabase, onValue, ref } from "firebase/database";
 import app from "../config/firebase";
 
@@ -11,6 +10,7 @@ const getData = <T>(
   const dbReferenece = ref(db, `${path.toLowerCase()}/`);
   onValue(dbReferenece, (snapshot) => {
     const data = snapshot.val();
+
     appState(data);
   });
 };

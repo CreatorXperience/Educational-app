@@ -190,7 +190,7 @@ const CoursesWrapper = styled.div`
       width: 200px;
       padding: 12px;
       border-radius: 6px;
-      background-color: #7f56d9;
+      background: linear-gradient(94deg, #8c3cdd 4.68%, #5b57d6 98.4%);
       color: white;
       border: none;
       font-family: DM sans;

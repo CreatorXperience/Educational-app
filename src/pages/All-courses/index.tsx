@@ -1,9 +1,14 @@
-import { useState } from "react";
-import ExploreCourses from "../../components/popularCourses";
 import AllCoursesWrapper from "./AllCoursesWrapper";
+import { DataProvider } from "../../context/DataProvider";
+import { TDatabase } from "../../types/type";
+import { useContext, useEffect } from "react";
+import Card from "../../components/Card";
 
 const AllCourses = () => {
-  const [course, setCourse] = useState<string | undefined>();
+  const { data } = useContext(DataProvider);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <AllCoursesWrapper>
       <div className="all-courses-container">
@@ -56,6 +61,13 @@ const AllCourses = () => {
 
             <div className="upper-btn"></div>
           </div>
+        </div>
+
+        <div className="course-grid">
+          {data &&
+            data.map((item) => {
+              return <Card data={item} key={item.id} />;
+            })}
         </div>
       </div>
     </AllCoursesWrapper>

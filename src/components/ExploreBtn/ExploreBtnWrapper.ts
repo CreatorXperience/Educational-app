@@ -9,7 +9,7 @@ const ExploreBtnWrapper = styled.div`
 
   button {
     border-radius: 47px;
-    background: #7f56d9;
+    background: linear-gradient(94deg, #8c3cdd 4.68%, #5b57d6 98.4%);
     box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
     display: flex;
     width: 273px;
@@ -28,6 +28,11 @@ const ExploreBtnWrapper = styled.div`
     transition: all 0.2s ease-in-out;
     border: none;
     cursor: pointer;
+  }
+
+  button a {
+    color: white;
+    text-decoration: none;
   }
 
   button:hover {

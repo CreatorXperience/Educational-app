@@ -6,6 +6,7 @@ import { lightningIcon } from "../../constants/images";
 import CourseBlock from "../../components/courseBlock";
 import CourseDescriptionWrapper from "./CourseDescriptionWrapper";
 import Accordion from "../../components/Accordion";
+import BlurredCircle from "../../components/blurredCircle/circle";
 
 const CoursDescription = () => {
   const { id } = useParams();
@@ -41,6 +42,7 @@ const CoursDescription = () => {
             <p>{course?.courseDescription}</p>
           </div>
 
+          <BlurredCircle />
           <div className="course-card">
             <div className="course-image"></div>
             <div className="course-desc">
@@ -89,6 +91,8 @@ const CoursDescription = () => {
         <div className="lightning">
           <div className="light">{lightningIcon()}</div>
         </div>
+
+        <BlurredCircle />
 
         <div className="overview-wrapper">
           <div className="overview">
@@ -266,6 +270,8 @@ const CoursDescription = () => {
               help you succeed.
             </p>
           </div>
+
+          <BlurredCircle />
 
           <div className="instructor-container">
             <div className="instructors-image"></div>

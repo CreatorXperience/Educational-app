@@ -1,11 +1,10 @@
 import AllCoursesWrapper from "./AllCoursesWrapper";
 import { DataProvider } from "../../context/DataProvider";
-import { TDatabase } from "../../types/type";
 import { useContext, useEffect } from "react";
 import Card from "../../components/Card";
 
 const AllCourses = () => {
-  const { data } = useContext(DataProvider);
+  const { data, isData } = useContext(DataProvider);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -68,6 +67,7 @@ const AllCourses = () => {
             data.map((item) => {
               return <Card data={item} key={item.id} />;
             })}
+          {isData ? "" : <div className="loader">Loading courses.....</div>}
         </div>
       </div>
     </AllCoursesWrapper>

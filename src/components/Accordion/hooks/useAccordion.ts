@@ -12,7 +12,6 @@ const useAccordion = () => {
   };
 
   return {
-    isIconClick,
     handleIconClick,
     ref,
   };

@@ -10,6 +10,7 @@ import Platform from "../Platform";
 import FeedBack from "../Feedback";
 import { DataProvider } from "../../context/DataProvider";
 import BlurredCircle from "../blurredCircle/circle";
+import Loader from "../Loader";
 
 const LandingPage = () => {
   const { isData, setCourse } = useContext(DataProvider);
@@ -25,7 +26,7 @@ const LandingPage = () => {
             >
           }
         />
-        <PopularCourse isData={isData} />
+        {isData ? <PopularCourse isData={isData} /> : <Loader />}
         <ExploreBtn />
         <Category />
         <Platform />

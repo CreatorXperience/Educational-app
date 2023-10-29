@@ -69,6 +69,7 @@ const HeroWrapper = styled.div`
       .hero-illustration {
         animation: jumpin 1.5s ease-in-out;
         transform: translateY(0px);
+        width: 100%;
       }
 
       @keyframes jumpin {

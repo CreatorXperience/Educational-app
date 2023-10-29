@@ -5,9 +5,21 @@ const ExploreBtn = () => {
   return (
     <ExploreBtnWrapper>
       <div className="explore">
-        <button>
-          <Link to={"/allcourses"}> Explore all Courses </Link>
-        </button>
+        <Link to={"/allcourses"}>
+          {" "}
+          <button className="btn" type="button">
+            <strong> EXPLORE</strong>
+
+            <div id="container-stars">
+              <div id="stars"></div>
+            </div>
+
+            <div id="glow">
+              <div className="circle"></div>
+              <div className="circle"></div>
+            </div>
+          </button>{" "}
+        </Link>
       </div>
     </ExploreBtnWrapper>
   );

@@ -32,11 +32,9 @@ const CoursDescription = () => {
       img={course?.coverImage as string}
       isexpand={isExpand}
     >
-      {/* <div>{course && <Card data={course as TDatabase} />}</div> */}
-
       <div className="content-wrapper">
         <div className="course-content">
-          <div className="go-back"></div>
+          <div className="go-back"> </div>
           <div className="content">
             <h1>{course?.coverTitle}</h1>
             <p>{course?.courseDescription}</p>

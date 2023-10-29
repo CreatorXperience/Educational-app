@@ -133,6 +133,14 @@ const AllCoursesWrapper = styled.div`
       grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
       gap: 50px;
       padding: 20px;
+
+      .loader {
+        font-family: Inter;
+        color: white;
+        font-size: 35px;
+        font-weight: 800;
+        text-align: center;
+      }
     }
   }
 

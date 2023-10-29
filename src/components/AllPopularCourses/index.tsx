@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Card from "../Card";
-import WireFrame from "../cardWireFrame/wireframe";
 import { useContext } from "react";
 import { DataProvider } from "../../context/DataProvider";
 
@@ -8,21 +7,10 @@ const PopularCourse = ({ isData }: { isData: boolean }) => {
   const { data } = useContext(DataProvider);
   return (
     <CardWrapper>
-      {isData ? (
-        <>
-          {data?.map((item, i) => {
-            if (i < 8) return <Card key={item.id} data={item} />;
-            return "";
-          })}
-        </>
-      ) : (
-        <>
-          <WireFrame />
-          <WireFrame />
-          <WireFrame />
-          <WireFrame />
-        </>
-      )}
+      {data?.map((item, i) => {
+        if (i < 8) return <Card key={item.id} data={item} />;
+        return "";
+      })}
     </CardWrapper>
   );
 };

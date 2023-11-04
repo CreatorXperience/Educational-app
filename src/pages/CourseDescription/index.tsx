@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import getData from "../../services/getData";
 import { TDatabase } from "../../types/type";
@@ -7,47 +7,13 @@ import CourseBlock from "../../components/courseBlock";
 import CourseDescriptionWrapper from "./CourseDescriptionWrapper";
 import Accordion from "../../components/Accordion";
 import BlurredCircle from "../../components/blurredCircle/circle";
+import useIntersectionObserver from "./hook/useIntersectionObserver";
 
 const CoursDescription = () => {
   const { id } = useParams();
   const [course, setCourse] = useState<TDatabase>();
   const [isExpand, setIsExpand] = useState<boolean>(false);
-  const navRef = useRef<HTMLDivElement | null>(null);
-  const topSection = useRef<HTMLDivElement>(null);
-  const [isIntersected, setIsIntersected] = useState(true);
-
-  const callback = (entries: any) => {
-    entries.forEach((entry: any) => {
-      console.log(entry.isIntersecting);
-      if (!entry.isIntersecting) {
-        setIsIntersected(false);
-      } else {
-        setIsIntersected(true);
-      }
-    });
-  };
-
-  let interSectionObserver = new IntersectionObserver(callback, {
-    threshold: 0.1,
-  });
-
-  useEffect(() => {
-    if (topSection && topSection.current) {
-      interSectionObserver.observe(topSection.current as Element);
-    }
-  });
-
-  useEffect(() => {
-    if (!isIntersected && navRef && navRef.current) {
-      navRef.current.style.top = "0";
-      navRef.current.style.position = "fixed";
-      navRef.current.style.width = "100%";
-      navRef.current.style.zIndex = "999";
-    } else if (isIntersected && navRef && navRef.current) {
-      navRef.current.style.top = "";
-      navRef.current.style.position = "relative";
-    }
-  });
+  const { navRef, topSection } = useIntersectionObserver();
 
   useEffect(() => {
     getData<TDatabase | undefined>(setCourse, `data/${id}`);

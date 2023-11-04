@@ -7,6 +7,7 @@ type TAccordionProps = {
 };
 const Accordion = ({ title, desc }: TAccordionProps) => {
   const { handleIconClick, ref } = useAccordion();
+
   return (
     <AccordionWrapper>
       <div className="accordion-container" ref={ref}>

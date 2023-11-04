@@ -21,6 +21,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
 
       div.circle {
         right: 0;
+        z-index: -1;
       }
 
       .content {
@@ -121,13 +122,17 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
     }
 
     .course-nav {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
       padding: 12px;
       background: linear-gradient(180deg, #3f205e, #340c58);
       color: white;
       height: 60px;
+      position: relative;
+
+      .lightning {
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+      }
 
       .nav-content {
         display: flex;
@@ -138,6 +143,10 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
         p {
           font-size: 18px;
           font-family: Inter;
+        }
+        a {
+          text-decoration: none;
+          color: white;
         }
       }
     }

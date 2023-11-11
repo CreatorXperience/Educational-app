@@ -10,14 +10,12 @@ import { TDatabase } from "./types/type";
 import { DataProvider } from "./context/DataProvider";
 import styled from "styled-components";
 import Footer from "./components/Footer";
+import { User } from "firebase/auth";
 
 const App = () => {
-  useEffect(() => {
-    auth().signIn("cola@gmail.com", "1234567890");
-  }, []);
-
   const [data, setData] = useState<TDatabase[] | null | undefined>();
   const [value, setValue] = useState<string | undefined>("data");
+  const [user, setUser] = useState<User>();
 
   useEffect(() => {
     try {
@@ -26,6 +24,14 @@ const App = () => {
       console.log("caught an error");
     }
   }, [value]);
+
+  useEffect(() => {
+    auth()
+      .signIn("cola@gmail.com", "1234567890")
+      .then((user) => {
+        setUser(user);
+      });
+  }, []);
 
   const memoizedData = useMemo(() => {
     return data;
@@ -39,7 +45,7 @@ const App = () => {
         <DataProvider.Provider
           value={{ data: memoizedData, setCourse: setValue, isData: isData }}
         >
-          <NavigationBar />
+          <NavigationBar user={user} />
           <div className="content">
             <RouterProvider router={router}></RouterProvider>
           </div>
@@ -56,10 +62,9 @@ const Appwrapper = styled.div`
   position: relative;
   display: flex;
   flex-flow: column;
+  height: 100%;
 
   .content {
-    height: 100%;
-
     overflow-y: auto;
   }
 `;

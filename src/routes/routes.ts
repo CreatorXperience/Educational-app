@@ -3,6 +3,7 @@ const ROUTES = {
   course: "/courses/:term",
   selectedCourse: "/selected/:id",
   allCourse: "/allcourses",
+  videoPages: "/video",
 };
 
 export default ROUTES;

@@ -1,57 +1,37 @@
+import { RouterProvider } from "react-router-dom";
+import styled from "styled-components";
+
+// import { useContext, useEffect } from "react";
 import "./App.css";
 
-import { RouterProvider } from "react-router-dom";
-import router from "./router";
-import { useEffect, useMemo, useState } from "react";
-import auth from "./auth/auth";
 import NavigationBar from "./components/navigationBar";
-import getData from "./services/getData";
-import { TDatabase } from "./types/type";
-import { DataProvider } from "./context/DataProvider";
-import styled from "styled-components";
 import Footer from "./components/Footer";
-import { User } from "firebase/auth";
+
+import { DataProvider } from "./context/DataProvider";
+import router from "./router";
+import useGetData from "./App/hook/useGetData";
+// import { userProvider } from "./AppWrapper";
+import UserRepo from "./AppWrapper";
 
 const App = () => {
-  const [data, setData] = useState<TDatabase[] | null | undefined>();
-  const [value, setValue] = useState<string | undefined>("data");
-  const [user, setUser] = useState<User>();
-
-  useEffect(() => {
-    try {
-      getData<TDatabase[] | null | undefined>(setData, value as string);
-    } catch (e) {
-      console.log("caught an error");
-    }
-  }, [value]);
-
-  useEffect(() => {
-    auth()
-      .signIn("cola@gmail.com", "1234567890")
-      .then((user) => {
-        setUser(user);
-      });
-  }, []);
-
-  const memoizedData = useMemo(() => {
-    return data;
-  }, [data]);
-
-  const isData = useMemo(() => (data ? true : false), [data]);
-
+  const { setValue, isData, memoizedData } = useGetData();
+  // const { setIsHideNavigationBar, ishideNavigationBar } =
+  //   useContext(userProvider);
   return (
     <Appwrapper>
-      <div className="App">
-        <DataProvider.Provider
-          value={{ data: memoizedData, setCourse: setValue, isData: isData }}
-        >
-          <NavigationBar user={user} />
-          <div className="content">
-            <RouterProvider router={router}></RouterProvider>
-          </div>
-          <Footer />
-        </DataProvider.Provider>
-      </div>
+      <UserRepo>
+        <div className="App">
+          <DataProvider.Provider
+            value={{ data: memoizedData, setCourse: setValue, isData: isData }}
+          >
+            <NavigationBar />
+            <div className="content">
+              <RouterProvider router={router}></RouterProvider>
+            </div>
+            <Footer />
+          </DataProvider.Provider>
+        </div>
+      </UserRepo>
     </Appwrapper>
   );
 };

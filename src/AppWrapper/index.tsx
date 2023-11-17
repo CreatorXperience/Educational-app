@@ -5,8 +5,6 @@ import { ReactElement, createContext, useMemo, useState } from "react";
 type TUser = {
   user: User | undefined;
   isLoggedIn: boolean;
-  ishideNavigationBar: boolean;
-  setIsHideNavigationBar?: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 type TRepoProps = {
@@ -16,16 +14,13 @@ type TRepoProps = {
 export const userProvider = createContext<TUser>({
   user: undefined,
   isLoggedIn: false,
-  ishideNavigationBar: false,
 });
 
 const UserRepo = ({ children }: TRepoProps) => {
   const { user, isLoggedIn } = useGetUser();
-  const [ishideNavigationBar, setIsHideNavigationBar] =
-    useState<boolean>(false);
 
   const memoizedUser = useMemo(() => {
-    return { user, isLoggedIn, ishideNavigationBar, setIsHideNavigationBar };
+    return { user, isLoggedIn };
   }, [user]);
 
   console.log(memoizedUser);

@@ -28,6 +28,7 @@ import indesign from "../../assets/indesign.svg";
 import vue from "../../assets/indesign.svg";
 import figma from "../../assets/figma.svg";
 import flutter from "../../assets/flutter.svg";
+import search from "../../assets/search.svg";
 
 const illustration = () => {
   return (
@@ -175,6 +176,10 @@ const flutterIcon = () => {
   return <img src={flutter} alt="flutter icon" />;
 };
 
+const searchIcon = () => {
+  return <img src={search} alt="search icon" />;
+};
+
 export {
   illustration,
   illustrationSm,
@@ -207,4 +212,5 @@ export {
   splineIcon,
   vueIcon,
   indesignIcon,
+  searchIcon,
 };

@@ -6,21 +6,40 @@ const VideoPageWrapper = styled.div`
   border: 1px solid white;
   display: flex;
 
-  .sideNav {
-    width: 5%;
-    height: 100%;
-    border: 1px solid red;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 100px 0px 100px 0px;
-  }
-
   .sideContentBar {
     width: 20%;
     height: 100%;
     border: 2px solid orange;
+    padding: 12px;
+
+    .header {
+      color: #fff;
+      font-family: Inter;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 57.5px;
+    }
+
+    a {
+      color: #484fff;
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .category {
+      color: lightgray;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 3 00;
+      line-height: normal;
+      padding: 40px 10px;
+    }
   }
 
   .videoSpace {

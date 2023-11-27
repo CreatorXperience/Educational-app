@@ -11,6 +11,7 @@ const SideNavWrapper = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 100px 0px 100px 0px;
+    background: #37265d;
   }
 `;
 

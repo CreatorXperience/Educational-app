@@ -14,11 +14,7 @@ let router = createBrowserRouter([
   },
   {
     path: ROUTES.course,
-    element: (
-      <PageLoader>
-        <Courses />
-      </PageLoader>
-    ),
+    element: <Courses />,
   },
   {
     path: ROUTES.selectedCourse,

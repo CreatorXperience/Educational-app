@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
   width: 100%;
+  overflow-x: hidden;
 
   .content-wrapper {
     position: relative;

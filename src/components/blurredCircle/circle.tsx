@@ -23,4 +23,10 @@ const BlurredWrapper = styled.div<{
     position: ${(props) => (props.position ? props.position : "absolute")};
     left: 0;
   }
+
+  @media screen and (max-screen: 400px) {
+    div.circle {
+      display: none;
+    }
+  }
 `;

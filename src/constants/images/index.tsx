@@ -82,12 +82,7 @@ const category1Icon = () => {
 };
 const category2Icon = () => {
   return (
-    <img
-      src={category2}
-      className="categoryIcon"
-      width="400px"
-      alt="category"
-    />
+    <img src={category2} className="categoryIcon" width="10px" alt="category" />
   );
 };
 

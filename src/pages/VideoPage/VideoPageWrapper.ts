@@ -11,6 +11,7 @@ const VideoPageWrapper = styled.div`
     height: 100%;
     border: 2px solid orange;
     padding: 12px;
+    overflow-y: auto;
 
     .header {
       color: #fff;

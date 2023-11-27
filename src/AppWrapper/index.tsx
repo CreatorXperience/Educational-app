@@ -1,6 +1,6 @@
 import { User } from "firebase/auth";
 import useGetUser from "./hooks/useGetUser";
-import { ReactElement, createContext, useMemo, useState } from "react";
+import { ReactElement, createContext, useMemo } from "react";
 
 type TUser = {
   user: User | undefined;
@@ -21,7 +21,7 @@ const UserRepo = ({ children }: TRepoProps) => {
 
   const memoizedUser = useMemo(() => {
     return { user, isLoggedIn };
-  }, [user]);
+  }, [user, isLoggedIn]);
 
   console.log(memoizedUser);
 

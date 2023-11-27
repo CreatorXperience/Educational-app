@@ -4,7 +4,7 @@ import { User } from "firebase/auth";
 
 const useGetUser = () => {
   const [user, setUser] = useState<User>();
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+  const [isLoggedIn] = useState<boolean>(false);
 
   useEffect(() => {
     auth()

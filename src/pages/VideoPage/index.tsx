@@ -21,7 +21,7 @@ const VideoPage = () => {
       <div className="sideContentBar">
         <div className="header">
           <p>AgileLearner.com</p>
-          <a>View all courses</a>
+          <a href="www.facebook.com">View all courses</a>
         </div>
 
         <SearchBar />
@@ -34,7 +34,7 @@ const VideoPage = () => {
               data?.map((content) => {
                 if (
                   new RegExp(content.category, "i").exec("mobile Development")
-                )
+                ) {
                   return (
                     <CourseComponent
                       key={content.id}
@@ -43,6 +43,8 @@ const VideoPage = () => {
                       img={content.coverImage}
                     />
                   );
+                }
+                return "";
               })}
           </div>
 
@@ -53,7 +55,7 @@ const VideoPage = () => {
               data?.map((content) => {
                 if (
                   new RegExp(content.category, "i").exec("backend Development")
-                )
+                ) {
                   return (
                     <CourseComponent
                       key={content.id}
@@ -62,6 +64,8 @@ const VideoPage = () => {
                       img={content.coverImage}
                     />
                   );
+                }
+                return "";
               })}
           </div>
         </div>

@@ -4,7 +4,7 @@ import { userProvider } from "../../AppWrapper";
 import { useContext } from "react";
 
 const NavigationBar = () => {
-  const { user, isLoggedIn } = useContext(userProvider);
+  const { isLoggedIn } = useContext(userProvider);
 
   return (
     <NavigationWrapper>

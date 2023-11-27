@@ -11,7 +11,7 @@ const CourseComponent = ({ img, title, content }: TCourseProp) => {
     <CourseWrapper>
       <div className="course-container">
         <div className="course-image">
-          <img src={img} />
+          <img alt="course" src={img} />
         </div>
         <div className="course-desc">
           <div className="course-title">{title}</div>

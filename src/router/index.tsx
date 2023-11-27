@@ -4,7 +4,6 @@ import Courses from "../pages/Courses";
 import ROUTES from "../routes/routes";
 import CoursDescription from "../pages/CourseDescription";
 import AllCourses from "../pages/All-courses";
-import PageLoader from "../components/pageLoader/index";
 import VideoPage from "../pages/VideoPage";
 
 let router = createBrowserRouter([

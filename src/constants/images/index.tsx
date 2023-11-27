@@ -19,6 +19,15 @@ import astro2 from "../../assets/astro2.png";
 import astro3 from "../../assets/astro3.png";
 import Mockup from "../../assets/mockup.svg";
 import lightning from "../../assets/Lightning.svg";
+import javascript from "../../assets/javascript.svg";
+import css from "../../assets/css.svg";
+import spline from "../../assets/spline.svg";
+import react from "../../assets/react.svg";
+import xd from "../../assets/react.svg";
+import indesign from "../../assets/indesign.svg";
+import vue from "../../assets/indesign.svg";
+import figma from "../../assets/figma.svg";
+import flutter from "../../assets/flutter.svg";
 
 const illustration = () => {
   return (
@@ -129,6 +138,43 @@ const astronaut3 = () => {
 const lightningIcon = () => {
   return <img src={lightning} className="astronaut" width="100%" alt="light" />;
 };
+
+const javascriptIcon = () => {
+  return <img src={javascript} alt="javascript icon" />;
+};
+
+const cssIcon = () => {
+  return <img src={css} alt="css icon" />;
+};
+
+const indesignIcon = () => {
+  return <img src={indesign} alt="indesign icon" />;
+};
+
+const reactIcon = () => {
+  return <img src={react} alt="react icon" />;
+};
+
+const splineIcon = () => {
+  return <img src={spline} alt="spline icon" />;
+};
+
+const xdIcon = () => {
+  return <img src={xd} alt="xd icon" />;
+};
+
+const vueIcon = () => {
+  return <img src={vue} alt="vue icon" />;
+};
+
+const figmaIcon = () => {
+  return <img src={figma} alt="figma icon" />;
+};
+
+const flutterIcon = () => {
+  return <img src={flutter} alt="flutter icon" />;
+};
+
 export {
   illustration,
   illustrationSm,
@@ -152,4 +198,13 @@ export {
   astronaut2,
   astronaut3,
   lightningIcon,
+  figmaIcon,
+  xdIcon,
+  flutterIcon,
+  reactIcon,
+  javascriptIcon,
+  cssIcon,
+  splineIcon,
+  vueIcon,
+  indesignIcon,
 };

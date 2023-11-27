@@ -34,7 +34,7 @@ const App = () => {
                 <RouterProvider router={router}></RouterProvider>
               </NavContext.Provider>
             </div>
-            <Footer />
+            {isHideNav ? <Footer /> : ""}
           </DataProvider.Provider>
         </div>
       </UserRepo>

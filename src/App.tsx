@@ -1,51 +1,43 @@
+import { RouterProvider } from "react-router-dom";
+import styled from "styled-components";
+
 import "./App.css";
 
-import { RouterProvider } from "react-router-dom";
-import router from "./router";
-import { useEffect, useMemo, useState } from "react";
-import auth from "./auth/auth";
 import NavigationBar from "./components/navigationBar";
-import getData from "./services/getData";
-import { TDatabase } from "./types/type";
-import { DataProvider } from "./context/DataProvider";
-import styled from "styled-components";
 import Footer from "./components/Footer";
 
+import { DataProvider } from "./context/DataProvider";
+import router from "./router";
+import useGetData from "./App/hook/useGetData";
+import UserRepo from "./AppWrapper";
+import { useState } from "react";
+import { createContext } from "react";
+
+export const NavContext = createContext<React.Dispatch<
+  React.SetStateAction<boolean>
+> | null>(null);
+
 const App = () => {
-  useEffect(() => {
-    auth().signIn("cola@gmail.com", "1234567890");
-  }, []);
+  const { setValue, isData, memoizedData } = useGetData();
 
-  const [data, setData] = useState<TDatabase[] | null | undefined>();
-  const [value, setValue] = useState<string | undefined>("data");
-
-  useEffect(() => {
-    try {
-      getData<TDatabase[] | null | undefined>(setData, value as string);
-    } catch (e) {
-      console.log("caught an error");
-    }
-  }, [value]);
-
-  const memoizedData = useMemo(() => {
-    return data;
-  }, [data]);
-
-  const isData = useMemo(() => (data ? true : false), [data]);
-
+  const [isHideNav, setIsHideNav] = useState(true);
   return (
     <Appwrapper>
-      <div className="App">
-        <DataProvider.Provider
-          value={{ data: memoizedData, setCourse: setValue, isData: isData }}
-        >
-          <NavigationBar />
-          <div className="content">
-            <RouterProvider router={router}></RouterProvider>
-          </div>
-          <Footer />
-        </DataProvider.Provider>
-      </div>
+      <UserRepo>
+        <div className="App">
+          <DataProvider.Provider
+            value={{ data: memoizedData, setCourse: setValue, isData: isData }}
+          >
+            {isHideNav ? <NavigationBar /> : ""}
+            <div className="content">
+              <NavContext.Provider value={setIsHideNav}>
+                <RouterProvider router={router}></RouterProvider>
+              </NavContext.Provider>
+            </div>
+            {isHideNav ? <Footer /> : ""}
+          </DataProvider.Provider>
+        </div>
+      </UserRepo>
     </Appwrapper>
   );
 };
@@ -53,13 +45,5 @@ const App = () => {
 export default App;
 
 const Appwrapper = styled.div`
-  position: relative;
-  display: flex;
-  flex-flow: column;
-
-  .content {
-    height: 100%;
-
-    overflow-y: auto;
-  }
+  height: 100%;
 `;

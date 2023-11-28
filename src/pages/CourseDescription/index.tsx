@@ -7,11 +7,13 @@ import CourseBlock from "../../components/courseBlock";
 import CourseDescriptionWrapper from "./CourseDescriptionWrapper";
 import Accordion from "../../components/Accordion";
 import BlurredCircle from "../../components/blurredCircle/circle";
+import useIntersectionObserver from "./hook/useIntersectionObserver";
 
 const CoursDescription = () => {
   const { id } = useParams();
   const [course, setCourse] = useState<TDatabase>();
   const [isExpand, setIsExpand] = useState<boolean>(false);
+  const { navRef, topSection } = useIntersectionObserver();
 
   useEffect(() => {
     getData<TDatabase | undefined>(setCourse, `data/${id}`);
@@ -33,7 +35,7 @@ const CoursDescription = () => {
       isexpand={isExpand}
     >
       <div className="content-wrapper">
-        <div className="course-content">
+        <div className="course-content" ref={topSection}>
           <div className="go-back"> </div>
           <div className="content">
             <h1>{course?.coverTitle}</h1>
@@ -77,22 +79,30 @@ const CoursDescription = () => {
             </ul>
           </div>
         </div>
-        <div className="course-nav">
+        <div className="course-nav" ref={navRef}>
           <div>
             <div className="nav-content">
-              <p>Overview</p>
-              <p>Curriculum</p>
-              <p>Instructor</p>
+              <p>
+                <a href="#overview">Overview</a>
+              </p>
+              <p>
+                <a href="#curriculum">Curriculum</a>
+              </p>
+              <p>
+                {" "}
+                <a href="#instructor">Instructor</a>
+              </p>
             </div>
           </div>
-        </div>
-        <div className="lightning">
-          <div className="light">{lightningIcon()}</div>
+
+          <div className="lightning">
+            <div className="light">{lightningIcon()}</div>
+          </div>
         </div>
 
         <BlurredCircle />
 
-        <div className="overview-wrapper">
+        <div className="overview-wrapper" id="overview">
           <div className="overview">
             <h1 className="overview-header">Course overview</h1>
             <p className="content">
@@ -245,7 +255,7 @@ const CoursDescription = () => {
           </div>
 
           <div className="accordion-container">
-            <h1>Curriculum</h1>
+            <h1 id="curriculum">Curriculum</h1>
             {course?.courseContent.topic.map((course) => {
               return (
                 <Accordion
@@ -257,7 +267,7 @@ const CoursDescription = () => {
             })}
           </div>
         </div>
-        <div className="instructor-section">
+        <div className="instructor-section" id="instructor">
           <div>
             <h1 className="instructor-header">Meet your instructor</h1>
             <p className="instructor-content">

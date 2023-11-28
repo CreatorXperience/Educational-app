@@ -21,7 +21,7 @@ const Footer = () => {
             <div className="links-wrapper">
               <div className="quick-links">Quick Links</div>
               <div>About</div>
-              <div>Course</div>
+              <div>Course</div> 
             </div>
 
             <div className="links-wrapper">

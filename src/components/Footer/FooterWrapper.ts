@@ -6,6 +6,7 @@ const FooterWrapper = styled.div`
   border: 1px solid red;
   margin-top: 150px;
   background: #37265d;
+  position: absolute;
 
   .footer-container {
     width: 100%;

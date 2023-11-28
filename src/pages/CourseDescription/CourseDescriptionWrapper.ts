@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
   width: 100%;
+  overflow-x: hidden;
 
   .content-wrapper {
     position: relative;
@@ -21,6 +22,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
 
       div.circle {
         right: 0;
+        z-index: -1;
       }
 
       .content {
@@ -59,6 +61,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
         border-radius: 5px;
         filter: drop-shadow(-34px 53px 4px rgba(0, 0, 0, 0.1));
         color: white;
+        z-index: 1000;
 
         .course-image {
           border-top-left-radius: 5px;
@@ -67,6 +70,8 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
           height: 220px;
           background-image: url(${(props) => props.img});
           background-size: cover;
+          position: relative;
+          /* z-index: 10; */
         }
 
         .course-desc {
@@ -121,13 +126,18 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
     }
 
     .course-nav {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
       padding: 12px;
       background: linear-gradient(180deg, #3f205e, #340c58);
       color: white;
       height: 60px;
+      position: relative;
+      z-index: -1;
+
+      .lightning {
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+      }
 
       .nav-content {
         display: flex;
@@ -138,6 +148,10 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
         p {
           font-size: 18px;
           font-family: Inter;
+        }
+        a {
+          text-decoration: none;
+          color: white;
         }
       }
     }

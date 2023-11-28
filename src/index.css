@@ -9,5 +9,21 @@
 }
 
 body,html{
+  
     background-color: #2C1F4A;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+    ::-webkit-scrollbar-track {
+    background: #37265d;
+  }
+    ::-webkit-scrollbar-thumb {
+        background: #493b67;
+      border-radius:10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    
+    background: #555; 
+  }

@@ -42,4 +42,5 @@ export default LandingPage;
 const HomeWrapper = styled.div`
   max-width: 2000px;
   margin: 0 auto;
+  overflow-x: hidden;
 `;

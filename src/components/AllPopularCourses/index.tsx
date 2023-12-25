@@ -1,14 +1,21 @@
 import styled from "styled-components";
-import Card from "../Card";
 import { useContext } from "react";
-import { DataProvider } from "../../context/DataProvider";
+import Card from "../Card";
 
-const PopularCourse = ({ isData }: { isData: boolean }) => {
-  const { data } = useContext(DataProvider);
+import useFetchData from "./hooks/useFetchCourseData";
+
+import type { TDatabase } from "../../types/type";
+
+const PopularCourse = () => {
+
+  const response:TDatabase[] = useFetchData()
+
+
+
   return (
     <CardWrapper>
-      {data?.map((item, i) => {
-        if (i < 8) return <Card key={item.id} data={item} />;
+      {response?.map((item, i) => {
+        if (i < 8) return <Card key={item._id} data={item} />;
         return "";
       })}
     </CardWrapper>

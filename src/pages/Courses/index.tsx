@@ -2,38 +2,38 @@ import { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import Card from "../../components/Card";
-import { DataProvider } from "../../context/DataProvider";
+// import { DataProvider } from "../../context/DataProvider";
 import { TDatabase } from "../../types/type";
 
 const Courses = () => {
   const { term } = useParams();
-  const { data } = useContext(DataProvider);
+  // const { data } = useContext(DataProvider);
   const [count, setCount] = useState(2);
 
-  const filterData = () => {
-    let pageContent = data?.filter((data) => {
-      if (
-        data.courseDescription
-          .toLowerCase()
-          .includes(term?.toLowerCase() as string)
-      ) {
-        return data;
-      }
-      return "";
-    });
+  // const filterData = () => {
+  //   let pageContent = data?.filter((data) => {
+  //     if (
+  //       data.courseDescription
+  //         .toLowerCase()
+  //         .includes(term?.toLowerCase() as string)
+  //     ) {
+  //       return data;
+  //     }
+  //     return "";
+  //   });
 
-    return pageContent;
-  };
+  //   return pageContent;
+  // };
 
-  const paginateData = () => {
-    const pageContent = filterData();
-    let arr: TDatabase[] = [];
+  // const paginateData = () => {
+  //   // const pageContent = filterData();
+  //   let arr: TDatabase[] = [];
 
-    for (let i = 0; i < count; i++) {
-      if (pageContent && pageContent[i]) arr.push(pageContent[i]);
-    }
-    return arr;
-  };
+  //   for (let i = 0; i < count; i++) {
+  //     if (pageContent && pageContent[i]) arr.push(pageContent[i]);
+  //   }
+  //   return arr;
+  // };
   return (
     <CoursesWrapper>
       <div className="top-section">
@@ -44,7 +44,7 @@ const Courses = () => {
           </div>
         </div>
       </div>
-      {data && filterData() ? (
+      {/* {data && filterData() ? (
         <>
           <div className="courses-section" data-testid="card-wrapper">
             (
@@ -103,7 +103,7 @@ const Courses = () => {
             try sear ching for a more generic term e.g node, angular, javascript
           </p>
         </div>
-      )}
+      )} */}
     </CoursesWrapper>
   );
 };

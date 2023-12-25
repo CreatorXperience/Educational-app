@@ -1,10 +1,10 @@
 import AllCoursesWrapper from "./AllCoursesWrapper";
-import { DataProvider } from "../../context/DataProvider";
+// import { DataProvider } from "../../context/DataProvider";
 import { useContext, useEffect } from "react";
 import Card from "../../components/Card";
 
 const AllCourses = () => {
-  const { data, isData } = useContext(DataProvider);
+  // const { data, isData } = useContext(DataProvider);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -63,11 +63,11 @@ const AllCourses = () => {
         </div>
 
         <div className="course-grid">
-          {data &&
+          {/* {data &&
             data.map((item) => {
-              return <Card data={item} key={item.id} />;
+              return <Card data={item} key={item._id} />;
             })}
-          {isData ? "" : <div className="loader">Loading courses.....</div>}
+          {isData ? "" : <div className="loader">Loading courses.....</div>} */}
         </div>
       </div>
     </AllCoursesWrapper>

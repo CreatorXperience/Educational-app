@@ -4,16 +4,19 @@ import { NavContext } from "../../App";
 import SideNav from "../../components/sideNav";
 import SearchBar from "../../components/searchBar";
 import CourseComponent from "../../components/courseComponent";
-import { DataProvider } from "../../context/DataProvider";
+import useFetchVideoCourse from "./hooks/useFetchVideoCourse";
+import { TDatabase } from "../../types/type";
+
 
 const VideoPage = () => {
   const setIsHideNav = useContext(NavContext);
-  const { data } = useContext(DataProvider);
 
+  
   useLayoutEffect(() => {
     if (setIsHideNav) setIsHideNav(false);
   }, [setIsHideNav]);
-
+  
+  const data:TDatabase[] =useFetchVideoCourse()
   return (
     <VideoPageWrapper>
       <SideNav />
@@ -31,13 +34,13 @@ const VideoPage = () => {
 
           <div className="container">
             {data &&
-              data?.map((content) => {
+              data?.map((content, i) => {
                 if (
-                  new RegExp(content.category, "i").exec("mobile Development")
+                  new RegExp(content.category, "i").exec("Python") && i < 6
                 ) {
                   return (
                     <CourseComponent
-                      key={content.id}
+                      key={content._id}
                       content={content.courseDescription}
                       title={content.coverTitle}
                       img={content.coverImage}
@@ -58,7 +61,7 @@ const VideoPage = () => {
                 ) {
                   return (
                     <CourseComponent
-                      key={content.id}
+                      key={content._id}
                       content={content.courseDescription}
                       title={content.coverTitle}
                       img={content.coverImage}

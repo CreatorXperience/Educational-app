@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const Card = ({ data }: TData) => {
   const navigate = useNavigate();
   const handleNavigate = () => {
-    navigate(`/selected/${data.id - 1}`);
+    navigate(`/selected/${data._id}`);
     window.scrollTo(0, 0);
   };
   return (

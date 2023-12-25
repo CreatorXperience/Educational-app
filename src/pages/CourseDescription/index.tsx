@@ -1,23 +1,23 @@
-import { useEffect, useState } from "react";
+import  {useState} from "react";
 import { useParams } from "react-router-dom";
-import getData from "../../services/getData";
+
 import { TDatabase } from "../../types/type";
 import { lightningIcon } from "../../constants/images";
 import CourseBlock from "../../components/courseBlock";
 import CourseDescriptionWrapper from "./CourseDescriptionWrapper";
-import Accordion from "../../components/Accordion";
+
 import BlurredCircle from "../../components/blurredCircle/circle";
 import useIntersectionObserver from "./hook/useIntersectionObserver";
+import useFetchCourse from "./hook/useFetchCourse";
 
 const CoursDescription = () => {
   const { id } = useParams();
-  const [course, setCourse] = useState<TDatabase>();
   const [isExpand, setIsExpand] = useState<boolean>(false);
   const { navRef, topSection } = useIntersectionObserver();
 
-  useEffect(() => {
-    getData<TDatabase | undefined>(setCourse, `data/${id}`);
-  }, [id]);
+  console.log(id)
+
+  let myCourse:TDatabase =  useFetchCourse(id as string)
 
   const handleExpand = () => {
     if (isExpand) {
@@ -31,15 +31,15 @@ const CoursDescription = () => {
 
   return (
     <CourseDescriptionWrapper
-      img={course?.coverImage as string}
+      img={myCourse?.coverImage as string}
       isexpand={isExpand}
     >
       <div className="content-wrapper">
         <div className="course-content" ref={topSection}>
           <div className="go-back"> </div>
           <div className="content">
-            <h1>{course?.coverTitle}</h1>
-            <p>{course?.courseDescription}</p>
+            <h1>{myCourse?.coverTitle}</h1>
+            <p>{myCourse?.courseDescription}</p>
           </div>
 
           <BlurredCircle />
@@ -118,7 +118,7 @@ const CoursDescription = () => {
           <div className="main-overview">
             <div className="title">WHAT YOU'LL LEARN</div>
             <div className="greeting">
-              Welcome to <span>{course?.coverTitle} course</span> , an engaging
+              Welcome to <span>{myCourse?.coverTitle} course</span> , an engaging
               and comprehensive educational experience designed to empower you
               with valuable knowledge and skills. This course is crafted to
               cater to learners of all backgrounds and levels of expertise,
@@ -135,7 +135,7 @@ const CoursDescription = () => {
               course={[
                 {
                   title: "Understanding Fundamentals",
-                  content: `Gain a solid understanding of the fundamental concepts, theories, and principles related to  ${course?.coverTitle}. Whether you're a beginner or an advanced learner, we will build a strong foundation for your knowledge.`,
+                  content: `Gain a solid understanding of the fundamental concepts, theories, and principles related to  ${myCourse?.coverTitle}. Whether you're a beginner or an advanced learner, we will build a strong foundation for your knowledge.`,
                 },
                 {
                   title: "Self-paced Learning",
@@ -152,7 +152,7 @@ const CoursDescription = () => {
 
             <div className="obj-title">Course Structure:</div>
             <div className="obj-desc">
-              The {course?.coverTitle} course is structured to provide a
+              The {myCourse?.coverTitle} course is structured to provide a
               well-rounded educational experience. Here's an overview of the
               course structure:
             </div>
@@ -160,12 +160,12 @@ const CoursDescription = () => {
             <CourseBlock
               course={[
                 {
-                  title: `Introduction to ${course?.coverTitle}`,
-                  content: `We will begin with an exploration of the core concepts and background of  ${course?.coverTitle}, ensuring everyone is on the same page.`,
+                  title: `Introduction to ${myCourse?.coverTitle}`,
+                  content: `We will begin with an exploration of the core concepts and background of  ${myCourse?.coverTitle}, ensuring everyone is on the same page.`,
                 },
                 {
                   title: "In-depth Modules:",
-                  content: `Dive into the heart of the course through a series of in-depth modules. Each module will cover specific aspects of  ${course?.coverTitle} and include lectures, readings, assignments, and assessments.`,
+                  content: `Dive into the heart of the course through a series of in-depth modules. Each module will cover specific aspects of  ${myCourse?.coverTitle} and include lectures, readings, assignments, and assessments.`,
                 },
                 {
                   title: "Resources and Support:",
@@ -174,7 +174,7 @@ const CoursDescription = () => {
                 },
                 {
                   title: "Communication Skills:",
-                  content: `Enhance your communication skills, both written and verbal, to effectively convey your ideas and insights about  ${course?.coverTitle}. Clear and concise communication is a vital skill in any field.`,
+                  content: `Enhance your communication skills, both written and verbal, to effectively convey your ideas and insights about  ${myCourse?.coverTitle}. Clear and concise communication is a vital skill in any field.`,
                 },
               ]}
             />
@@ -212,7 +212,7 @@ const CoursDescription = () => {
               course={[
                 {
                   title: "A Strong Knowledge Base:",
-                  content: `A deep understanding of  ${course?.coverTitle} and its practical applications.`,
+                  content: `A deep understanding of  ${myCourse?.coverTitle} and its practical applications.`,
                 },
                 {
                   title: "Enhanced Skills:",
@@ -231,7 +231,7 @@ const CoursDescription = () => {
               We look forward to embarking on this educational journey with you.
               Remember that learning is a continuous process, and this course is
               just the beginning. Let's explore, discover, and grow together in
-              the world of {course?.coverTitle}.
+              the world of {myCourse?.coverTitle}.
             </div>
 
             <div className="overlay">
@@ -256,7 +256,7 @@ const CoursDescription = () => {
 
           <div className="accordion-container">
             <h1 id="curriculum">Curriculum</h1>
-            {course?.courseContent.topic.map((course) => {
+            {/* {myCourse?.courseContent.topic.map((course) => {
               return (
                 <Accordion
                   desc={course.description}
@@ -264,7 +264,7 @@ const CoursDescription = () => {
                   key={course.id}
                 />
               );
-            })}
+            })} */}
           </div>
         </div>
         <div className="instructor-section" id="instructor">

@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import Card from "../../components/Card";
@@ -7,6 +7,7 @@ import { TDatabase } from "../../types/type";
 
 const Courses = () => {
   const { term } = useParams();
+  
   // const { data } = useContext(DataProvider);
   const [count, setCount] = useState(2);
 

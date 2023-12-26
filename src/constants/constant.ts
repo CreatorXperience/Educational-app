@@ -1,4 +1,4 @@
-let FONT = {
+const FONT = {
   xsm: "14px",
   sm: "16px",
   md: "22px",
@@ -13,4 +13,6 @@ const COLORS = {
   tertiary: "#FF5156",
 };
 
-export { FONT, COLORS };
+const BASE_URL= "https://educational-app-backend-production-6646.up.railway.app"
+
+export { FONT, COLORS,BASE_URL };

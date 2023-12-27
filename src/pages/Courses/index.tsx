@@ -1,14 +1,19 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import useSearchCourse from "./hooks/useFetchCourse";
 import Card from "../../components/Card";
-// import { DataProvider } from "../../context/DataProvider";
 import { TDatabase } from "../../types/type";
 
 const Courses = () => {
   const { term } = useParams();
-  // const { data } = useContext(DataProvider);
   const [count, setCount] = useState(2);
+
+
+  let {postSearchCourse, mutateCourse, isError,isSuccess} = useSearchCourse()
+  let datas = mutateCourse(term as string, count) 
+
+  // const { data } = useContext(DataProvider);
 
   // const filterData = () => {
   //   let pageContent = data?.filter((data) => {
@@ -25,15 +30,15 @@ const Courses = () => {
   //   return pageContent;
   // };
 
-  // const paginateData = () => {
-  //   // const pageContent = filterData();
-  //   let arr: TDatabase[] = [];
+  const paginateData = () => {
+    const pageContent = datas;
+    let arr: TDatabase[] = [];
 
-  //   for (let i = 0; i < count; i++) {
-  //     if (pageContent && pageContent[i]) arr.push(pageContent[i]);
-  //   }
-  //   return arr;
-  // };
+    for (let i = 0; i < count; i++) {
+      if (pageContent && pageContent[i]) arr.push(pageContent[i]);
+    }
+    return arr;
+  };
   return (
     <CoursesWrapper>
       <div className="top-section">
@@ -44,31 +49,15 @@ const Courses = () => {
           </div>
         </div>
       </div>
-      {/* {data && filterData() ? (
-        <>
-          <div className="courses-section" data-testid="card-wrapper">
-            (
-            <div className="courses-inner">
-              {paginateData()?.map((data, i) => {
-                return <Card data={data} key={i} />;
-              })}
-            </div>
-            )
-          </div>
 
-          <div className="btn-wrapper">
-            <button
-              onClick={() => {
-                if (
-                  paginateData() &&
-                  paginateData()?.length !== filterData()?.length
-                ) {
-                  setCount((count) => count + 2);
-                }
-              }}
-            >
-              Load More
-            </button>
+      {/* <div className="courses-section" data-testid="card-wrapper">
+         
+            <div className="courses-inner">
+             
+              {datas &&  datas?.map((data, i) =>  <Card data={data} key={i} /> )}
+            
+            </div>
+            
           </div>
 
           <div className="searches-container">
@@ -95,6 +84,61 @@ const Courses = () => {
               </div>
             </div>
           </div>
+
+          
+ */}
+
+
+
+      {datas ? (
+        <>
+          <div className="courses-section" data-testid="card-wrapper">
+            (
+            <div className="courses-inner">
+              {datas?.map((data, i) => {
+                return <Card data={data} key={i} />;
+              })}
+            </div>
+            )
+          </div>
+
+          
+
+          <div className="searches-container">
+            <div className="search-wrapper">
+              <h3 className="search-title">Searches related to {term}</h3>
+
+              <div className="other-searches">
+                <div className="search-item">
+                  <p>nodejs</p>
+                  <p>nodejs</p>
+                  <p>
+                    node.js para principiantes: establece tu servidor con http
+                  </p>
+                  <p>node.js backend básico con buenas prácticas.</p>
+                </div>
+                <div className="search-item">
+                  <p>node.js backend basics with best practices</p>
+                  <p>nodejs</p>
+                  <p>
+                    node.js: interceptando peticiones a un api con middlewares
+                  </p>
+                  <p>hello node kubernetes</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div className="btn-wrapper">
+            <button
+              onClick={() => {
+                setCount(count => count+1)
+              }}
+            >
+              Load More
+            </button>
+          </div>
         </>
       ) : (
         <div className="checkConnection">
@@ -103,7 +147,9 @@ const Courses = () => {
             try sear ching for a more generic term e.g node, angular, javascript
           </p>
         </div>
-      )} */}
+      )}
+
+  
     </CoursesWrapper>
   );
 };

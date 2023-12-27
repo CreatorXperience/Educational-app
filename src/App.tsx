@@ -22,16 +22,13 @@ export const NavContext = createContext<React.Dispatch<
 
 let client = new QueryClient()
 const App = () => {
-  
-
-
   const [isHideNav, setIsHideNav] = useState(true);
+  
   return (
     <QueryClientProvider client={client} >
     <Appwrapper>
       <UserRepo>
         <div className="App">
-   
             {isHideNav ? <NavigationBar /> : ""}
             <div className="content">
               <NavContext.Provider value={setIsHideNav}>
@@ -43,7 +40,7 @@ const App = () => {
         </div>
       </UserRepo>
     </Appwrapper>
-            </QueryClientProvider>
+    </QueryClientProvider>
   );
 };
 

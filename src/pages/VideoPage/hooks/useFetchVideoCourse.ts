@@ -1,12 +1,8 @@
-import axios from "axios"
 import { useQuery } from "react-query"
+import fetchData from "../../../services/courses/fetch-data"
 
 const useFetchVideoCourse = ()=>{
-    const getVideoCourses = async()=>{
-        let {data} = await axios.get("https://educational-app-backend-production-6646.up.railway.app/api/courses")
-        return data
-    }
-    let {data}= useQuery("videos", getVideoCourses)
+    let {data}= useQuery("videos",fetchData)
     return data
 }
 

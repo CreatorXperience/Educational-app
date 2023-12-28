@@ -7,11 +7,10 @@ import { TDatabase } from "../../types/type";
 
 const Courses = () => {
   const { term } = useParams();
-  const [count, setCount] = useState(2);
+  const [count, setCount] = useState(0);
 
-
-  let {postSearchCourse, mutateCourse, isError,isSuccess} = useSearchCourse()
-  let datas = mutateCourse(term as string, count) 
+  let { postSearchCourse, mutateCourse } = useSearchCourse();
+  let datas = mutateCourse(term as string, count);
 
   // const { data } = useContext(DataProvider);
 
@@ -88,8 +87,6 @@ const Courses = () => {
           
  */}
 
-
-
       {datas ? (
         <>
           <div className="courses-section" data-testid="card-wrapper">
@@ -101,8 +98,6 @@ const Courses = () => {
             </div>
             )
           </div>
-
-          
 
           <div className="searches-container">
             <div className="search-wrapper">
@@ -129,11 +124,10 @@ const Courses = () => {
             </div>
           </div>
 
-
           <div className="btn-wrapper">
             <button
               onClick={() => {
-                setCount(count => count+1)
+                setCount((count) => count + 1);
               }}
             >
               Load More
@@ -148,8 +142,6 @@ const Courses = () => {
           </p>
         </div>
       )}
-
-  
     </CoursesWrapper>
   );
 };

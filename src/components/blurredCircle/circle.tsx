@@ -10,9 +10,7 @@ const BlurredCircle = () => {
 
 export default BlurredCircle;
 
-const BlurredWrapper = styled.div<{
-  position?: string;
-}>`
+const BlurredWrapper = styled.div<{ position?: string }>`
   div.circle {
     border: 1px solid red;
     width: 400px;
@@ -22,6 +20,7 @@ const BlurredWrapper = styled.div<{
     filter: blur(150px);
     position: ${(props) => (props.position ? props.position : "absolute")};
     left: 0;
+    display: none;
   }
 
   @media screen and (max-screen: 400px) {

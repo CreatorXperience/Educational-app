@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import useSearchCourse from "./hooks/useFetchCourse";
@@ -7,10 +7,11 @@ import SearchBar from "../../components/searchBar";
 
 const Courses = () => {
   const { term } = useParams();
+  const [searchTerm, setSearchTerm] = useState<string | undefined>(term);
   const [count, setCount] = useState(0);
 
   let { data } = useSearchCourse({
-    term: term as string,
+    term: searchTerm as string,
     count,
   });
 
@@ -18,7 +19,7 @@ const Courses = () => {
     <CoursesWrapper>
       <div className="top-section">
         <div className="inner-section">
-          <div className="search-term"> Search term: "{term}" </div>
+          <div className="search-term"> Search term: "{searchTerm}" </div>
           <div className="search-term">
             Explore 100% online Courses on Agile
           </div>
@@ -26,7 +27,7 @@ const Courses = () => {
       </div>
 
       <div className="search-bar-wrapper">
-        <SearchBar />
+        <SearchBar updateTerm={setSearchTerm} />
       </div>
 
       {data && data.length > 0 ? (

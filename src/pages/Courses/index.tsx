@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import useSearchCourse from "./hooks/useFetchCourse";
 import Card from "../../components/Card";
+import SearchBar from "../../components/searchBar";
 
 const Courses = () => {
   const { term } = useParams();
@@ -22,6 +23,10 @@ const Courses = () => {
             Explore 100% online Courses on Agile
           </div>
         </div>
+      </div>
+
+      <div className="search-bar-wrapper">
+        <SearchBar />
       </div>
 
       {data && data.length > 0 ? (
@@ -109,6 +114,12 @@ const CoursesWrapper = styled.div`
         line-height: 40px;
       }
     }
+  }
+
+  .search-bar-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .checkConnection {
@@ -234,6 +245,12 @@ const CoursesWrapper = styled.div`
           font-size: 20px;
         }
       }
+    }
+
+    .search-bar-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
     }
 
     .checkConnection {

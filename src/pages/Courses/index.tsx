@@ -10,7 +10,7 @@ const Courses = () => {
   const [searchTerm, setSearchTerm] = useState<string | undefined>(term);
   const [count, setCount] = useState(0);
 
-  let { data } = useSearchCourse({
+  let { data, postSearchCourse } = useSearchCourse({
     term: searchTerm as string,
     count,
   });
@@ -30,7 +30,7 @@ const Courses = () => {
         <SearchBar updateTerm={setSearchTerm} />
       </div>
 
-      {data && data.length > 0 ? (
+      {data && data.length > 0 && postSearchCourse.isSuccess && (
         <>
           <div className="courses-section" data-testid="card-wrapper">
             (
@@ -77,12 +77,20 @@ const Courses = () => {
             </button>
           </div>
         </>
-      ) : (
+      )}
+
+      {postSearchCourse.isError && data && data.length === 0 && (
         <div className="checkConnection">
           <p>oop's sorry, can't find "{term}"</p>
           <p>
             try sear ching for a more generic term e.g node, angular, javascript
           </p>
+        </div>
+      )}
+
+      {postSearchCourse.isLoading && (
+        <div className="checkConnection">
+          <p>Loading ...</p>
         </div>
       )}
     </CoursesWrapper>

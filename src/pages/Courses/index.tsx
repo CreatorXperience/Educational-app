@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
-import useSearchCourse from "./hooks/useFetchCourse";
+import useSearchCourse from "./hooks/useSearchCourse";
 import Card from "../../components/Card";
 import SearchBar from "../../components/searchBar";
 

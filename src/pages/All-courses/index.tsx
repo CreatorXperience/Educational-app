@@ -1,10 +1,18 @@
 import AllCoursesWrapper from "./AllCoursesWrapper";
-// import { DataProvider } from "../../context/DataProvider";
-import { useContext, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Card from "../../components/Card";
+import useGetAllCourses from "./hooks/useGetCourses";
 
 const AllCourses = () => {
-  // const { data, isData } = useContext(DataProvider);
+  let [count, setCount] = useState<number>(0);
+  const { data, isLoading } = useGetAllCourses(count);
+
+  const handleNextBtnClick = () => {
+    window.scrollTo(20, 20);
+    setTimeout(() => {
+      setCount((count) => count + 1);
+    }, 3000);
+  };
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -63,11 +71,15 @@ const AllCourses = () => {
         </div>
 
         <div className="course-grid">
-          {/* {data &&
+          {data &&
             data.map((item) => {
               return <Card data={item} key={item._id} />;
             })}
-          {isData ? "" : <div className="loader">Loading courses.....</div>} */}
+          {isLoading && <div className="loader">Loading courses.....</div>}
+        </div>
+
+        <div className="btn-wrapper">
+          <button onClick={() => handleNextBtnClick()}>Next</button>
         </div>
       </div>
     </AllCoursesWrapper>

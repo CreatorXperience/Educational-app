@@ -62,6 +62,12 @@ const WireFramesWrapper = styled.div`
       border-radius: 20px;
     }
   }
+
+  @media screen and (max-width: 400px) {
+    .wireframe-container {
+      display: none;
+    }
+  }
 `;
 
 export default WireFramesWrapper;

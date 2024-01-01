@@ -50,7 +50,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
       .course-card {
         width: 25%;
         height: 900px;
-        background: linear-gradient(180deg, #5841ce 0%, #2c1f6a 100%);
+        background: linear-gradient(90deg, #442490, #942cf6);
         display: flex;
         flex-flow: column;
         align-items: center;
@@ -127,7 +127,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
 
     .course-nav {
       padding: 12px;
-      background: linear-gradient(180deg, #3f205e, #340c58);
+      background: linear-gradient(180deg, #9688ff, #453b8a);
       color: white;
       height: 60px;
       position: relative;
@@ -198,7 +198,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
         border-radius: 20px;
         margin-top: 20px;
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-
+        border: 1px solid #5b57d6;
         color: white;
 
         .overlay {
@@ -241,7 +241,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
           font-size: 20px;
           font-weight: 700;
           padding: 12px;
-          color: white;
+          color: #bfa2ff;
         }
 
         .greeting {
@@ -249,6 +249,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
           font-family: Inter;
           font-weight: 200;
           padding: 12px;
+          color: white;
         }
 
         .obj-title {
@@ -256,7 +257,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
           font-size: 20px;
           font-weight: 700;
           padding: 12px;
-          color: white;
+          color: #bfa2ff;
           margin-top: 20px;
         }
 
@@ -278,7 +279,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
 
             span {
               font-weight: 700;
-              color: white;
+              color: #bfa2ff;
             }
           }
 
@@ -492,11 +493,15 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
       }
 
       .course-nav {
-        height: 120px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
 
+        .lightning {
+          position: absolute;
+          top: 0;
+        }
         .nav-content {
-          flex-flow: column;
-          align-items: center;
           width: 100%;
           margin-left: 0;
           padding: 12px;
@@ -700,7 +705,7 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
           right: 10px;
           top: 0px;
           border-radius: 5px;
-          z-index: 0;
+          z-index: 1000;
 
           .course-desc {
             font-size: 18px;
@@ -714,13 +719,20 @@ const CourseDescriptionWrapper = styled.div<{ img: string; isexpand: boolean }>`
       }
 
       .course-nav {
-        height: 100px;
+        height: 80px;
+        position: relative;
+        z-index: -1;
+
+        .lightning {
+          position: absolute;
+          top: 0;
+        }
 
         .nav-content {
           flex-flow: row;
           align-items: center;
           justify-content: start;
-          width: 100%;
+          width: 20%;
           margin-left: 0;
           padding: 12px;
 

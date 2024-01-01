@@ -3,42 +3,17 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import useSearchCourse from "./hooks/useFetchCourse";
 import Card from "../../components/Card";
-import { TDatabase } from "../../types/type";
+import SearchBar from "../../components/searchBar";
 
 const Courses = () => {
   const { term } = useParams();
-  const [count, setCount] = useState(2);
+  const [count, setCount] = useState(0);
 
+  let { data } = useSearchCourse({
+    term: term as string,
+    count,
+  });
 
-  let {postSearchCourse, mutateCourse, isError,isSuccess} = useSearchCourse()
-  let datas = mutateCourse(term as string, count) 
-
-  // const { data } = useContext(DataProvider);
-
-  // const filterData = () => {
-  //   let pageContent = data?.filter((data) => {
-  //     if (
-  //       data.courseDescription
-  //         .toLowerCase()
-  //         .includes(term?.toLowerCase() as string)
-  //     ) {
-  //       return data;
-  //     }
-  //     return "";
-  //   });
-
-  //   return pageContent;
-  // };
-
-  const paginateData = () => {
-    const pageContent = datas;
-    let arr: TDatabase[] = [];
-
-    for (let i = 0; i < count; i++) {
-      if (pageContent && pageContent[i]) arr.push(pageContent[i]);
-    }
-    return arr;
-  };
   return (
     <CoursesWrapper>
       <div className="top-section">
@@ -50,60 +25,22 @@ const Courses = () => {
         </div>
       </div>
 
-      {/* <div className="courses-section" data-testid="card-wrapper">
-         
-            <div className="courses-inner">
-             
-              {datas &&  datas?.map((data, i) =>  <Card data={data} key={i} /> )}
-            
-            </div>
-            
-          </div>
+      <div className="search-bar-wrapper">
+        <SearchBar />
+      </div>
 
-          <div className="searches-container">
-            <div className="search-wrapper">
-              <h3 className="search-title">Searches related to {term}</h3>
-
-              <div className="other-searches">
-                <div className="search-item">
-                  <p>nodejs</p>
-                  <p>nodejs</p>
-                  <p>
-                    node.js para principiantes: establece tu servidor con http
-                  </p>
-                  <p>node.js backend básico con buenas prácticas.</p>
-                </div>
-                <div className="search-item">
-                  <p>node.js backend basics with best practices</p>
-                  <p>nodejs</p>
-                  <p>
-                    node.js: interceptando peticiones a un api con middlewares
-                  </p>
-                  <p>hello node kubernetes</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          
- */}
-
-
-
-      {datas ? (
+      {data && data.length > 0 ? (
         <>
           <div className="courses-section" data-testid="card-wrapper">
             (
             <div className="courses-inner">
-              {datas?.map((data, i) => {
+              {data?.map((data, i) => {
                 return <Card data={data} key={i} />;
               })}
             </div>
             )
           </div>
 
-          
-
           <div className="searches-container">
             <div className="search-wrapper">
               <h3 className="search-title">Searches related to {term}</h3>
@@ -129,14 +66,13 @@ const Courses = () => {
             </div>
           </div>
 
-
           <div className="btn-wrapper">
             <button
               onClick={() => {
-                setCount(count => count+1)
+                setCount((count) => count + 1);
               }}
             >
-              Load More
+              Next
             </button>
           </div>
         </>
@@ -148,8 +84,6 @@ const Courses = () => {
           </p>
         </div>
       )}
-
-  
     </CoursesWrapper>
   );
 };
@@ -180,6 +114,12 @@ const CoursesWrapper = styled.div`
         line-height: 40px;
       }
     }
+  }
+
+  .search-bar-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .checkConnection {
@@ -305,6 +245,12 @@ const CoursesWrapper = styled.div`
           font-size: 20px;
         }
       }
+    }
+
+    .search-bar-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
     }
 
     .checkConnection {

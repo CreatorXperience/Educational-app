@@ -29,7 +29,7 @@ const useSearchCourse = (payload: { term: string; count: number }) => {
 
   useEffect(() => {
     mutateCourse(memoizedProps.term as string, memoizedProps.count);
-  }, [memoizedProps.count]);
+  }, [memoizedProps.term, memoizedProps.count]);
 
   return { postSearchCourse, data };
 };

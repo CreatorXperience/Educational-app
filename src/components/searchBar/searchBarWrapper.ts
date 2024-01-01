@@ -1,13 +1,18 @@
 import styled from "styled-components";
 
 const SearchBarWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
   .inputWrapper {
-    width: 304px;
-    height: 40px;
+    width: 500px;
+    height: 60px;
     flex-shrink: 0;
     background-color: #37265d;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px;
+    margin-top: 20px;
 
     input {
       width: 90%;
@@ -23,6 +28,12 @@ const SearchBarWrapper = styled.div`
       font-style: normal;
       font-weight: 300;
       line-height: normal;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .inputWrapper {
+      width: 90%;
     }
   }
 `;

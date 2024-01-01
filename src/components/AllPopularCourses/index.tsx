@@ -5,7 +5,7 @@ import Card from "../Card";
 import useFetchData from "./hooks/useFetchCourseData";
 
 const PopularCourse = () => {
-  const [count, setCount] = useState<number>(0);
+  const [count] = useState<number>(0);
   const response = useFetchData(count);
 
   return (

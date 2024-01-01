@@ -7,7 +7,7 @@ const useAccordion = () => {
   const handleIconClick = () => {
     setIsClicked(!isIconClick);
     if (ref.current) {
-      ref.current.style.height = isIconClick ? "60px" : "auto";
+      ref.current.style.height = isIconClick ? "120px" : "auto";
     }
   };
 

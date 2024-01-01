@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-const SearchBarWrapper = styled.div`
+const SearchBarWrapper = styled.div<{ width?: string }>`
   width: 100%;
   display: flex;
   justify-content: center;
 
   .inputWrapper {
-    width: 500px;
+    width: ${(props) => (props.width ? props.width : "500px")};
     height: 60px;
     flex-shrink: 0;
     background-color: #37265d;

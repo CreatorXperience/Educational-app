@@ -142,6 +142,25 @@ const AllCoursesWrapper = styled.div`
         text-align: center;
       }
     }
+
+    .btn-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+
+      button {
+        padding: 12px;
+        width: 150px;
+        border: none;
+        font-family: DM sans;
+        background: linear-gradient(94deg, #8c3cdd 4.68%, #5b57d6 98.4%);
+        color: white;
+        font-weight: 500;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
   }
 
   @media screen and (max-width: 768px) {

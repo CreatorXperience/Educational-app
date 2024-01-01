@@ -1,16 +1,12 @@
 import styled from "styled-components";
-import { useContext } from "react";
+import { useState } from "react";
 import Card from "../Card";
 
 import useFetchData from "./hooks/useFetchCourseData";
 
-import type { TDatabase } from "../../types/type";
-
 const PopularCourse = () => {
-
-  const response:TDatabase[] = useFetchData()
-
-
+  const [count] = useState<number>(0);
+  const response = useFetchData(count);
 
   return (
     <CardWrapper>

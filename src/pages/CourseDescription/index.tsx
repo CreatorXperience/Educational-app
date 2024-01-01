@@ -1,4 +1,4 @@
-import  {useState} from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 
 import { TDatabase } from "../../types/type";
@@ -15,9 +15,7 @@ const CoursDescription = () => {
   const [isExpand, setIsExpand] = useState<boolean>(false);
   const { navRef, topSection } = useIntersectionObserver();
 
-  console.log(id)
-
-  let myCourse:TDatabase =  useFetchCourse(id as string)
+  let myCourse: TDatabase = useFetchCourse(id as string);
 
   const handleExpand = () => {
     if (isExpand) {
@@ -118,11 +116,11 @@ const CoursDescription = () => {
           <div className="main-overview">
             <div className="title">WHAT YOU'LL LEARN</div>
             <div className="greeting">
-              Welcome to <span>{myCourse?.coverTitle} course</span> , an engaging
-              and comprehensive educational experience designed to empower you
-              with valuable knowledge and skills. This course is crafted to
-              cater to learners of all backgrounds and levels of expertise,
-              making it accessible and beneficial for everyone.
+              Welcome to <span>{myCourse?.coverTitle} course</span> , an
+              engaging and comprehensive educational experience designed to
+              empower you with valuable knowledge and skills. This course is
+              crafted to cater to learners of all backgrounds and levels of
+              expertise, making it accessible and beneficial for everyone.
             </div>
 
             <div className="obj-title">Course Objectives:</div>

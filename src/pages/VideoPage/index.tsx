@@ -1,22 +1,20 @@
 import VideoPageWrapper from "./VideoPageWrapper";
-import { useContext, useLayoutEffect } from "react";
+import { useContext, useLayoutEffect, useState } from "react";
 import { NavContext } from "../../App";
 import SideNav from "../../components/sideNav";
 import SearchBar from "../../components/searchBar";
 import CourseComponent from "../../components/courseComponent";
 import useFetchVideoCourse from "./hooks/useFetchVideoCourse";
-import { TDatabase } from "../../types/type";
-
 
 const VideoPage = () => {
   const setIsHideNav = useContext(NavContext);
+  const [count] = useState<number>(0);
 
-  
   useLayoutEffect(() => {
     if (setIsHideNav) setIsHideNav(false);
   }, [setIsHideNav]);
-  
-  const data:TDatabase[] =useFetchVideoCourse()
+
+  const data = useFetchVideoCourse(count);
   return (
     <VideoPageWrapper>
       <SideNav />
@@ -35,9 +33,7 @@ const VideoPage = () => {
           <div className="container">
             {data &&
               data?.map((content, i) => {
-                if (
-                  new RegExp(content.category, "i").exec("Python") && i < 6
-                ) {
+                if (new RegExp(content.category, "i").exec("Python") && i < 6) {
                   return (
                     <CourseComponent
                       key={content._id}

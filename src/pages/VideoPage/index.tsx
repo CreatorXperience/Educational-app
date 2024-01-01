@@ -3,16 +3,25 @@ import { useContext, useLayoutEffect, useState } from "react";
 import { NavContext } from "../../App";
 import SideNav from "../../components/sideNav";
 import SearchBar from "../../components/searchBar";
-import useFetchVideoCourse from "./hooks/useFetchVideoCourse";
+
 import VideoCard from "../../components/videoCard";
 import svg from "../../constants/svgs/stars";
 import { lightningIcon } from "../../constants/images";
 import { TDatabase } from "../../types/type";
+import { useParams } from "react-router-dom";
+import useFetchSingleCourse from "./hooks/useFetchSingleCourse";
+import useFetchVideoCourse from "./hooks/useFetchVideoCourses";
 
 const VideoPage = () => {
+  const { videoId } = useParams();
   const setIsHideNav = useContext(NavContext);
   const [count] = useState<number>(0);
   const [currentVideo, setCurrentVideo] = useState<TDatabase>();
+  const [identifier, setVideoIdentifier] = useState(videoId);
+
+  let { data: course } = useFetchSingleCourse(identifier as string);
+
+  console.log(identifier);
 
   useLayoutEffect(() => {
     if (setIsHideNav) setIsHideNav(false);
@@ -36,7 +45,7 @@ const VideoPage = () => {
 
           <div className="container">
             <VideoCard
-              setCurrentVideo={setCurrentVideo}
+              setVideoId={setVideoIdentifier}
               data={data}
               category="Python"
             />
@@ -46,7 +55,7 @@ const VideoPage = () => {
 
           <div className="container">
             <VideoCard
-              setCurrentVideo={setCurrentVideo}
+              setVideoId={setVideoIdentifier}
               data={data}
               category="Anaconda"
             />
@@ -78,7 +87,7 @@ const VideoPage = () => {
             />
             <div className="topics">
               <VideoCard
-                setCurrentVideo={setCurrentVideo}
+                setVideoId={setVideoIdentifier}
                 data={data}
                 category="python"
               />
@@ -86,14 +95,14 @@ const VideoPage = () => {
           </div>
 
           <div className="video-cont">
-            <p className="title">{currentVideo?.coverTitle}</p>
+            <p className="title">{course?.coverTitle}</p>
             <button className="copylink">Copy link</button>
           </div>
 
           <div className="description-container">
             <p className="overview">Course Overview</p>
 
-            <div className="desc">{currentVideo?.courseDescription}</div>
+            <div className="desc">{course?.courseDescription}</div>
           </div>
         </div>
       </div>

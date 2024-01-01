@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import { TDatabase } from "../../types/type";
 import { lightningIcon } from "../../constants/images";
@@ -14,8 +14,13 @@ const CoursDescription = () => {
   const { id } = useParams();
   const [isExpand, setIsExpand] = useState<boolean>(false);
   const { navRef, topSection } = useIntersectionObserver();
+  const navigate = useNavigate();
 
   let myCourse: TDatabase = useFetchCourse(id as string);
+
+  const handleRedirectToVideo = () => {
+    navigate(`/video/${myCourse._id}`);
+  };
 
   const handleExpand = () => {
     if (isExpand) {
@@ -47,7 +52,12 @@ const CoursDescription = () => {
               Join 1,000,000+ students enrolled in ZTM courses!
             </div>
 
-            <button className="start-btn">Start Learning Now</button>
+            <button
+              className="start-btn"
+              onClick={() => handleRedirectToVideo()}
+            >
+              Start Learning Now
+            </button>
 
             <div className="line"></div>
 

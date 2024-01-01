@@ -9,7 +9,7 @@ type TData = {
     courseDescription: string;
     coverImage: string;
     coverTitle: string;
-    _id: number;
+    _id: string;
     stars: number;
   };
 };

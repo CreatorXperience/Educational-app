@@ -4,9 +4,9 @@ import CourseComponent from "../courseComponent";
 type TVideoProps = {
   data: TDatabase[] | undefined;
   category: string;
-  setCurrentVideo: React.Dispatch<React.SetStateAction<TDatabase | undefined>>;
+  setVideoId: React.Dispatch<React.SetStateAction<string | undefined>>;
 };
-const VideoCard = ({ data, category, setCurrentVideo }: TVideoProps) => {
+const VideoCard = ({ data, category, setVideoId }: TVideoProps) => {
   return (
     <div>
       {data &&
@@ -15,7 +15,7 @@ const VideoCard = ({ data, category, setCurrentVideo }: TVideoProps) => {
             return (
               <CourseComponent
                 data={content}
-                setCurrentVideo={setCurrentVideo}
+                setVideoId={setVideoId}
                 key={content._id}
               />
             );

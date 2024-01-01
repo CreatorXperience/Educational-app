@@ -1,7 +1,7 @@
 import { SrvRecord } from "dns";
 
 type TDatabase = {
-  _id: number;
+  _id: string;
   coverTitle: string;
   category: string;
   author: {

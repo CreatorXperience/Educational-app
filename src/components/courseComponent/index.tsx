@@ -3,12 +3,12 @@ import CourseWrapper from "./courseWrapper";
 
 type TCourseProp = {
   data: TDatabase;
-  setCurrentVideo: React.Dispatch<React.SetStateAction<TDatabase | undefined>>;
+  setVideoId: React.Dispatch<React.SetStateAction<string | undefined>>;
 };
 
-const CourseComponent = ({ data, setCurrentVideo }: TCourseProp) => {
+const CourseComponent = ({ data, setVideoId }: TCourseProp) => {
   const handleClick = () => {
-    setCurrentVideo(data);
+    setVideoId(data._id);
   };
   return (
     <CourseWrapper>

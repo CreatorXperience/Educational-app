@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import { TDatabase } from "../../types/type";
 import { lightningIcon } from "../../constants/images";
@@ -9,28 +9,16 @@ import CourseDescriptionWrapper from "./CourseDescriptionWrapper";
 import BlurredCircle from "../../components/blurredCircle/circle";
 import useIntersectionObserver from "./hook/useIntersectionObserver";
 import useFetchCourse from "./hook/useFetchCourse";
+import useExpandAndRedirect from "./hook/useExpandAndRedirect";
 
 const CoursDescription = () => {
   const { id } = useParams();
   const [isExpand, setIsExpand] = useState<boolean>(false);
   const { navRef, topSection } = useIntersectionObserver();
-  const navigate = useNavigate();
 
   let myCourse: TDatabase = useFetchCourse(id as string);
 
-  const handleRedirectToVideo = () => {
-    navigate(`/video/${myCourse._id}`);
-  };
-
-  const handleExpand = () => {
-    if (isExpand) {
-      if (window.innerWidth < 800) {
-        window.scrollTo(0, window.innerHeight - 800);
-      }
-      window.scrollTo(0, window.innerHeight / 2);
-    }
-    setIsExpand(!isExpand);
-  };
+  const { handleExpand, handleRedirectToVideo } = useExpandAndRedirect();
 
   return (
     <CourseDescriptionWrapper
@@ -54,7 +42,7 @@ const CoursDescription = () => {
 
             <button
               className="start-btn"
-              onClick={() => handleRedirectToVideo()}
+              onClick={() => handleRedirectToVideo(myCourse._id)}
             >
               Start Learning Now
             </button>
@@ -243,7 +231,7 @@ const CoursDescription = () => {
             </div>
 
             <div className="overlay">
-              <button onClick={() => handleExpand()}>
+              <button onClick={() => handleExpand(isExpand, setIsExpand)}>
                 {isExpand ? "Collapse" : "Expand"}
                 <i className="fa-solid fa-caret-down"></i>{" "}
               </button>

@@ -204,7 +204,7 @@ const VideoPageWrapper = styled.div`
     }
   }
 
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 900px) {
     flex-flow: column;
     height: auto;
 

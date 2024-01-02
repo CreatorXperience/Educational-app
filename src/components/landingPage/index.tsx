@@ -2,7 +2,6 @@ import PopularCourse from "../AllPopularCourses";
 import Hero from "../hero";
 import Partner from "../partners";
 
-
 import ExploreBtn from "../ExploreBtn";
 import Category from "../Category";
 import styled from "styled-components";
@@ -10,10 +9,7 @@ import Platform from "../Platform";
 import FeedBack from "../Feedback";
 
 import BlurredCircle from "../blurredCircle/circle";
-import Loader from "../Loader";
-
 const LandingPage = () => {
-
   return (
     <HomeWrapper>
       <div className="home-container">
@@ -26,7 +22,7 @@ const LandingPage = () => {
             >
           }
         /> */}
-     <PopularCourse  /> 
+        <PopularCourse />
         <ExploreBtn />
         <Category />
         <Platform />

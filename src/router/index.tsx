@@ -5,6 +5,7 @@ import ROUTES from "../routes/routes";
 import CoursDescription from "../pages/CourseDescription";
 import AllCourses from "../pages/All-courses";
 import VideoPage from "../pages/VideoPage";
+import Frame from "../pages/Auth/Login/login";
 
 let router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ let router = createBrowserRouter([
   {
     path: ROUTES.videoPages,
     element: <VideoPage />,
+  },
+  {
+    path: "/login",
+    element: <Frame />,
   },
 ]);
 

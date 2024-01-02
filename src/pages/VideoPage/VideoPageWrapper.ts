@@ -109,6 +109,10 @@ const VideoPageWrapper = styled.div`
             font-weight: 400;
             line-height: 28px;
           }
+
+          .hamburger {
+            display: none;
+          }
         }
       }
 
@@ -124,6 +128,13 @@ const VideoPageWrapper = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-around;
+    border: 1px solid red;
+    height: auto;
+
+    .search-wrapper {
+      display: none;
+    }
+
     iframe {
       width: 70%;
       height: 600px;
@@ -191,6 +202,93 @@ const VideoPageWrapper = styled.div`
       line-height: normal;
       margin-top: 20px;
     }
+  }
+
+  @media screen and (max-width: 760px) {
+    flex-flow: column;
+    height: auto;
+
+    .sideContentBar {
+      width: 100%;
+      height: auto;
+      margin-top: 30px;
+      display: none;
+    }
+
+    .videoSpace {
+      width: 100%;
+      height: auto;
+      margin-top: 50px;
+
+      .video-content {
+      }
+
+      .top-section {
+        margin-bottom: 50%;
+
+        .section {
+          width: 100%;
+
+          .right-section {
+            width: 30%;
+            justify-content: end;
+
+            .email,
+            .user-name {
+              display: none;
+            }
+            .hamburger {
+              display: block;
+
+              i {
+                font-size: 30px;
+              }
+            }
+          }
+
+          .left-section {
+            width: 70%;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    .video-container {
+      flex-flow: column;
+      justify-content: center;
+      padding: 10px;
+
+      .search-wrapper {
+        display: block;
+
+        .inputWrapper {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+
+      iframe {
+        width: 100%;
+        height: 300px;
+      }
+
+      .topics {
+        height: 100px;
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .video-cont {
+    .title {
+      font-size: 16px;
+    }
+  }
+
+  .description-container {
+    width: 90%;
   }
 `;
 

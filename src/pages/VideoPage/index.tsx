@@ -7,7 +7,6 @@ import SearchBar from "../../components/searchBar";
 import VideoCard from "../../components/videoCard";
 import svg from "../../constants/svgs/stars";
 import { lightningIcon } from "../../constants/images";
-import { TDatabase } from "../../types/type";
 import { useParams } from "react-router-dom";
 import useFetchSingleCourse from "./hooks/useFetchSingleCourse";
 import useFetchVideoCourse from "./hooks/useFetchVideoCourses";
@@ -16,12 +15,9 @@ const VideoPage = () => {
   const { videoId } = useParams();
   const setIsHideNav = useContext(NavContext);
   const [count] = useState<number>(0);
-  const [currentVideo, setCurrentVideo] = useState<TDatabase>();
   const [identifier, setVideoIdentifier] = useState(videoId);
 
   let { data: course } = useFetchSingleCourse(identifier as string);
-
-  console.log(identifier);
 
   useLayoutEffect(() => {
     if (setIsHideNav) setIsHideNav(false);
@@ -74,6 +70,12 @@ const VideoPage = () => {
               <div className="right-section">
                 <p className="email">tester@gmail.com</p>
                 <p className="user-name">Peter Tester</p>
+                <p className="hamburger">
+                  <i
+                    className="fa-solid fa-bars"
+                    style={{ color: "white" }}
+                  ></i>
+                </p>
               </div>
             </div>
             <div className="lightningWrapper">
@@ -81,6 +83,7 @@ const VideoPage = () => {
             </div>
           </div>
           <div className="video-container">
+            <SearchBar width="100%" />
             <iframe
               src="https://www.youtube.com/embed/quJzdnXuNDc?si=Q8OIxZUGWF7CUgfX"
               title="pay"

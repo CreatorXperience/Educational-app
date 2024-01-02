@@ -20,7 +20,7 @@ const SearchBar = ({ updateTerm, width }: TSeachProp) => {
   };
 
   return (
-    <SearchBarWrapper width={width}>
+    <SearchBarWrapper width={width} className="search-wrapper">
       <div className="inputWrapper">
         <form onSubmit={(e) => handleSubmit(e)}>
           <input

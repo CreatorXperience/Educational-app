@@ -274,7 +274,7 @@ const VideoPageWrapper = styled.div`
       }
 
       .topics {
-        height: 100px;
+        height: auto;
         width: 100%;
         margin-top: 20px;
       }

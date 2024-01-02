@@ -14,7 +14,7 @@ const SideNavWrapper = styled.div`
     background: #37265d;
   }
 
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 900px) {
     width: 100%;
     overflow-x: hidden;
 

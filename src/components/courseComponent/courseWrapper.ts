@@ -8,15 +8,17 @@ const CourseWrapper = styled.div`
     height: 100px;
     border: 1px solid red;
     display: flex;
+    overflow-y: hidden;
 
     .course-image {
-      width: 35%;
+      width: 25%;
       height: 100%;
+      padding: 8px;
 
       img {
         border-radius: 10px;
-        width: 98.018px;
-        height: 97px;
+        width: 90px;
+        height: 90%;
       }
     }
 

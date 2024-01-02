@@ -13,6 +13,19 @@ const SideNavWrapper = styled.div`
     padding: 100px 0px 100px 0px;
     background: #37265d;
   }
+
+  @media screen and (max-width: 760px) {
+    width: 100%;
+    overflow-x: hidden;
+
+    .sideNav {
+      flex-flow: row;
+      height: 50px;
+      align-items: flex-start;
+      padding: 0;
+      transform: translateX(-300%);
+    }
+  }
 `;
 
 export default SideNavWrapper;

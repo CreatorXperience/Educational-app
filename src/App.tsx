@@ -8,7 +8,6 @@ import "./App.css";
 import NavigationBar from "./components/navigationBar";
 import Footer from "./components/Footer";
 
-import UserRepo from "./AppWrapper";
 import { useState } from "react";
 import { createContext } from "react";
 
@@ -31,7 +30,7 @@ const App = () => {
               <RouterProvider router={router}></RouterProvider>
             </NavContext.Provider>
           </div>
-          {isHideNav ? <Footer /> : "hi"}
+          {isHideNav ? <Footer /> : ""}
         </div>
         {/* </UserRepo> */}
       </Appwrapper>

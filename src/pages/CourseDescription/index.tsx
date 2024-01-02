@@ -9,6 +9,7 @@ import CourseDescriptionWrapper from "./CourseDescriptionWrapper";
 import BlurredCircle from "../../components/blurredCircle/circle";
 import useIntersectionObserver from "./hook/useIntersectionObserver";
 import useFetchCourse from "./hook/useFetchCourse";
+import useExpandAndRedirect from "./hook/useExpandAndRedirect";
 
 const CoursDescription = () => {
   const { id } = useParams();
@@ -17,15 +18,7 @@ const CoursDescription = () => {
 
   let myCourse: TDatabase = useFetchCourse(id as string);
 
-  const handleExpand = () => {
-    if (isExpand) {
-      if (window.innerWidth < 800) {
-        window.scrollTo(0, window.innerHeight - 800);
-      }
-      window.scrollTo(0, window.innerHeight / 2);
-    }
-    setIsExpand(!isExpand);
-  };
+  const { handleExpand, handleRedirectToVideo } = useExpandAndRedirect();
 
   return (
     <CourseDescriptionWrapper
@@ -47,7 +40,12 @@ const CoursDescription = () => {
               Join 1,000,000+ students enrolled in ZTM courses!
             </div>
 
-            <button className="start-btn">Start Learning Now</button>
+            <button
+              className="start-btn"
+              onClick={() => handleRedirectToVideo(myCourse._id)}
+            >
+              Start Learning Now
+            </button>
 
             <div className="line"></div>
 
@@ -233,7 +231,7 @@ const CoursDescription = () => {
             </div>
 
             <div className="overlay">
-              <button onClick={() => handleExpand()}>
+              <button onClick={() => handleExpand(isExpand, setIsExpand)}>
                 {isExpand ? "Collapse" : "Expand"}
                 <i className="fa-solid fa-caret-down"></i>{" "}
               </button>

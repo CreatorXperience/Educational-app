@@ -1,22 +1,27 @@
+import { TDatabase } from "../../types/type";
 import CourseWrapper from "./courseWrapper";
 
 type TCourseProp = {
-  img: string;
-  title: string;
-  content: string;
+  data: TDatabase;
+  setVideoId: React.Dispatch<React.SetStateAction<string | undefined>>;
 };
 
-const CourseComponent = ({ img, title, content }: TCourseProp) => {
+const CourseComponent = ({ data, setVideoId }: TCourseProp) => {
+  const handleClick = () => {
+    setVideoId(data._id);
+  };
   return (
     <CourseWrapper>
-      <div className="course-container">
+      <div className="course-container" onClick={() => handleClick()}>
         <div className="course-image">
-          <img alt="course" src={img} />
+          <img alt="course" src={data.coverImage} />
         </div>
         <div className="course-desc">
-          <div className="course-title">{title}</div>
+          <div className="course-title">{data.coverTitle}</div>
           <div className="course-content">
-            {content.length > 35 ? content.slice(0, 35) + "....." : content}
+            {data.courseDescription.length > 35
+              ? data.courseDescription.slice(0, 35) + "....."
+              : data.courseDescription}
           </div>
         </div>
       </div>

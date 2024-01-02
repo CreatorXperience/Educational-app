@@ -4,8 +4,9 @@ import SearchBarWrapper from "./searchBarWrapper";
 
 type TSeachProp = {
   updateTerm?: React.Dispatch<React.SetStateAction<string | undefined>>;
+  width?: string;
 };
-const SearchBar = ({ updateTerm }: TSeachProp) => {
+const SearchBar = ({ updateTerm, width }: TSeachProp) => {
   const [userInput, setUserinput] = useState<string>();
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -19,7 +20,7 @@ const SearchBar = ({ updateTerm }: TSeachProp) => {
   };
 
   return (
-    <SearchBarWrapper>
+    <SearchBarWrapper width={width} className="search-wrapper">
       <div className="inputWrapper">
         <form onSubmit={(e) => handleSubmit(e)}>
           <input
